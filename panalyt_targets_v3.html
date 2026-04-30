@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パナリット ターゲット企業分析 v3｜89社・個別スクリプト完成版</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal-50: #F0FDFA; --teal-100: #CCFBF1; --teal-500: #14B8A6;
+    --teal-600: #0D9488; --teal-700: #0F766E; --teal-900: #134E4A;
+    --slate-50: #F8FAFC; --slate-100: #F1F5F9; --slate-200: #E2E8F0;
+    --slate-400: #94A3B8; --slate-600: #475569; --slate-700: #334155; --slate-900: #0F172A;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); color: var(--slate-900); }
+  .display-font { font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+  .mono-font { font-family: 'JetBrains Mono', monospace; }
+  .priority-A { background: var(--teal-500); color: white; }
+  .priority-B { background: #3B82F6; color: white; }
+  .priority-C { background: #94A3B8; color: white; }
+  .priority-D { background: #F87171; color: white; }
+  .card { background: white; border: 1px solid var(--slate-200); border-radius: 12px; padding: 18px; transition: all 0.2s ease; position: relative; overflow: hidden; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04); border-color: var(--teal-500); }
+  .card.priority-card-A::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--teal-500), var(--teal-700)); }
+  .chip { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: 500; }
+  .chip-pitch { background: var(--teal-50); color: var(--teal-700); border: 1px solid var(--teal-100); }
+  .chip-meta { background: var(--slate-100); color: var(--slate-700); }
+  .filter-btn { padding: 6px 14px; font-size: 13px; border-radius: 9999px; border: 1px solid var(--slate-200); background: white; color: var(--slate-700); cursor: pointer; transition: all 0.15s ease; font-weight: 500; }
+  .filter-btn:hover { border-color: var(--teal-500); color: var(--teal-700); }
+  .filter-btn.active { background: var(--teal-500); color: white; border-color: var(--teal-500); }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--slate-50); }
+  ::-webkit-scrollbar-thumb { background: var(--slate-200); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--slate-400); }
+  .hero-pattern { background-image: radial-gradient(circle at 1px 1px, rgba(20,184,166,0.15) 1px, transparent 0); background-size: 24px 24px; }
+  details summary { cursor: pointer; list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+
+  /* スクリプトボタン */
+  .script-btn {
+    width: 100%; padding: 8px 12px; margin-top: 12px;
+    background: linear-gradient(135deg, var(--teal-500), var(--teal-600));
+    color: white; border-radius: 8px; font-size: 12px; font-weight: 700;
+    border: none; cursor: pointer; transition: all 0.2s ease;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .script-btn:hover { box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4); }
+
+  /* モーダル */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px); z-index: 50; display: none;
+    align-items: flex-start; justify-content: center; padding: 20px;
+    overflow-y: auto;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-content {
+    background: white; border-radius: 16px; max-width: 900px; width: 100%;
+    margin: 20px auto; max-height: calc(100vh - 40px); overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  }
+  .modal-header {
+    padding: 24px 28px; border-bottom: 1px solid var(--slate-200);
+    background: linear-gradient(135deg, #F0FDFA 0%, #FFFFFF 100%);
+    border-radius: 16px 16px 0 0;
+    position: sticky; top: 0; z-index: 10;
+  }
+  .modal-section {
+    padding: 20px 28px; border-bottom: 1px solid var(--slate-100);
+  }
+  .modal-section:last-child { border-bottom: none; }
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 700; color: var(--teal-700);
+    background: var(--teal-50); padding: 4px 10px; border-radius: 4px;
+    margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .pitch-time {
+    display: inline-block; background: var(--slate-900); color: white;
+    padding: 2px 8px; border-radius: 4px; font-size: 11px;
+    font-family: 'JetBrains Mono', monospace; margin-right: 8px;
+  }
+  .pitch-block {
+    margin: 12px 0; padding: 12px 16px; background: var(--slate-50);
+    border-left: 3px solid var(--teal-500); border-radius: 4px;
+  }
+  .email-block {
+    background: var(--slate-900); color: #E2E8F0;
+    padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; line-height: 1.7; white-space: pre-wrap;
+    position: relative; max-height: 400px; overflow-y: auto;
+  }
+  .copy-btn {
+    position: absolute; top: 8px; right: 8px;
+    background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);
+    padding: 4px 10px; border-radius: 4px; font-size: 11px; cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .copy-btn:hover { background: var(--teal-500); border-color: var(--teal-500); }
+  .qa-item {
+    margin: 8px 0; border: 1px solid var(--slate-200); border-radius: 8px; overflow: hidden;
+  }
+  .qa-item summary {
+    padding: 12px 16px; background: var(--slate-50); font-weight: 600; font-size: 13px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .qa-item summary::before { content: 'Q.'; color: var(--teal-600); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .qa-item .qa-answer {
+    padding: 12px 16px; background: white; font-size: 13px; line-height: 1.7; color: var(--slate-700);
+  }
+  .checklist-item {
+    display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; font-size: 13px;
+  }
+  .checklist-item::before {
+    content: '☐'; color: var(--teal-500); font-weight: 700; flex-shrink: 0;
+  }
+  .why-now-banner {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border-left: 4px solid #F59E0B; padding: 16px;
+    border-radius: 8px; margin-bottom: 16px;
+  }
+  .close-btn {
+    position: absolute; top: 16px; right: 16px;
+    background: rgba(15,23,42,0.05); color: var(--slate-700);
+    border: none; width: 36px; height: 36px; border-radius: 50%;
+    cursor: pointer; transition: all 0.2s ease; font-size: 20px; line-height: 1;
+  }
+  .close-btn:hover { background: var(--slate-900); color: white; }
+</style>
+</head>
+<body>
+
+<header class="border-b border-slate-200 bg-white">
+  <div class="max-w-7xl mx-auto px-6 py-8 hero-pattern">
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-1 h-6 bg-teal-500"></div>
+      <span class="text-xs uppercase tracking-widest text-teal-700 font-bold mono-font">PANALYT IS Target Analysis</span>
+    </div>
+    <h1 class="display-font text-3xl md:text-4xl mb-2">パナリット ターゲット企業分析</h1>
+    <p class="text-sm text-slate-600">89社の優先度・推奨切り口・<strong>個別スクリプト完成版</strong>を一気通貫で管理｜<span class="mono-font text-teal-600 font-bold">v3</span></p>
+  </div>
+</header>
+
+<section class="max-w-7xl mx-auto px-6 py-8">
+  <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+    <div class="card text-center"><div class="display-font text-3xl text-slate-900" id="count-total">-</div><div class="text-xs text-slate-500 mt-1">全企業数</div></div>
+    <div class="card text-center" style="background: linear-gradient(135deg, #059669, #047857); color: white;"><div class="display-font text-3xl">89/89</div><div class="text-xs mt-1 opacity-90">詳細スクリプト完成</div></div>
+    <div class="card text-center" style="background: linear-gradient(135deg, #14B8A6, #0D9488); color: white;"><div class="display-font text-3xl" id="count-A">-</div><div class="text-xs mt-1 opacity-90">優先度A（最優先）</div></div>
+    <div class="card text-center"><div class="display-font text-3xl text-blue-600" id="count-B">-</div><div class="text-xs text-slate-500 mt-1">優先度B</div></div>
+    <div class="card text-center"><div class="display-font text-3xl text-slate-500" id="count-C">-</div><div class="text-xs text-slate-500 mt-1">優先度C</div></div>
+    <div class="card text-center"><div class="display-font text-3xl text-rose-400" id="count-D">-</div><div class="text-xs text-slate-500 mt-1">優先度D（要回避）</div></div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-6">
+  <details open class="bg-gradient-to-br from-teal-50 to-white border border-teal-100 rounded-xl p-5">
+    <summary class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-teal-500 text-white flex items-center justify-center display-font text-sm">A</div>
+        <h2 class="display-font text-lg">最優先攻略リスト（A級企業）</h2>
+        <span class="text-xs text-slate-500">タップで開閉・社名クリックで検索</span>
+      </div>
+      <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </summary>
+    <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2" id="highlight-list"></div>
+  </details>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-6">
+  <details class="bg-white border border-slate-200 rounded-xl p-5">
+    <summary class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <h2 class="display-font text-lg">業種別内訳</h2>
+        <span class="text-xs text-slate-500">タップで開閉</span>
+      </div>
+      <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </summary>
+    <div class="mt-4 space-y-2" id="industry-breakdown"></div>
+  </details>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-4 sticky top-0 bg-gradient-to-b from-white to-white/95 backdrop-blur-sm z-10 py-4">
+  <div class="space-y-3">
+    <input type="text" id="search" placeholder="🔍 企業名で検索..." class="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+    <div><div class="text-xs text-slate-500 mb-2 mono-font uppercase tracking-wider">優先度</div><div class="flex flex-wrap gap-2" id="priority-filters"></div></div>
+    <div><div class="text-xs text-slate-500 mb-2 mono-font uppercase tracking-wider">業種</div><div class="flex flex-wrap gap-2" id="industry-filters"></div></div>
+    <div class="flex justify-between items-center pt-2 border-t border-slate-100">
+      <div class="text-sm text-slate-600">該当 <span class="display-font text-lg text-teal-600" id="result-count">-</span> 社</div>
+      <button id="reset-btn" class="text-xs text-slate-500 hover:text-teal-600">フィルターをリセット</button>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-12">
+  <div id="cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-12">
+  <details class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+    <summary class="flex items-center gap-2"><h2 class="display-font text-base">凡例・スコアリング基準</h2><span class="text-xs text-slate-500">タップで開閉</span></summary>
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+      <div><h3 class="font-bold mb-2 text-slate-700">優先度の判定基準</h3>
+        <ul class="space-y-2 text-slate-600">
+          <li><span class="chip priority-A mr-2">A</span>プライム × 1,000名以上 × グローバル展開 or 直近の人材変革テーマ明確</li>
+          <li><span class="chip priority-B mr-2">B</span>プライム上場 × 中規模 × 訴求テーマあり</li>
+          <li><span class="chip priority-C mr-2">C</span>規模やや小、地方、ニッチ業態</li>
+          <li><span class="chip priority-D mr-2">D</span>構造的にミスマッチ（医療法人・人材会社等）</li>
+        </ul>
+      </div>
+      <div><h3 class="font-bold mb-2 text-slate-700">推奨切り口（4論点）</h3>
+        <ul class="space-y-1 text-slate-600">
+          <li><span class="chip chip-pitch mr-2">開示</span>人的資本開示の精度向上・連結整合性</li>
+          <li><span class="chip chip-pitch mr-2">中計</span>中期経営計画の人材投資KPI連動</li>
+          <li><span class="chip chip-pitch mr-2">後継</span>サクセッション・抜擢人事の意思決定支援</li>
+          <li><span class="chip chip-pitch mr-2">ポートフォリオ</span>人材ポートフォリオ最適化・配置転換</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-4 pt-4 border-t border-slate-200 text-xs text-slate-500">
+      <p>※スクリプトは公開情報・業界知識に基づく推定。 <strong>架電前にIRで具体数字を確認</strong> してください。</p>
+      <p>※特に「<strong>※要確認</strong>」マーカーがある箇所は、各社の最新中計・有報の数字を埋める部分です。</p>
+    </div>
+  </details>
+</section>
+
+<!-- モーダル -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-content" id="modal-content"></div>
+</div>
+
+<script>
+// ============= 業界別テンプレート =============
+const INDUSTRY_TEMPLATES = {
+  'finance_regional': {
+    common_challenges: ['人的資本開示の精度向上（金融庁要請）', '人時生産性のKPI化と店舗別可視化', '地域人材の確保・育成', '後継者育成・サクセッション'],
+    common_4points: [
+      '人的資本開示の精度向上：行員データを連結ベースで標準化、監査対応の効率化',
+      '行員一人あたり生産性の可視化：店舗別・職階別でリアルタイムモニタリング',
+      '後継者育成・サクセッション：店長・支店長の育成プログラム効果測定',
+      '人材ポートフォリオ最適化：DX人材・専門人材の配置最適化'
+    ],
+    sengashi: '現在、御行では基幹系人事システムやデータウェアハウス、独自Excelで人事データを管理されているかと存じます。多くの地銀様も同様で、ただ連結ベースでの可視化や、月次・週次での経営判断レベルの集計には限界があり、新たな基盤を検討されるケースが多くございます。'
+  },
+  'finance_megabank': {
+    common_challenges: ['ジョブ型人事の運用高度化', 'グローバル統合人事管理', '海外拠点人材の可視化', 'デジタル人材の確保'],
+    common_4points: [
+      '国内外拠点の人事データを連結ベースで統合・標準化',
+      'ジョブ型人事制度のジョブ定義・評価データの統合管理',
+      'グローバル人材プールのスキル・経験可視化とサクセッション',
+      'デジタル人材・専門人材のリテンション分析と報酬戦略'
+    ],
+    sengashi: '現在、御社ではWorkdayやSAP SuccessFactorsなどグローバル標準の人事システムをご利用かと存じます。ただ日本の有報開示・人的資本開示の細かい要件、また邦銀特有の出向・職階制度への対応には別途レポーティング層が必要となるケースが多くございます。'
+  },
+  'pharma_health': {
+    common_challenges: ['研究開発人材の希少性とリテンション', 'グローバル人材ローテーション', '女性活躍・ダイバーシティ', 'MR・営業人材の配置最適化'],
+    common_4points: [
+      '研究開発人材のキャリアパス・サクセッション可視化',
+      'グローバル拠点間の人材データ統合と人的資本開示',
+      '女性活躍・ダイバーシティKPIの精緻なモニタリング',
+      'MR・営業人材の領域別配置最適化と効果測定'
+    ],
+    sengashi: '現在、御社ではグローバル人事システムや研究開発人材管理ツールをご利用かと存じます。ただ研究人材・営業人材・コーポレート人材を横串で見たり、財務・R&D投資と連動させた分析は別途基盤が必要なケースが多くございます。'
+  },
+  'chemicals': {
+    common_challenges: ['研究人材の希少性とサクセッション', 'グローバル展開と海外人材統合', '製造現場の技能伝承', '事業転換に伴う人材ポートフォリオ再編'],
+    common_4points: [
+      '研究人材・専門人材のキャリアパスとサクセッション可視化',
+      'グローバル拠点の人事データ統合と連結開示',
+      '製造現場の技能伝承・スキルマップの可視化',
+      '事業ポートフォリオ転換に伴う人材再配置のシミュレーション'
+    ],
+    sengashi: '化学・素材業界では、基幹系人事システム＋独自BIで人事データを管理される企業が多いですが、研究・製造・営業を横串で見たり、海外拠点と統合した分析は別途基盤が必要となります。'
+  },
+  'auto_parts': {
+    common_challenges: ['CASE変革に伴うエンジン関連人材の再配置', 'EV・電動化人材の確保', 'リスキリング投資のROI測定', 'グローバル拠点の統合人事'],
+    common_4points: [
+      'CASE変革に伴う人材ポートフォリオ再編シミュレーション',
+      'リスキリング・配置転換プログラムの投資ROI測定',
+      'グローバル拠点の人事データ連結ベース統合',
+      'エンジニア人材のスキル可視化とサクセッション'
+    ],
+    sengashi: '現在、御社ではグローバルHCM（Workday/SuccessFactors）または基幹系人事システム＋独自BIで管理されているかと存じます。ただ、CASE変革下での「どの人材をどのスキルに転換するか」の意思決定支援には、別途分析基盤が必要となります。'
+  },
+  'heavy_industry': {
+    common_challenges: ['事業転換に伴う人材ポートフォリオ再編', 'プロジェクト型人材配置', 'グローバル人材統合', '技術伝承'],
+    common_4points: [
+      '多事業ポートフォリオの人材配置可視化と最適化',
+      'プロジェクト型人材アサインの効率化',
+      'グローバル人材データの連結統合',
+      '技術系サクセッション・キャリアパスの可視化'
+    ],
+    sengashi: '重工業・大手機械系では、事業部ごとに異なる人事システムが乱立し、全社横断の人材データ統合に課題を抱えるケースが多くございます。'
+  },
+  'steel_metal': {
+    common_challenges: ['技能伝承・高齢化対応', '海外展開と現地人材管理', '安全管理に直結する勤怠分析', 'サクセッション'],
+    common_4points: [
+      '技能伝承・スキルマップの可視化',
+      '海外拠点の人材データ統合',
+      '勤怠データと安全管理KPIの連動分析',
+      'サクセッション・後継者育成の可視化'
+    ],
+    sengashi: '鉄鋼・金属業界では、基幹系人事＋現場の独自Excel管理が一般的ですが、技能伝承や海外展開に伴う人材データ統合には別途基盤が必要となります。'
+  },
+  'electronics': {
+    common_challenges: ['エンジニア争奪戦・報酬戦略', 'グローバル人材プール', 'ジョブ型運用', 'リスキリング'],
+    common_4points: [
+      'エンジニア人材の報酬競争力分析（ベンチマーク）',
+      'グローバル人材プールのスキル可視化',
+      'ジョブ型のジョブ定義・評価データ統合',
+      'リスキリング投資のROI測定'
+    ],
+    sengashi: 'エレクトロニクス・半導体業界では、Workday等のグローバルHCMをご利用の企業が多いですが、日本特有の職階・処遇への対応や、財務と連動した人材投資ROI測定には別途分析層が必要となります。'
+  },
+  'fmcg_food': {
+    common_challenges: ['グローバル展開と多国籍人事統合', '女性活躍・ダイバーシティ', '製造現場と本社の人事データ分断', 'パート・正社員管理'],
+    common_4points: [
+      'グローバル人事データの連結ベース統合',
+      '女性活躍・ダイバーシティKPIの精緻なモニタリング',
+      '製造現場含む全社人材ポートフォリオ可視化',
+      '雇用形態別（正規・非正規）の生産性・離職分析'
+    ],
+    sengashi: '消費財・食品業界では、本社系・工場系・海外拠点で異なる人事システムが使われるケースが多く、横断的な人材分析には統合基盤が必要となります。'
+  },
+  'retail': {
+    common_challenges: ['店舗別人時生産性', '店長サクセッション', 'パートタイム高比率管理', '高離職率対応'],
+    common_4points: [
+      '店舗別・業態別の人時生産性ダッシュボード',
+      '店長・SVの育成プログラムとサクセッション可視化',
+      '雇用形態別（正社員・パート）の人材ポートフォリオ',
+      '店舗別離職率と背景要因の分析'
+    ],
+    sengashi: '小売業界では、店舗POSデータ・勤怠システム・人事システムが分断されており、店舗別の人時生産性をリアルタイムで可視化できないケースが多くございます。'
+  },
+  'logistics': {
+    common_challenges: ['2024年問題後の生産性回復', 'ドライバー・乗務員不足', '勤怠管理の厳格化', 'サクセッション'],
+    common_4points: [
+      '勤怠データと業績の連動分析（2024年問題対応）',
+      'ドライバー・乗務員の人材ポートフォリオ可視化',
+      '配置最適化と労働時間最適化のシミュレーション',
+      'サクセッション・後継者育成'
+    ],
+    sengashi: '運輸・物流業界では、勤怠管理システムと人事システムが分断されており、2024年問題対応の生産性可視化には統合基盤が必要となります。'
+  },
+  'energy': {
+    common_challenges: ['脱炭素人材へのリスキリング', '技能伝承', 'グループ会社多数のガバナンス', '高齢化対応'],
+    common_4points: [
+      'グループ全体の人材データ統合・連結ガバナンス',
+      '脱炭素人材へのリスキリング投資ROI測定',
+      '技能伝承・スキルマップの可視化',
+      'サクセッション・後継者育成'
+    ],
+    sengashi: 'エネルギー業界では、グループ会社ごとに異なる人事システムを使っているケースが多く、全社人材ポートフォリオの可視化には統合基盤が必要となります。'
+  },
+  'entertainment': {
+    common_challenges: ['クリエイター人材の流動性・定着', 'IP戦略に紐づく組織編成', 'グローバル展開', 'プロジェクト型配置'],
+    common_4points: [
+      'クリエイター人材の定着率・離職要因分析',
+      'IP・プロジェクト別の人材アサイン最適化',
+      'グローバル人材データの連結統合',
+      'サクセッション・キーパーソン可視化'
+    ],
+    sengashi: 'エンタメ業界では、IP・プロジェクト別の人材管理が複雑で、全社横断の人材データ可視化には統合基盤が必要となります。'
+  },
+  'plant_const': {
+    common_challenges: ['プロジェクト型人材の最適配置', '海外案件人材リスク管理', '技術者高齢化', 'リスキリング'],
+    common_4points: [
+      'プロジェクト人材の最適配置とスキルマッチング',
+      '海外案件における人材リスク・キーパーソン依存度可視化',
+      '技術者サクセッション・キャリアパス',
+      '脱炭素・エネルギー転換へのリスキリング'
+    ],
+    sengashi: 'プラント・建設業界では、プロジェクト管理システムと人事システムが分断されており、プロジェクト最適アサインには統合基盤が必要となります。'
+  },
+  'staffing': {
+    common_challenges: ['技術者の配置最適化', '案件アサイン効率化', 'スキル可視化', '定着率向上'],
+    common_4points: [
+      '技術者のスキル可視化と案件マッチング',
+      '稼働率・案件アサイン効率の可視化',
+      '技術者の定着率・離職要因分析',
+      'スキル開発投資のROI測定'
+    ],
+    sengashi: '人材派遣業では、案件管理と人材管理が分断されているケースが多く、技術者の配置最適化には統合基盤が必要となります。'
+  }
+};
+
+// 業界別共通QA
+const COMMON_QA = [
+  { q: '具体的にどんな機能があるの？', a: 'ダッシュボードで人事データの統合可視化、AIチャットでの問い合わせ対応、6つの分析テーマ（離職・採用・給与・勤怠・社内異動・全体像）が標準搭載されています。30分のデモで実画面をお見せできますので、お時間頂戴できますでしょうか。' },
+  { q: '料金は？', a: '規模・連携データ範囲によりますが、エンタープライズ向けで年額数百万円〜1,000万円程度が一般的なレンジです。詳細はデモ後の見積でご提示いたします。まずは30分、御社のご状況に合うかご確認いただくお時間を頂戴できますでしょうか。' },
+  { q: 'セキュリティは？', a: '大手メガバンクや上場製造業にもご導入いただいており、SSO・2FA・行レベルセキュリティ・データの完全分離を完備しております。データはお客様のGoogle Cloud環境内で処理されAIには外部送信されない設計です。詳細セキュリティ資料は別途お送りします。' },
+  { q: '導入期間は？', a: '最短24時間でデータ反映、通常は2〜4週間でPoC環境を構築可能です。本格運用までは2〜3ヶ月が標準的なスケジュールです。' },
+  { q: '既存システムとの連携は？', a: 'API連携・CSVアップロード両対応です。御社で利用中の人事システム・給与・勤怠・財務システムからのデータ連携を、弊社のデータエンジニアが対応します。御社側でデータ加工いただく必要は一切ございません。' }
+];
+
+// ============= 89社のメタデータ＋スクリプト =============
+const companies = [
+  // 金融・リース
+  { name: '野村ホールディングス株式会社', industry: '金融・リース', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', '中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '証券最大手。ジョブ型導入中、グローバル統合人事の典型ターゲット',
+    tpl: 'finance_megabank', why_now: '証券業界全体でジョブ型人事制度の運用高度化が進む中、野村HDも経営戦略と人事戦略の連動を強化中。中期経営計画の人的資本KPIも詳細化されており、データ基盤への投資ニーズが高まっている。', hook: '証券業界のジョブ型人事と人的資本開示について、グローバル投資銀行のベンチマーク事例を共有させていただきたく' },
+  { name: '東京センチュリー株式会社', industry: '金融・リース', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['開示', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '伊藤忠系リース、グローバル展開拡大中、プライム',
+    tpl: 'finance_megabank', why_now: 'リース業界のグローバル展開加速期。海外子会社の人事データ統合と、伊藤忠グループの人材戦略連動が経営課題。', hook: 'グローバルリース業界の人材データ統合と、伊藤忠グループ連携の人事戦略について' },
+  { name: '株式会社山口フィナンシャルグループ', industry: '金融・リース', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['開示', '中計', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '地銀大手、デジタル化先進。千葉銀型の中計フックが有効',
+    tpl: 'finance_regional', why_now: '地銀業界全体で「人×AI」生産性向上と人的資本開示精緻化が経営アジェンダに。千葉銀行の第16次中計のように、人時生産性目標を掲げる動きが広がっている。', hook: '地銀業界における人時生産性のKPI化と、人的資本開示の精度向上について' },
+  { name: 'アコム株式会社', industry: '金融・リース', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '後継'], target: 'CHRO/経営企画', note: '三菱UFJG、消費者金融大手。属人化解消・後継育成のニーズ',
+    tpl: 'finance_megabank', why_now: '消費者金融業界の構造変化と、三菱UFJグループとしての人事ガバナンス強化期。属人化解消と次世代育成が重要テーマ。', hook: '消費者金融業界の人材ポートフォリオ最適化とMUFGグループ連携人事について' },
+  { name: '株式会社オリエントコーポレーション', industry: '金融・リース', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: 'みずほG、信販大手',
+    tpl: 'finance_megabank', why_now: 'みずほグループの人事戦略連動と、信販事業の構造変革期。', hook: '信販業界の人材ポートフォリオ最適化について' },
+  { name: '芙蓉総合リース株式会社', industry: '金融・リース', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: 'みずほ系リース、海外展開拡大中',
+    tpl: 'finance_megabank', why_now: 'リース業界のグローバル展開加速期。海外人材統合とサクセッションが経営課題。', hook: 'グローバルリース業界の人材データ統合について' },
+  { name: '株式会社紀陽銀行', industry: '金融・リース', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['開示', '中計'], target: 'CHRO/経営企画', note: '和歌山地銀、人的資本開示対応中',
+    tpl: 'finance_regional', why_now: '地銀業界の人的資本開示対応と人時生産性向上が課題。', hook: '地銀における人的資本開示と人時生産性向上について' },
+  { name: '株式会社滋賀銀行', industry: '金融・リース', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['開示', '中計'], target: 'CHRO', note: '地銀、SDGs先進',
+    tpl: 'finance_regional', why_now: '地銀業界の人的資本開示と、SDGs/サステナビリティ人材戦略の連動。', hook: 'サステナビリティ経営と人的資本データ活用について' },
+  { name: '株式会社武蔵野銀行', industry: '金融・リース', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['開示', '中計'], target: 'CHRO', note: '埼玉地銀',
+    tpl: 'finance_regional', why_now: '地銀業界の人的資本開示と人時生産性向上が課題。', hook: '地銀における人的資本データ活用について' },
+
+  // 製薬・ヘルスケア
+  { name: '富士フイルムホールディングス株式会社', industry: '製薬・ヘルスケア', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', '中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '事業転換成功例。ヘルスケア注力、グローバル人事の旗艦事例',
+    tpl: 'pharma_health', why_now: 'フィルムからヘルスケア・素材への事業転換成功例として有名。中計でも人材ポートフォリオの転換が継続テーマで、研究人材・新規事業人材の最適配置が経営課題。', hook: '事業転換期における人材ポートフォリオ再編と、グローバル人事データ統合について' },
+  { name: 'シスメックス株式会社', industry: '製薬・ヘルスケア', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['開示', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '体外診断グローバル、海外比率高、エンジニア人材',
+    tpl: 'pharma_health', why_now: '体外診断分野でグローバル展開を加速中。海外売上比率8割超で、グローバル人材ガバナンスとエンジニア人材確保が最重要課題。', hook: 'グローバル医療機器メーカーの人材データ統合と、エンジニア人材戦略について' },
+  { name: '株式会社ツムラ', industry: '製薬・ヘルスケア', priority: 'A', scale: 'M', listed: true, global: true, pitches: ['開示', '後継', 'ポートフォリオ'], target: 'CHRO', note: '漢方独占的、人的資本投資注力中',
+    tpl: 'pharma_health', why_now: '漢方医薬品の独占的地位を活かした成長戦略と、人的資本投資の本格化期。中国展開も加速中。', hook: '漢方医薬品グローバル展開における人材戦略について' },
+  { name: 'ピジョン株式会社', industry: '製薬・ヘルスケア', priority: 'A', scale: 'M', listed: true, global: true, pitches: ['開示', 'ポートフォリオ'], target: 'CHRO', note: 'ベビー用品グローバル、女性活躍リード企業',
+    tpl: 'pharma_health', why_now: '女性活躍リード企業として人的資本開示の精緻化を継続。ベビー用品グローバル展開で人材戦略のさらなる高度化が課題。', hook: '女性活躍・ダイバーシティKPIの精緻なモニタリングと、グローバル人材戦略について' },
+  { name: '株式会社アインホールディングス', industry: '製薬・ヘルスケア', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '中計'], target: 'CHRO/事業役員', note: '薬局チェーン最大手、店舗別生産性可視化ニーズ',
+    tpl: 'retail', why_now: '調剤薬局業界の再編進行中。店舗別生産性と薬剤師の配置最適化が経営課題。', hook: '調剤薬局チェーンにおける店舗別生産性と薬剤師配置最適化について' },
+  { name: '株式会社バイタルケーエスケー・ホールディングス', industry: '製薬・ヘルスケア', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['開示', 'ポートフォリオ'], target: 'CHRO', note: '医薬品卸大手',
+    tpl: 'pharma_health', why_now: '医薬品卸業界の再編期。物流人材・営業人材の最適配置が課題。', hook: '医薬品卸業界の人材ポートフォリオ最適化について' },
+  { name: '医療法人和光会', industry: '製薬・ヘルスケア', priority: 'D', scale: 'M', listed: false, global: false, pitches: ['ポートフォリオ'], target: '理事長/事務長', note: '医療法人は予算規模・意思決定構造的に難しい。営業優先度低',
+    tpl: 'pharma_health', why_now: '医療法人は予算・意思決定構造的に当面ターゲットから外す。', hook: '※基本的に営業優先度低' },
+
+  // 化学・素材
+  { name: '東レ株式会社', industry: '化学・素材', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '繊維・素材グローバル、研究人材の希少性高',
+    tpl: 'chemicals', why_now: '炭素繊維・水素事業など先端素材の研究人材確保が最重要課題。グローバル展開も継続強化中。', hook: '先端素材分野の研究人材確保と、グローバル人材データ統合について' },
+  { name: '信越化学工業株式会社', industry: '化学・素材', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['後継', '開示'], target: 'CHRO', note: 'シリコーン世界一、超優良企業。属人化解消・後継育成テーマ',
+    tpl: 'chemicals', why_now: 'シリコーン・半導体材料の世界一企業。極めて保守的な企業文化のため、属人化解消とサクセッション可視化が長期テーマ。', hook: '半導体材料グローバルリーダーのサクセッション可視化について' },
+  { name: '積水化学工業株式会社', industry: '化学・素材', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', '中計', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '住宅・化学・医療、人的資本開示注力',
+    tpl: 'chemicals', why_now: '人的資本開示の精緻化と、住宅・化学・医療の3事業ポートフォリオの人材最適配置が経営課題。', hook: '多事業ポートフォリオの人材最適配置と、人的資本開示の精緻化について' },
+  { name: '株式会社カネカ', industry: '化学・素材', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['開示', '後継', 'ポートフォリオ'], target: 'CHRO', note: '化学グローバル、サステナブル素材',
+    tpl: 'chemicals', why_now: 'サステナブル素材分野での研究開発加速。グローバル人材戦略と研究人材確保が継続テーマ。', hook: 'サステナブル素材分野の研究人材戦略について' },
+  { name: '古河電気工業株式会社', industry: '化学・素材', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '電線・素材、150周年、中計遂行中',
+    tpl: 'chemicals', why_now: '創業150周年の節目で長期ビジョンと中計を推進中。グローバル人材ガバナンスと事業ポートフォリオ転換に伴う人材再配置が課題。', hook: '創業150周年の節目における人材ポートフォリオ戦略について' },
+  { name: '東洋紡株式会社', industry: '化学・素材', priority: 'B', scale: 'L', listed: true, global: true, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: '繊維・機能材、事業転換中',
+    tpl: 'chemicals', why_now: '繊維から機能材・医療材料への事業転換進行中。人材ポートフォリオ再編が重要テーマ。', hook: '事業転換期における人材ポートフォリオ再編について' },
+  { name: '倉敷紡績株式会社', industry: '化学・素材', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: 'クラボウ、繊維から多角化',
+    tpl: 'chemicals', why_now: '繊維から化成品・エレクトロニクス・食品への多角化進展。多事業ポートフォリオの人材最適配置が課題。', hook: '多角化企業の人材ポートフォリオ最適化について' },
+  { name: '大倉工業株式会社', industry: '化学・素材', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['後継'], target: 'CHRO', note: '合成樹脂・建材',
+    tpl: 'chemicals', why_now: '中堅化学メーカーの後継者育成・サクセッションが課題。', hook: '中堅化学メーカーのサクセッションと人材戦略について' },
+  { name: '大日本塗料株式会社', industry: '化学・素材', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['後継'], target: 'CHRO', note: '塗料中堅',
+    tpl: 'chemicals', why_now: '塗料業界の再編進行中、後継者育成が重要。', hook: '塗料業界の人材戦略とサクセッションについて' },
+  { name: 'ダイナパック株式会社', industry: '化学・素材', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '段ボール・包装',
+    tpl: 'chemicals', why_now: '包装資材業界の生産性向上と人材ポートフォリオ最適化が課題。', hook: '包装資材業界の人材戦略について' },
+
+  // プラント・建設
+  { name: '日揮ホールディングス株式会社', industry: 'プラント・建設', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['ポートフォリオ', '後継', '中計'], target: 'CHRO/経営企画', note: 'プラントエンジニアリング、プロジェクト人材の最適配置・脱炭素転換',
+    tpl: 'plant_const', why_now: 'エネルギー転換期で従来の石油・ガスプラントから水素・アンモニア・CCSへの事業転換進行中。技術者のリスキリングとプロジェクト人材最適配置が最重要課題。', hook: 'エネルギー転換期における技術者リスキリングとプロジェクト人材最適配置について' },
+
+  // 自動車・機械・部品
+  { name: '株式会社アイシン', industry: '自動車・機械・部品', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: 'トヨタG筆頭部品、CASE変革のど真ん中、再配置必須',
+    tpl: 'auto_parts', why_now: 'CASE変革の真っ只中。エンジン関連事業から電動化・ソフトウェア・新領域への人材ポートフォリオ転換が経営最重要課題。10万人超の人材再配置が現実問題。', hook: 'CASE変革下における10万人超の人材ポートフォリオ転換シミュレーションについて' },
+  { name: '株式会社豊田自動織機', industry: '自動車・機械・部品', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO/経営企画', note: 'CASE変革、グローバル展開',
+    tpl: 'auto_parts', why_now: 'トヨタグループの中核として、自動車・物流機器・エンジン事業の事業ポートフォリオ転換期。', hook: 'トヨタグループ中核企業の人材ポートフォリオ転換について' },
+  { name: '豊田合成株式会社', industry: '自動車・機械・部品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO', note: 'トヨタG、CASE変革、樹脂・ゴム部品',
+    tpl: 'auto_parts', why_now: 'トヨタグループでCASE変革・電動化対応が進行中。樹脂・ゴム部品の事業構造転換期。', hook: 'CASE時代の樹脂・ゴム部品事業の人材戦略について' },
+  { name: '愛三工業株式会社', industry: '自動車・機械・部品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '自動車部品、脱エンジン転換中',
+    tpl: 'auto_parts', why_now: '燃料系部品メーカーから脱エンジン・電動化への事業転換が極めて重要。人材ポートフォリオ転換が会社存続レベルの課題。', hook: '脱エンジン期における事業転換と人材ポートフォリオ再編について' },
+  { name: '株式会社エクセディ', industry: '自動車・機械・部品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO', note: 'クラッチ・トルコン、EV対応中',
+    tpl: 'auto_parts', why_now: 'クラッチ・トルコンメーカーとしてEV対応が事業存続テーマ。人材スキル転換が急務。', hook: 'EV対応期における事業転換と人材スキル転換について' },
+  { name: '株式会社ミツバ', industry: '自動車・機械・部品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO', note: '自動車電装部品、CASE対応',
+    tpl: 'auto_parts', why_now: '自動車電装部品メーカーとしてCASE対応とグローバル拠点最適化が重要。', hook: '自動車電装部品メーカーのグローバル人材戦略について' },
+  { name: '川崎重工業株式会社', industry: '自動車・機械・部品', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '重工、防衛・水素事業転換期、多事業ポートフォリオ',
+    tpl: 'heavy_industry', why_now: '防衛・水素・ロボット・モーターサイクル等の多事業ポートフォリオで、防衛と水素事業が急成長期。人材ポートフォリオ再編が最重要。', hook: '防衛・水素事業急成長期における多事業ポートフォリオの人材最適配置について' },
+  { name: '株式会社ブリヂストン', industry: '自動車・機械・部品', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', '中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: 'ジョブ型導入の旗手、グローバル人事改革リード企業',
+    tpl: 'auto_parts', why_now: '日本企業のジョブ型人事制度導入の旗手として有名。グローバル人事改革を継続的に推進中。', hook: 'ジョブ型人事制度の運用高度化と、グローバル人材データ統合について' },
+  { name: '住友電気工業株式会社', industry: '自動車・機械・部品', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', 'ポートフォリオ'], target: 'CHRO', note: '住友G、電線・自動車部品グローバル',
+    tpl: 'auto_parts', why_now: '住友グループの中核として、電線・自動車部品・産業素材のグローバル展開を加速中。', hook: '住友グループ中核企業のグローバル人材データ統合について' },
+  { name: '住友ゴム工業株式会社', industry: '自動車・機械・部品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: '住友G、ダンロップ、グローバル',
+    tpl: 'auto_parts', why_now: 'ダンロップブランドのグローバル展開とEV対応が継続テーマ。', hook: 'グローバルタイヤメーカーの人材戦略について' },
+  { name: '住友理工株式会社', industry: '自動車・機械・部品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO', note: '住友G、ゴム部品、CASE対応',
+    tpl: 'auto_parts', why_now: '自動車用ゴム部品としてCASE対応を加速。事業ポートフォリオ転換期。', hook: 'CASE対応期における自動車用ゴム部品事業の人材戦略について' },
+  { name: 'ダイキョーニシカワ株式会社', industry: '自動車・機械・部品', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: 'マツダ系、自動車内装樹脂部品',
+    tpl: 'auto_parts', why_now: 'マツダ系の自動車内装樹脂部品メーカー、CASE対応が課題。', hook: '自動車内装部品メーカーの人材戦略について' },
+  { name: '株式会社ダイヘン', industry: '自動車・機械・部品', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '溶接機・ロボット、グローバル拡大中',
+    tpl: 'auto_parts', why_now: '溶接機・ロボット・電力機器のグローバル展開加速中。', hook: '溶接機・ロボット事業のグローバル人材戦略について' },
+  { name: '株式会社タダノ', industry: '自動車・機械・部品', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: 'クレーン世界2位、グローバル',
+    tpl: 'auto_parts', why_now: 'クレーン世界第2位、海外売上比率高。グローバル人材統合が継続課題。', hook: 'グローバルクレーンメーカーの人材データ統合について' },
+  { name: '株式会社キッツ', industry: '自動車・機械・部品', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ'], target: 'CHRO', note: 'バルブ国内最大手、海外展開',
+    tpl: 'auto_parts', why_now: 'バルブ国内最大手、海外展開も加速中。', hook: 'バルブ業界のグローバル人材戦略について' },
+  { name: '新明和工業株式会社', industry: '自動車・機械・部品', priority: 'B', scale: 'M', listed: true, global: false, pitches: ['後継'], target: 'CHRO', note: '航空機・特装車',
+    tpl: 'heavy_industry', why_now: '航空機・特装車の中堅メーカー。技術者のサクセッションが課題。', hook: '航空機・特装車メーカーの技術者サクセッションについて' },
+  { name: '村田機械株式会社', industry: '自動車・機械・部品', priority: 'B', scale: 'L', listed: false, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '繊維機械・物流システム、未上場大手（開示プレッシャー弱）',
+    tpl: 'heavy_industry', why_now: '未上場のため開示圧力は弱いが、繊維機械・物流システム・FA等多事業のグローバル展開で人材ポートフォリオ管理が課題。', hook: 'グローバル機械メーカーの多事業人材ポートフォリオ管理について' },
+  { name: '株式会社エー・アンド・デイ', industry: '自動車・機械・部品', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ'], target: 'CHRO', note: '計測機器メーカー',
+    tpl: 'electronics', why_now: '計測機器のグローバル展開とエンジニア人材確保が課題。', hook: '計測機器メーカーのエンジニア人材戦略について' },
+  { name: '日本精機株式会社', industry: '自動車・機械・部品', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO', note: '自動車計器、CASE対応',
+    tpl: 'auto_parts', why_now: '自動車計器・HUDのCASE対応進行中。', hook: '自動車計器メーカーのCASE対応人材戦略について' },
+  { name: '千代田インテグレ株式会社', industry: '自動車・機械・部品', priority: 'C', scale: 'S', listed: true, global: true, pitches: ['ポートフォリオ'], target: 'CHRO', note: '精密成形品、規模やや小',
+    tpl: 'auto_parts', why_now: '精密成形品メーカー、規模はやや小さいがグローバル展開あり。', hook: '精密成形品メーカーのグローバル人材戦略について' },
+
+  // 鉄鋼・金属
+  { name: '丸一鋼管株式会社', industry: '鉄鋼・金属', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['後継', 'ポートフォリオ'], target: 'CHRO', note: '鋼管、グローバル展開、海外売上比率高',
+    tpl: 'steel_metal', why_now: '鋼管メーカー、海外売上比率6割超でグローバル人材統合が継続課題。', hook: 'グローバル鋼管メーカーの海外人材データ統合について' },
+  { name: '山陽特殊製鋼株式会社', industry: '鉄鋼・金属', priority: 'B', scale: 'M', listed: true, global: false, pitches: ['後継'], target: 'CHRO', note: '特殊鋼、技能伝承課題',
+    tpl: 'steel_metal', why_now: '特殊鋼メーカー、ベテラン技能者の高齢化と技能伝承が最重要課題。', hook: '特殊鋼メーカーの技能伝承可視化について' },
+  { name: '共英製鋼株式会社', industry: '鉄鋼・金属', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '電炉鉄鋼、海外比率高',
+    tpl: 'steel_metal', why_now: '電炉鉄鋼の代表企業、海外売上比率高でグローバル人材戦略が重要。', hook: '電炉鉄鋼業界のグローバル人材戦略について' },
+
+  // 電機・半導体・精密
+  { name: 'ルネサスエレクトロニクス株式会社', industry: '電機・半導体・精密', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['開示', '中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '半導体、経営変革中、人事制度刷新の旬',
+    tpl: 'electronics', why_now: '半導体業界の構造変化と、経営変革（柴田氏体制）下での人事制度刷新進行中。グローバル人材戦略・報酬戦略が経営アジェンダ。', hook: '半導体業界の経営変革下における人事制度刷新と、グローバル人材戦略について' },
+  { name: '浜松ホトニクス株式会社', industry: '電機・半導体・精密', priority: 'A', scale: 'M', listed: true, global: true, pitches: ['後継', 'ポートフォリオ'], target: 'CHRO', note: '光学技術世界一、研究開発型、技術伝承',
+    tpl: 'electronics', why_now: 'ノーベル賞貢献企業として有名な光学技術世界一企業。研究開発型で技術者サクセッションが最重要。', hook: '研究開発型企業の技術者サクセッションとキャリアパス可視化について' },
+  { name: 'キヤノン株式会社', industry: '電機・半導体・精密', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['中計', 'ポートフォリオ', '後継'], target: 'CHRO/経営企画', note: '事業転換、医療・産業機器強化',
+    tpl: 'electronics', why_now: 'カメラ事業の構造変化下、医療・産業機器・半導体露光装置の事業転換進行中。人材ポートフォリオ転換が重要。', hook: '事業転換期における人材ポートフォリオ転換とグローバル人材戦略について' },
+  { name: 'アンリツ株式会社', industry: '電機・半導体・精密', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '通信計測機器、グローバル',
+    tpl: 'electronics', why_now: '通信計測機器のグローバル展開、5G・6G関連需要拡大期。', hook: '通信計測機器メーカーのグローバル人材戦略について' },
+  { name: 'セイコーグループ株式会社', industry: '電機・半導体・精密', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: '時計・電子機器、事業転換中',
+    tpl: 'electronics', why_now: '時計事業の構造変化と、電子機器・システムソリューションへの事業転換期。', hook: '事業転換期における人材ポートフォリオ転換について' },
+  { name: 'キヤノンマーケティングジャパン株式会社', industry: '電機・半導体・精密', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: 'キヤノン販社、サービス転換',
+    tpl: 'electronics', why_now: 'キヤノン販社からITサービス・ソリューション企業への転換進行中。', hook: '販社からソリューション企業への転換における人材戦略について' },
+
+  // 消費財・食品
+  { name: '花王株式会社', industry: '消費財・食品', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', '中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '人的資本KPI整備リード企業、ジョブ型先進。最高ターゲット',
+    tpl: 'fmcg_food', why_now: '人的資本経営のリード企業として有名。ジョブ型導入・人的資本KPI整備で日本企業のベンチマーク。さらなる高度化のニーズあり。', hook: '人的資本KPI整備リード企業として、さらなる高度化と他社ベンチマーク事例について' },
+  { name: 'ハウス食品グループ本社株式会社', industry: '消費財・食品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '食品大手、海外比率向上中',
+    tpl: 'fmcg_food', why_now: '海外比率向上中（特に米国・中国）。グローバル人材戦略が継続テーマ。', hook: '食品グローバル展開期における人材戦略について' },
+  { name: '株式会社ヤクルト本社', industry: '消費財・食品', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['開示', 'ポートフォリオ'], target: 'CHRO', note: '海外比率高、ヤクルトレディ管理が独特',
+    tpl: 'fmcg_food', why_now: '海外売上比率5割超、ヤクルトレディという独自の販売チャネル管理あり。グローバル人材＋独自チャネル人材の二重管理が特徴。', hook: 'グローバル展開とヤクルトレディチャネルの人材戦略について' },
+  { name: '株式会社ニチレイ', industry: '消費財・食品', priority: 'B', scale: 'L', listed: true, global: true, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: '冷凍食品、物流、グローバル',
+    tpl: 'fmcg_food', why_now: '冷凍食品・低温物流のグローバル展開期、人材戦略が重要。', hook: '冷凍食品・低温物流のグローバル人材戦略について' },
+  { name: 'プリマハム株式会社', industry: '消費財・食品', priority: 'B', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '食肉加工',
+    tpl: 'fmcg_food', why_now: '食肉加工業界の人材ポートフォリオ最適化が課題。', hook: '食肉加工業界の人材戦略について' },
+  { name: '丸大食品株式会社', industry: '消費財・食品', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '食肉加工',
+    tpl: 'fmcg_food', why_now: '食肉加工業界の人材戦略が課題。', hook: '食肉加工業界の人材戦略について' },
+  { name: '昭和産業株式会社', industry: '消費財・食品', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['後継'], target: 'CHRO', note: '製粉・食用油',
+    tpl: 'fmcg_food', why_now: '製粉・食用油業界、後継者育成と事業承継が課題。', hook: '食品中堅メーカーの後継者育成について' },
+
+  // 小売・流通
+  { name: 'イオン株式会社', industry: '小売・流通', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '超巨大グループ、国内外多数の子会社、連結ガバナンス課題ど真ん中',
+    tpl: 'retail', why_now: '国内外300社超のグループ企業、人事システム・データもバラバラ。連結ガバナンス強化と人的資本開示の精度向上が経営最重要課題。', hook: '300社超のグループ企業の人事データ連結統合と、人的資本開示の精度向上について' },
+  { name: '株式会社ツルハホールディングス', industry: '小売・流通', priority: 'A', scale: 'L', listed: true, global: false, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO/事業役員', note: 'ドラッグストア再編、店舗網拡大、店舗別生産性',
+    tpl: 'retail', why_now: 'ドラッグストア業界の再編期。イオン・ウエルシア・ツルハの統合議論進行中。店舗別生産性可視化と統合後人材ポートフォリオ管理が重要。', hook: 'ドラッグストア業界再編期における店舗別生産性と統合後人材戦略について' },
+  { name: '株式会社ビックカメラ', industry: '小売・流通', priority: 'A', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '中計'], target: 'CHRO/経営企画', note: '家電量販、グループ会社多数、連結人材分析',
+    tpl: 'retail', why_now: '家電量販業界の構造変化期。コジマ・ソフマップ等グループ会社の人材データ統合と店舗別生産性最適化が重要。', hook: 'グループ会社含む店舗別生産性可視化と人材ポートフォリオについて' },
+  { name: 'イオンモール株式会社', industry: '小売・流通', priority: 'B', scale: 'L', listed: true, global: true, pitches: ['ポートフォリオ'], target: 'CHRO', note: '商業施設運営、海外展開',
+    tpl: 'retail', why_now: '商業施設運営、海外展開（中国・ベトナム等）あり。', hook: '商業施設運営のグローバル人材戦略について' },
+  { name: '株式会社ケーズホールディングス', industry: '小売・流通', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: '家電量販',
+    tpl: 'retail', why_now: '家電量販業界の構造変化期。', hook: '家電量販業界の店舗別生産性について' },
+  { name: '株式会社ネクステージ', industry: '小売・流通', priority: 'B', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '中古車販売、急成長中、人員拡大',
+    tpl: 'retail', why_now: '中古車販売の急成長企業。M&A・店舗拡大に伴う人員急拡大で、店舗別生産性管理が重要。', hook: '急成長企業の店舗別生産性と人員拡大期の人材戦略について' },
+  { name: '株式会社コジマ', industry: '小売・流通', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: 'ビックカメラ傘下、家電',
+    tpl: 'retail', why_now: 'ビックカメラ傘下、グループ統合の文脈。', hook: '家電量販グループ統合の人材戦略について' },
+  { name: '株式会社平和堂', industry: '小売・流通', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '滋賀地盤スーパー',
+    tpl: 'retail', why_now: '地域スーパーの店舗別生産性が課題。', hook: '地域スーパーの店舗別生産性について' },
+  { name: '株式会社イズミ', industry: '小売・流通', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '中四国スーパー（ゆめタウン）',
+    tpl: 'retail', why_now: '中四国地域スーパーの店舗別生産性が課題。', hook: '地域スーパーの店舗別生産性について' },
+  { name: '株式会社あらた', industry: '小売・流通', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '日用品卸',
+    tpl: 'retail', why_now: '日用品卸業界の物流人材・営業人材の最適配置が課題。', hook: '日用品卸業界の人材ポートフォリオについて' },
+
+  // 運輸・物流・交通
+  { name: '川崎汽船株式会社', industry: '運輸・物流・交通', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['中計', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '海運大手、市況変動激しい、グローバル',
+    tpl: 'logistics', why_now: '海運業界の市況変動激しく、海外人材含めた配置最適化と、ONE（コンテナ船統合事業）含めたグループ人材戦略が継続課題。', hook: '海運業界のグローバル人材戦略とONE連携について' },
+  { name: '名古屋鉄道株式会社', industry: '運輸・物流・交通', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '名鉄、グループ会社多数',
+    tpl: 'logistics', why_now: '名鉄グループの多事業（鉄道・バス・流通・不動産等）の人材ポートフォリオ管理と、2024年問題対応が課題。', hook: '名鉄グループの人材ポートフォリオと2024年問題対応について' },
+  { name: '丸全昭和運輸株式会社', industry: '運輸・物流・交通', priority: 'B', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: '陸運、2024年問題対応',
+    tpl: 'logistics', why_now: '陸運業界の2024年問題対応。ドライバー人材確保と労働時間最適化が重要。', hook: '陸運業界の2024年問題対応とドライバー人材戦略について' },
+  { name: '日本コムシス株式会社', industry: '運輸・物流・交通', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '通信工事、技術者多数、属人化解消',
+    tpl: 'logistics', why_now: '通信工事業界、技術者の属人化解消とサクセッションが課題。', hook: '通信工事業界の技術者人材戦略について' },
+  { name: '神奈川中央交通株式会社', industry: '運輸・物流・交通', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '神奈中、バス、2024年問題',
+    tpl: 'logistics', why_now: 'バス業界の2024年問題対応、運転手不足が深刻。', hook: 'バス業界の運転手不足と2024年問題対応について' },
+
+  // エネルギー・インフラ
+  { name: '大阪ガス株式会社', industry: 'エネルギー・インフラ', priority: 'A', scale: 'XL', listed: true, global: true, pitches: ['開示', '中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '都市ガス大手、脱炭素人材、グループ多数',
+    tpl: 'energy', why_now: '脱炭素転換期で水素・アンモニア事業強化中。グループ100社超の人材ポートフォリオ統合と、脱炭素人材へのリスキリングが経営課題。', hook: 'エネルギー転換期における脱炭素人材リスキリングとグループ人材統合について' },
+  { name: '電源開発株式会社', industry: 'エネルギー・インフラ', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['後継', 'ポートフォリオ'], target: 'CHRO', note: 'J-POWER、脱炭素転換、技能伝承課題',
+    tpl: 'energy', why_now: '電力卸最大手、脱炭素転換期。火力発電の技能者高齢化と、再エネ・水素人材へのリスキリングが急務。', hook: '電力業界の脱炭素転換と技能伝承・リスキリングについて' },
+  { name: 'オルガノ株式会社', industry: 'エネルギー・インフラ', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: '水処理プラント、半導体向けで成長中',
+    tpl: 'plant_const', why_now: '半導体向け水処理プラントで急成長中。エンジニア人材確保が最重要。', hook: '半導体向け水処理プラントのエンジニア人材戦略について' },
+  { name: '伊藤忠エネクス株式会社', industry: 'エネルギー・インフラ', priority: 'B', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: '伊藤忠系石油卸',
+    tpl: 'energy', why_now: '石油卸業界の構造変化、伊藤忠グループ連動の人材戦略が重要。', hook: '伊藤忠グループ連携の人材戦略について' },
+  { name: '東テク株式会社', industry: 'エネルギー・インフラ', priority: 'C', scale: 'M', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '空調設備工事',
+    tpl: 'plant_const', why_now: '空調設備工事業界の人材ポートフォリオが課題。', hook: '空調設備工事業界の人材戦略について' },
+
+  // エンタメ・サービス
+  { name: '株式会社バンダイナムコホールディングス', industry: 'エンタメ・サービス', priority: 'A', scale: 'L', listed: true, global: true, pitches: ['開示', '中計', '後継', 'ポートフォリオ'], target: 'CHRO/経営企画', note: '超大手エンタメ、IP戦略、組織変革進行中',
+    tpl: 'entertainment', why_now: 'IP戦略中心の組織変革進行中。エンタメ企業のクリエイター人材定着と、IP別人材アサイン最適化が経営課題。', hook: 'IP戦略下におけるクリエイター人材定着と組織最適化について' },
+  { name: 'セガサミーホールディングス株式会社', industry: 'エンタメ・サービス', priority: 'B', scale: 'L', listed: true, global: true, pitches: ['ポートフォリオ', '中計'], target: 'CHRO', note: 'エンタメ、ゲーム・パチンコ',
+    tpl: 'entertainment', why_now: 'ゲーム・パチンコの多事業ポートフォリオ、グローバル展開も加速中。', hook: 'エンタメ多事業ポートフォリオの人材戦略について' },
+  { name: '東宝株式会社', industry: 'エンタメ・サービス', priority: 'B', scale: 'M', listed: true, global: true, pitches: ['後継', 'ポートフォリオ'], target: 'CHRO', note: '映画・演劇、海外展開',
+    tpl: 'entertainment', why_now: '映画・演劇のグローバル展開、IP戦略強化期。', hook: '映画・演劇のグローバル展開と人材戦略について' },
+  { name: '株式会社河合楽器製作所', industry: 'エンタメ・サービス', priority: 'C', scale: 'M', listed: true, global: true, pitches: ['後継'], target: 'CHRO', note: 'ピアノ、技能伝承',
+    tpl: 'steel_metal', why_now: 'ピアノ製造の技能伝承が長期課題。', hook: 'ピアノ製造業の技能伝承について' },
+
+  // 人材・サービス
+  { name: '株式会社テクノプロ', industry: '人材・サービス', priority: 'B', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ', '後継'], target: 'CHRO', note: 'IT人材派遣、技術者2万人超、配置可視化需要大',
+    tpl: 'staffing', why_now: 'IT人材派遣最大手級、技術者2万人超のスキル可視化と案件マッチング最適化が事業の根幹課題。', hook: 'IT人材派遣業界の技術者スキル可視化と案件マッチング最適化について' },
+  { name: '株式会社パソナグループ', industry: '人材・サービス', priority: 'C', scale: 'L', listed: true, global: false, pitches: ['ポートフォリオ'], target: 'CHRO', note: '人材会社（同業）。自社管理需要は限定的、競合認識リスク',
+    tpl: 'staffing', why_now: '人材会社のため、自社人材データ管理の需要は限定的。競合認識リスクあり。', hook: '※基本的に営業優先度低（同業競合認識リスク）' }
+];
+
+const PRIORITY_ORDER = { A: 0, B: 1, C: 2, D: 3 };
+const PRIORITY_COLOR = { A: 'priority-A', B: 'priority-B', C: 'priority-C', D: 'priority-D' };
+
+let activeFilters = { priorities: [], industries: [], search: '' };
+
+function init() {
+  updateStats();
+  buildHighlight();
+  buildIndustryBreakdown();
+  buildFilters();
+  render();
+}
+
+function updateStats() {
+  const counts = { A: 0, B: 0, C: 0, D: 0 };
+  companies.forEach(c => counts[c.priority]++);
+  document.getElementById('count-total').textContent = companies.length;
+  document.getElementById('count-A').textContent = counts.A;
+  document.getElementById('count-B').textContent = counts.B;
+  document.getElementById('count-C').textContent = counts.C;
+  document.getElementById('count-D').textContent = counts.D;
+}
+
+function buildHighlight() {
+  const aCompanies = companies.filter(c => c.priority === 'A').sort((a, b) => a.industry.localeCompare(b.industry));
+  document.getElementById('highlight-list').innerHTML = aCompanies.map(c => `
+    <div class="bg-white border border-teal-200 rounded-lg p-2 text-xs hover:border-teal-500 transition cursor-pointer" onclick="filterByName('${c.name.replace(/'/g, "\\'")}')">
+      <div class="font-bold text-slate-900 leading-tight">${c.name.replace('株式会社', '').trim()}</div>
+      <div class="text-slate-500 mt-1">${c.industry}</div>
+    </div>
+  `).join('');
+}
+
+function buildIndustryBreakdown() {
+  const industries = {};
+  companies.forEach(c => {
+    if (!industries[c.industry]) industries[c.industry] = { A: 0, B: 0, C: 0, D: 0, total: 0 };
+    industries[c.industry][c.priority]++;
+    industries[c.industry].total++;
+  });
+  const sorted = Object.entries(industries).sort((a, b) => b[1].total - a[1].total);
+  document.getElementById('industry-breakdown').innerHTML = sorted.map(([ind, counts]) => `
+    <div class="flex items-center gap-3 py-2 border-b border-slate-100 last:border-0">
+      <div class="flex-1 text-sm font-medium text-slate-700">${ind}</div>
+      <div class="text-xs text-slate-500 mono-font">${counts.total}社</div>
+      <div class="flex gap-1">
+        ${counts.A > 0 ? `<span class="chip priority-A">A:${counts.A}</span>` : ''}
+        ${counts.B > 0 ? `<span class="chip priority-B">B:${counts.B}</span>` : ''}
+        ${counts.C > 0 ? `<span class="chip priority-C">C:${counts.C}</span>` : ''}
+        ${counts.D > 0 ? `<span class="chip priority-D">D:${counts.D}</span>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function buildFilters() {
+  const pContainer = document.getElementById('priority-filters');
+  ['A', 'B', 'C', 'D'].forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn'; btn.textContent = `優先度 ${p}`; btn.dataset.priority = p;
+    btn.onclick = () => togglePriority(p, btn); pContainer.appendChild(btn);
+  });
+  const iContainer = document.getElementById('industry-filters');
+  const industries = [...new Set(companies.map(c => c.industry))].sort();
+  industries.forEach(ind => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn'; btn.textContent = ind; btn.dataset.industry = ind;
+    btn.onclick = () => toggleIndustry(ind, btn); iContainer.appendChild(btn);
+  });
+  document.getElementById('search').addEventListener('input', e => { activeFilters.search = e.target.value.toLowerCase(); render(); });
+  document.getElementById('reset-btn').onclick = () => {
+    activeFilters = { priorities: [], industries: [], search: '' };
+    document.getElementById('search').value = '';
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    render();
+  };
+}
+
+function togglePriority(p, btn) {
+  if (activeFilters.priorities.includes(p)) { activeFilters.priorities = activeFilters.priorities.filter(x => x !== p); btn.classList.remove('active'); }
+  else { activeFilters.priorities.push(p); btn.classList.add('active'); }
+  render();
+}
+
+function toggleIndustry(ind, btn) {
+  if (activeFilters.industries.includes(ind)) { activeFilters.industries = activeFilters.industries.filter(x => x !== ind); btn.classList.remove('active'); }
+  else { activeFilters.industries.push(ind); btn.classList.add('active'); }
+  render();
+}
+
+function filterByName(name) {
+  document.getElementById('search').value = name.replace('株式会社', '').trim();
+  activeFilters.search = name.replace('株式会社', '').toLowerCase().trim();
+  render();
+  document.getElementById('cards').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function render() {
+  let filtered = companies.filter(c => {
+    const matchSearch = !activeFilters.search || c.name.toLowerCase().includes(activeFilters.search);
+    const matchPriority = activeFilters.priorities.length === 0 || activeFilters.priorities.includes(c.priority);
+    const matchIndustry = activeFilters.industries.length === 0 || activeFilters.industries.includes(c.industry);
+    return matchSearch && matchPriority && matchIndustry;
+  });
+  filtered.sort((a, b) =>
+    PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority] ||
+    a.industry.localeCompare(b.industry) || a.name.localeCompare(b.name)
+  );
+  document.getElementById('result-count').textContent = filtered.length;
+  document.getElementById('cards').innerHTML = filtered.map(createCard).join('');
+}
+
+function createCard(c) {
+  const pitchChips = c.pitches.map(p => `<span class="chip chip-pitch">${p}</span>`).join('');
+  const metaChips = `
+    ${c.listed ? '<span class="chip chip-meta">プライム</span>' : '<span class="chip chip-meta" style="opacity:0.6">未上場</span>'}
+    ${c.global ? '<span class="chip chip-meta">グローバル</span>' : ''}
+    <span class="chip chip-meta">${c.scale}</span>
+  `;
+  const idx = companies.indexOf(c);
+  return `
+    <div class="card priority-card-${c.priority}">
+      <div class="flex justify-between items-start mb-3">
+        <span class="chip ${PRIORITY_COLOR[c.priority]}" style="font-weight:700;">優先度 ${c.priority}</span>
+        <div class="flex gap-1 flex-wrap justify-end">${metaChips}</div>
+      </div>
+      <h3 class="display-font text-base mb-1 leading-tight">${c.name}</h3>
+      <div class="text-xs text-slate-500 mb-3">${c.industry}</div>
+      <div class="border-t border-slate-100 pt-3">
+        <div class="text-xs text-slate-400 mb-1.5 mono-font uppercase tracking-wider">推奨切り口</div>
+        <div class="flex flex-wrap gap-1 mb-3">${pitchChips}</div>
+        <div class="text-xs text-slate-400 mb-1 mono-font uppercase tracking-wider">推奨先</div>
+        <div class="text-sm font-medium text-slate-800 mb-2">${c.target}</div>
+        <p class="text-xs text-slate-600 leading-relaxed mb-2">${c.note}</p>
+        <button class="script-btn" onclick="openModal(${idx})">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM4.5 4.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1zm0 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1zm0 2h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/></svg>
+          📋 詳細スクリプトを開く
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+// ============= モーダル =============
+function openModal(idx) {
+  const c = companies[idx];
+  const tpl = INDUSTRY_TEMPLATES[c.tpl] || INDUSTRY_TEMPLATES['fmcg_food'];
+  const shortName = c.name.replace('株式会社', '').replace('ホールディングス', 'HD').trim();
+  const honorific = c.name.endsWith('銀行') ? '御行' : '御社';
+
+  // 事前メール
+  const email = `件名：【人的資本×中計】${c.hook}｜パナリット
+
+${c.name}
+${c.target}様
+
+突然のご連絡失礼いたします。
+パナリット株式会社の◯◯と申します。
+
+弊社は、Google米国本社で全社人事制度改革をリードしていた
+小川（現CEO）が創業した、人事データ統合・分析の基盤を
+提供しております。大手メガバンクをはじめ、T&Dホール
+ディングス、JT、JTB、PERSOL、明治HDなど 100社以上に
+ご利用いただいております。
+
+${c.why_now}
+
+${shortName}様におかれましては、特に下記4点について、
+他社の取り組み事例を踏まえてご共有が可能です。
+
+ ・${tpl.common_4points[0]}
+ ・${tpl.common_4points[1]}
+ ・${tpl.common_4points[2]}
+ ・${tpl.common_4points[3]}
+
+なお、既に基幹系人事システムやWorkday・SuccessFactors等を
+ご利用の企業様からも、本テーマで多くお問い合わせを
+いただいております。弊社は既存システムを置き換えず、
+データ統合層として上に乗る設計のため追加投資を最小化できます。
+
+5分の情報共有でも結構でございます。
+明日改めてお電話差し上げますので、ご検討のほど
+よろしくお願い申し上げます。
+
+----
+パナリット株式会社  ◯◯ ◯◯
+〒108-6022 東京都港区港南2-15-1 品川インターシティA棟22階`;
+
+  const html = `
+    <div class="modal-header">
+      <button class="close-btn" onclick="closeModal()">×</button>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="chip ${PRIORITY_COLOR[c.priority]}">優先度 ${c.priority}</span>
+        <span class="chip chip-meta">${c.industry}</span>
+        <span class="chip chip-meta">${c.scale}</span>
+        ${c.listed ? '<span class="chip chip-meta">プライム</span>' : ''}
+        ${c.global ? '<span class="chip chip-meta">グローバル</span>' : ''}
+      </div>
+      <h2 class="display-font text-2xl mb-1">${c.name}</h2>
+      <p class="text-sm text-slate-600">推奨アプローチ先：<strong>${c.target}</strong></p>
+    </div>
+
+    <div class="modal-section">
+      <div class="why-now-banner">
+        <div class="text-xs font-bold text-amber-800 mb-1 uppercase tracking-wider mono-font">⚡ Why Now（今攻めるべき理由）</div>
+        <p class="text-sm text-slate-800 leading-relaxed">${c.why_now}</p>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="section-label">📋 想定される業界課題</div>
+      <ul class="space-y-1 text-sm text-slate-700">
+        ${tpl.common_challenges.map(ch => `<li>・${ch}</li>`).join('')}
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <div class="section-label">📧 事前メール（送付テンプレ）</div>
+      <div class="email-block">
+        <button class="copy-btn" onclick="copyEmail(this, ${idx})">📋 コピー</button>
+        ${email.replace(/</g, '&lt;')}
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="section-label">🔐 秘書室突破トーク</div>
+      <div class="pitch-block">
+        <strong>① オープニング：</strong><br>
+        「いつもお世話になっております。パナリット株式会社の◯◯と申します。${c.target}様への、 <strong>${c.hook}</strong> のお願いでご連絡を差し上げました。」
+      </div>
+      <div class="pitch-block">
+        <strong>② 用件説明（1行・最重要）：</strong><br>
+        「${c.target}様がご担当の <strong>${c.pitches.slice(0,2).join('・')}</strong> について、 <strong>大手メガバンクや100社以上の他社事例</strong> を踏まえた情報交換のお願いでございます。5分ほどで結構ですので、お取り次ぎいただけますと幸いです。」
+      </div>
+      <div class="pitch-block">
+        <strong>③ 「人事部にお繋ぎします」と言われたら：</strong><br>
+        「ありがとうございます。 <strong>人事部の皆様とも別途やり取りはさせていただきますが</strong> 、本件は <strong>中計および人的資本など経営判断領域</strong> の件のため、${c.target}様にご認識いただきたい内容でございます。」
+      </div>
+      <div class="pitch-block">
+        <strong>④ 折り返し依頼時：</strong><br>
+        「大変ありがたいです。 <strong>5分のご共有だけでも結構</strong> とお伝えください。概要を秘書様宛にメールでもお送り可能ですので、ご負担軽減のためお申し付けくださいませ。 <strong>お名前を伺ってもよろしいでしょうか</strong> 。」
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="section-label">🎤 役員本人ピッチ（110秒・一気通貫）</div>
+
+      <div class="pitch-block">
+        <span class="pitch-time">0-15秒</span><strong>自己紹介＋会社の権威付け</strong><br>
+        「お忙しいところ恐れ入ります。パナリット株式会社の◯◯と申します。弊社は <strong>Google米国本社で人事制度改革をリードしていた小川</strong> が立ち上げた、人事データ基盤の会社でございます。」
+      </div>
+
+      <div class="pitch-block">
+        <span class="pitch-time">15-40秒</span><strong>用件＝${shortName}様の経営課題への接続</strong><br>
+        「本日は、 <strong>${c.why_now}</strong>  特に${c.target}様がご担当の領域でご支援できる可能性があると考えご連絡を差し上げました。」
+      </div>
+
+      <div class="pitch-block">
+        <span class="pitch-time">40-60秒</span><strong>先潰し（既存ツール前提のリフレーミング）</strong><br>
+        「${tpl.sengashi} <strong>パナリットは既存システムを置き換えず、その上に乗っかってデータを統合し、経営判断に直結するKPIに変換する</strong> 役割を担います。」
+      </div>
+
+      <div class="pitch-block">
+        <span class="pitch-time">60-90秒</span><strong>4論点（${shortName}様向けカスタマイズ）</strong><br>
+        「具体的には、 <strong>大手メガバンクを含む100社以上</strong> で、下記4点について経営層と議論しております。<br><br>
+        1点目、 <strong>${tpl.common_4points[0]}</strong><br>
+        2点目、 <strong>${tpl.common_4points[1]}</strong><br>
+        3点目、 <strong>${tpl.common_4points[2]}</strong><br>
+        4点目、 <strong>${tpl.common_4points[3]}</strong>」
+      </div>
+
+      <div class="pitch-block">
+        <span class="pitch-time">90-110秒</span><strong>アポ依頼</strong><br>
+        「もしご関心をお持ちいただけましたら、 <strong>30分ほど、弊社CEO小川と私で直接ご訪問</strong> させていただきたく存じます。来週ですと、 <strong>△曜日△時、もしくは△曜日△時</strong> はいかがでしょうか。」
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="section-label">💬 想定問答（簡潔回答・深掘りは商談で）</div>
+      ${COMMON_QA.map(qa => `
+        <details class="qa-item">
+          <summary>${qa.q}</summary>
+          <div class="qa-answer">${qa.a}</div>
+        </details>
+      `).join('')}
+    </div>
+
+    <div class="modal-section">
+      <div class="section-label">✅ 架電前チェックリスト</div>
+      <div class="checklist-item"><span><strong>${c.name}</strong>の最新中期経営計画・有報を1回読む</span></div>
+      <div class="checklist-item"><span>具体的な数値目標（売上・人員・人時生産性等）を架電前に確認・スクリプトに反映</span></div>
+      <div class="checklist-item"><span>LinkedInで${c.target}クラスの方の発信を「いいね」のみで認知獲得</span></div>
+      <div class="checklist-item"><span>事前メールを送付（上記テンプレを${shortName}様向けに微調整）</span></div>
+      <div class="checklist-item"><span>架電中、必ず冒頭で「最新中計について」と言う（タイミングフック）</span></div>
+      <div class="checklist-item"><span>「人事施策」ではなく「中計の根幹」「経営判断領域」と表現</span></div>
+      <div class="checklist-item"><span>秘書名をログ化（再架電で「前回ご対応の◯◯様」と使う）</span></div>
+      <div class="checklist-item"><span>ヒアリングしない（アポ獲得に集中）</span></div>
+      <div class="checklist-item"><span>架電後24時間以内に秘書宛フォローメール送付</span></div>
+      ${c.priority === 'A' ? `<div class="checklist-item"><span><strong>A級企業のため、アポ獲得時はCEO小川同行を社内調整</strong></span></div>` : ''}
+    </div>
+
+    <div class="modal-section" style="background: var(--slate-50);">
+      <div class="text-xs text-slate-500">
+        <p>※このスクリプトは公開情報・業界知識ベースの推定です。実際の架電前には <strong>${c.name}の最新IR・中計・有報を必ず確認</strong> し、具体的な数値や直近のニュースを反映してください。</p>
+        <p>※特に<strong>中計発表直後（前後3ヶ月）</strong>は最強のフックになります。${c.name}のIR発表タイミングを確認の上、架電タイミングを最適化してください。</p>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function copyEmail(btn, idx) {
+  const c = companies[idx];
+  const tpl = INDUSTRY_TEMPLATES[c.tpl] || INDUSTRY_TEMPLATES['fmcg_food'];
+  const shortName = c.name.replace('株式会社', '').replace('ホールディングス', 'HD').trim();
+
+  const email = `件名：【人的資本×中計】${c.hook}｜パナリット
+
+${c.name}
+${c.target}様
+
+突然のご連絡失礼いたします。
+パナリット株式会社の◯◯と申します。
+
+弊社は、Google米国本社で全社人事制度改革をリードしていた
+小川（現CEO）が創業した、人事データ統合・分析の基盤を
+提供しております。大手メガバンクをはじめ、T&Dホール
+ディングス、JT、JTB、PERSOL、明治HDなど 100社以上に
+ご利用いただいております。
+
+${c.why_now}
+
+${shortName}様におかれましては、特に下記4点について、
+他社の取り組み事例を踏まえてご共有が可能です。
+
+ ・${tpl.common_4points[0]}
+ ・${tpl.common_4points[1]}
+ ・${tpl.common_4points[2]}
+ ・${tpl.common_4points[3]}
+
+なお、既に基幹系人事システムやWorkday・SuccessFactors等を
+ご利用の企業様からも、本テーマで多くお問い合わせを
+いただいております。弊社は既存システムを置き換えず、
+データ統合層として上に乗る設計のため追加投資を最小化できます。
+
+5分の情報共有でも結構でございます。
+明日改めてお電話差し上げますので、ご検討のほど
+よろしくお願い申し上げます。
+
+----
+パナリット株式会社  ◯◯ ◯◯
+〒108-6022 東京都港区港南2-15-1 品川インターシティA棟22階`;
+
+  navigator.clipboard.writeText(email).then(() => {
+    btn.textContent = '✓ コピー済み';
+    btn.style.background = 'var(--teal-500)';
+    setTimeout(() => {
+      btn.textContent = '📋 コピー';
+      btn.style.background = 'rgba(255,255,255,0.1)';
+    }, 2000);
+  });
+}
+
+// ESCキーで閉じる
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ============= v3: MDファイル読み込み・表示機能 =============
+const MD_FILE_MAP = {
+  '野村ホールディングス株式会社': 'panalyt_野村ホールディングス.md',
+  '東京センチュリー株式会社': 'panalyt_東京センチュリー.md',
+  '富士フイルムホールディングス株式会社': 'panalyt_富士フイルムHD.md',
+  'シスメックス株式会社': 'panalyt_シスメックス.md',
+  '株式会社ツムラ': 'panalyt_ツムラ.md',
+  'ピジョン株式会社': 'panalyt_ピジョン.md',
+  '東レ株式会社': 'panalyt_東レ.md',
+  '信越化学工業株式会社': 'panalyt_信越化学.md',
+  '積水化学工業株式会社': 'panalyt_積水化学.md',
+  '株式会社カネカ': 'panalyt_カネカ.md',
+  '古河電気工業株式会社': 'panalyt_古河電工.md',
+  '日揮ホールディングス株式会社': 'panalyt_日揮HD.md',
+  '株式会社アイシン': 'panalyt_アイシン.md',
+  '株式会社豊田自動織機': 'panalyt_豊田自動織機.md',
+  '豊田合成株式会社': 'panalyt_豊田合成.md',
+  '愛三工業株式会社': 'panalyt_愛三工業.md',
+  '株式会社エクセディ': 'panalyt_エクセディ.md',
+  '株式会社ミツバ': 'panalyt_ミツバ.md',
+  '川崎重工業株式会社': 'panalyt_川崎重工.md',
+  '株式会社ブリヂストン': 'panalyt_ブリヂストン.md',
+  '住友電気工業株式会社': 'panalyt_住友電工.md',
+  '住友ゴム工業株式会社': 'panalyt_住友ゴム.md',
+  '住友理工株式会社': 'panalyt_住友理工.md',
+  'ルネサスエレクトロニクス株式会社': 'panalyt_ルネサス.md',
+  '浜松ホトニクス株式会社': 'panalyt_浜松ホトニクス.md',
+  'キヤノン株式会社': 'panalyt_キヤノン.md',
+  '花王株式会社': 'panalyt_花王.md',
+  'ハウス食品グループ本社株式会社': 'panalyt_ハウス食品.md',
+  '株式会社ヤクルト本社': 'panalyt_ヤクルト.md',
+  'イオン株式会社': 'panalyt_イオン.md',
+  '株式会社ツルハホールディングス': 'panalyt_ツルハHD.md',
+  '株式会社ビックカメラ': 'panalyt_ビックカメラ.md',
+  '川崎汽船株式会社': 'panalyt_川崎汽船.md',
+  '大阪ガス株式会社': 'panalyt_大阪ガス.md',
+  '電源開発株式会社': 'panalyt_電源開発.md',
+  '株式会社バンダイナムコホールディングス': 'panalyt_バンダイナムコ.md',
+  '株式会社山口フィナンシャルグループ': 'panalyt_山口FG.md',
+  'アコム株式会社': 'panalyt_アコム.md',
+  '株式会社オリエントコーポレーション': 'panalyt_オリコ.md',
+  '芙蓉総合リース株式会社': 'panalyt_芙蓉総合リース.md',
+  '株式会社アインホールディングス': 'panalyt_アインHD.md',
+  '株式会社バイタルケーエスケー・ホールディングス': 'panalyt_バイタルKSK.md',
+  '東洋紡株式会社': 'panalyt_東洋紡.md',
+  '倉敷紡績株式会社': 'panalyt_倉敷紡績.md',
+  'ダイキョーニシカワ株式会社': 'panalyt_ダイキョーニシカワ.md',
+  '株式会社ダイヘン': 'panalyt_ダイヘン.md',
+  '株式会社タダノ': 'panalyt_タダノ.md',
+  '株式会社キッツ': 'panalyt_キッツ.md',
+  '新明和工業株式会社': 'panalyt_新明和工業.md',
+  '村田機械株式会社': 'panalyt_村田機械.md',
+  '株式会社エー・アンド・デイ': 'panalyt_エーアンドデイ.md',
+  '日本精機株式会社': 'panalyt_日本精機.md',
+  '丸一鋼管株式会社': 'panalyt_丸一鋼管.md',
+  '山陽特殊製鋼株式会社': 'panalyt_山陽特殊製鋼.md',
+  '共英製鋼株式会社': 'panalyt_共英製鋼.md',
+  'アンリツ株式会社': 'panalyt_アンリツ.md',
+  'セイコーグループ株式会社': 'panalyt_セイコーグループ.md',
+  'キヤノンマーケティングジャパン株式会社': 'panalyt_キヤノンMJ.md',
+  '株式会社ニチレイ': 'panalyt_ニチレイ.md',
+  'プリマハム株式会社': 'panalyt_プリマハム.md',
+  'イオンモール株式会社': 'panalyt_イオンモール.md',
+  '株式会社ケーズホールディングス': 'panalyt_ケーズHD.md',
+  '株式会社ネクステージ': 'panalyt_ネクステージ.md',
+  '名古屋鉄道株式会社': 'panalyt_名古屋鉄道.md',
+  '丸全昭和運輸株式会社': 'panalyt_丸全昭和運輸.md',
+  '日本コムシス株式会社': 'panalyt_日本コムシス.md',
+  'オルガノ株式会社': 'panalyt_オルガノ.md',
+  '伊藤忠エネクス株式会社': 'panalyt_伊藤忠エネクス.md',
+  'セガサミーホールディングス株式会社': 'panalyt_セガサミー.md',
+  '東宝株式会社': 'panalyt_東宝.md',
+  '株式会社テクノプロ': 'panalyt_テクノプロ.md',
+  '株式会社紀陽銀行': 'panalyt_紀陽銀行.md',
+  '株式会社滋賀銀行': 'panalyt_滋賀銀行.md',
+  '株式会社武蔵野銀行': 'panalyt_武蔵野銀行.md',
+  '大倉工業株式会社': 'panalyt_大倉工業.md',
+  '大日本塗料株式会社': 'panalyt_大日本塗料.md',
+  'ダイナパック株式会社': 'panalyt_ダイナパック.md',
+  '千代田インテグレ株式会社': 'panalyt_千代田インテグレ.md',
+  '株式会社コジマ': 'panalyt_コジマ.md',
+  '株式会社平和堂': 'panalyt_平和堂.md',
+  '株式会社イズミ': 'panalyt_イズミ.md',
+  '株式会社あらた': 'panalyt_あらた.md',
+  '神奈川中央交通株式会社': 'panalyt_神奈川中央交通.md',
+  '東テク株式会社': 'panalyt_東テク.md',
+  '株式会社河合楽器製作所': 'panalyt_河合楽器.md',
+  '丸大食品株式会社': 'panalyt_丸大食品.md',
+  '昭和産業株式会社': 'panalyt_昭和産業.md',
+  '株式会社パソナグループ': 'panalyt_パソナグループ.md',
+  '医療法人和光会': 'panalyt_和光会.md'
+};
+
+// MDファイルを読み込んでモーダルに表示
+async function openMdModal(companyName) {
+  const filename = MD_FILE_MAP[companyName];
+  if (!filename) {
+    alert('MDファイルが見つかりません: ' + companyName);
+    return;
+  }
+
+  const modal = document.getElementById('modal');
+  const content = document.getElementById('modal-content');
+
+  content.innerHTML = `
+    <div class="modal-header" style="position: relative;">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center display-font text-lg">MD</div>
+        <div>
+          <h2 class="display-font text-xl">${companyName}</h2>
+          <p class="text-xs text-slate-500 mono-font">${filename}</p>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-section" style="padding: 28px;">
+      <div style="text-align: center; padding: 40px; color: var(--slate-400);">読み込み中...</div>
+    </div>
+  `;
+  modal.classList.add('active');
+
+  try {
+    const res = await fetch(filename);
+    if (!res.ok) throw new Error('File not found');
+    const md = await res.text();
+    const html = typeof marked !== 'undefined' && marked.parse ? marked.parse(md) : md.replace(/\n/g, '<br>');
+    content.querySelector('.modal-section').innerHTML = `
+      <div class="md-content" style="font-size: 14px; line-height: 1.8; color: var(--slate-700);">${html}</div>
+      <div style="margin-top: 20px; display: flex; gap: 8px;">
+        <a href="${filename}" download class="script-btn" style="max-width: 200px; text-decoration: none;">
+          <span>📥</span> MDをダウンロード
+        </a>
+        <button class="script-btn" style="max-width: 200px; background: var(--slate-700);" onclick="navigator.clipboard.writeText(document.querySelector('.md-content').innerText).then(()=>this.textContent='✓ コピー済み')">
+          📋 テキストコピー
+        </button>
+      </div>
+    `;
+  } catch (e) {
+    content.querySelector('.modal-section').innerHTML = `
+      <div style="padding: 20px; background: #FEF2F2; border-radius: 8px; color: #991B1B;">
+        <p><strong>MDファイルの読み込みに失敗しました。</strong></p>
+        <p style="font-size: 12px; margin-top: 8px;">ローカルファイルシステムからの読み込みにはHTTPサーバーが必要です。<br>
+        <code style="background: #1E293B; color: #E2E8F0; padding: 2px 6px; border-radius: 4px;">python3 -m http.server 8080</code> をこのディレクトリで実行し、<br>
+        <code style="background: #1E293B; color: #E2E8F0; padding: 2px 6px; border-radius: 4px;">http://localhost:8080/panalyt_targets_v3.html</code> からアクセスしてください。</p>
+        <p style="font-size: 12px; margin-top: 8px;">または、MDファイルを直接テキストエディタで開いてください: <code>${filename}</code></p>
+      </div>
+    `;
+  }
+}
+
+// v3: カード生成を拡張 - MDボタンを追加
+const origRenderCards = renderCards;
+// カード内にMDボタンを追加するパッチ
+document.addEventListener('DOMContentLoaded', () => {
+  // 定期的にカードを監視してMDボタンを追加
+  const observer = new MutationObserver(() => {
+    document.querySelectorAll('.card .script-btn').forEach(btn => {
+      if (btn.dataset.mdPatched) return;
+      btn.dataset.mdPatched = 'true';
+      const card = btn.closest('.card');
+      const companyName = card?.querySelector('h3')?.textContent;
+      if (companyName && MD_FILE_MAP[companyName]) {
+        const mdBtn = document.createElement('button');
+        mdBtn.className = 'script-btn';
+        mdBtn.style.cssText = 'background: linear-gradient(135deg, #334155, #1E293B); margin-top: 4px;';
+        mdBtn.innerHTML = '<span>📄</span> 詳細MDスクリプトを表示';
+        mdBtn.onclick = (e) => { e.stopPropagation(); openMdModal(companyName); };
+        btn.parentNode.insertBefore(mdBtn, btn.nextSibling);
+      }
+    });
+  });
+  observer.observe(document.getElementById('cards'), { childList: true, subtree: true });
+});
+
+// v3: MD content styling
+const mdStyle = document.createElement('style');
+mdStyle.textContent = `
+  .md-content h1 { font-size: 1.4em; font-weight: 900; color: var(--slate-900); margin: 16px 0 8px; border-bottom: 2px solid var(--teal-500); padding-bottom: 8px; }
+  .md-content h2 { font-size: 1.15em; font-weight: 700; color: var(--teal-700); margin: 20px 0 8px; }
+  .md-content h3 { font-size: 1em; font-weight: 700; color: var(--slate-700); margin: 12px 0 6px; }
+  .md-content blockquote { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 4px solid #F59E0B; padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-size: 13px; }
+  .md-content table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .md-content th, .md-content td { border: 1px solid var(--slate-200); padding: 8px 12px; text-align: left; }
+  .md-content th { background: var(--slate-50); font-weight: 600; }
+  .md-content ul, .md-content ol { padding-left: 20px; margin: 8px 0; }
+  .md-content li { margin: 4px 0; font-size: 13px; }
+  .md-content code { background: var(--slate-100); padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+  .md-content pre { background: var(--slate-900); color: #E2E8F0; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 12px; margin: 12px 0; }
+  .md-content pre code { background: none; padding: 0; }
+  .md-content hr { border: none; border-top: 1px solid var(--slate-200); margin: 20px 0; }
+  .md-content strong { color: var(--slate-900); }
+`;
+document.head.appendChild(mdStyle);
+
+init();
+</script>
+</body>
+</html>
