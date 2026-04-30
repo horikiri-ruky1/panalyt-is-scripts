@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パナリット ターゲット企業分析 v4</title>
+<style>
+:root {
+  --teal: #14B8A6; --teal-d: #0D9488; --teal-l: #F0FDFA; --teal-b: #CCFBF1;
+  --s50: #F8FAFC; --s100: #F1F5F9; --s200: #E2E8F0; --s400: #94A3B8;
+  --s500: #64748B; --s600: #475569; --s700: #334155; --s900: #0F172A;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'Helvetica Neue', 'Noto Sans JP', sans-serif; background: var(--s50); color: var(--s900); line-height: 1.6; }
+.mono { font-family: ui-monospace, 'SF Mono', monospace; }
+
+/* Layout */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+header { background: #fff; border-bottom: 1px solid var(--s200); padding: 24px 0; }
+header h1 { font-size: 24px; font-weight: 800; }
+header p { font-size: 13px; color: var(--s500); margin-top: 4px; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; padding: 20px 0; }
+.stat { background: #fff; border: 1px solid var(--s200); border-radius: 10px; padding: 14px; text-align: center; }
+.stat-val { font-size: 28px; font-weight: 800; }
+.stat-label { font-size: 11px; color: var(--s500); margin-top: 2px; }
+.stat-primary { background: linear-gradient(135deg, var(--teal), var(--teal-d)); color: #fff; }
+.stat-primary .stat-label { color: rgba(255,255,255,.8); }
+
+/* Controls */
+.controls { position: sticky; top: 0; z-index: 20; background: rgba(248,250,252,.95); backdrop-filter: blur(8px); padding: 16px 0; border-bottom: 1px solid var(--s200); }
+.search-input { width: 100%; padding: 10px 14px; border: 1px solid var(--s200); border-radius: 10px; font-size: 14px; outline: none; transition: border-color .2s; }
+.search-input:focus { border-color: var(--teal); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.filter-btn { padding: 4px 12px; font-size: 12px; border-radius: 20px; border: 1px solid var(--s200); background: #fff; cursor: pointer; transition: all .15s; font-weight: 500; color: var(--s700); }
+.filter-btn:hover { border-color: var(--teal); }
+.filter-btn.on { background: var(--teal); color: #fff; border-color: var(--teal); }
+.result-info { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 13px; color: var(--s500); }
+.result-count { font-size: 18px; font-weight: 800; color: var(--teal-d); }
+.reset-btn { background: none; border: none; color: var(--s400); cursor: pointer; font-size: 12px; }
+.reset-btn:hover { color: var(--teal); }
+
+/* Cards - virtual scroll container */
+.cards-viewport { position: relative; overflow: hidden; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; padding: 20px 0 60px; }
+
+/* Card */
+.card { background: #fff; border: 1px solid var(--s200); border-radius: 10px; padding: 16px; transition: transform .15s, box-shadow .15s; position: relative; overflow: hidden; }
+.card:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.06); border-color: var(--teal); }
+.card[data-p="A"]::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--teal), var(--teal-d)); }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.card h3 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.card-industry { font-size: 11px; color: var(--s500); }
+.card-body { border-top: 1px solid var(--s100); padding-top: 10px; }
+.card-label { font-size: 10px; color: var(--s400); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+.card-note { font-size: 12px; color: var(--s600); margin: 8px 0; line-height: 1.5; }
+
+/* Chips */
+.chip { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 600; }
+.chip-A { background: var(--teal); color: #fff; }
+.chip-B { background: #3B82F6; color: #fff; }
+.chip-C { background: var(--s400); color: #fff; }
+.chip-D { background: #FB7185; color: #fff; }
+.chip-tag { background: var(--teal-l); color: var(--teal-d); border: 1px solid var(--teal-b); margin: 2px; }
+.chip-meta { background: var(--s100); color: var(--s700); margin: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 3px; }
+
+/* Buttons */
+.btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px; margin-top: 10px; border-radius: 8px; border: none; font-size: 12px; font-weight: 700; cursor: pointer; transition: all .2s; }
+.btn-primary { background: linear-gradient(135deg, var(--teal), var(--teal-d)); color: #fff; }
+.btn-primary:hover { box-shadow: 0 4px 12px rgba(20,184,166,.35); }
+.btn-dark { background: linear-gradient(135deg, #334155, #1E293B); color: #fff; margin-top: 6px; }
+.btn-dark:hover { box-shadow: 0 4px 12px rgba(0,0,0,.2); }
+
+/* Modal */
+.modal-bg { position: fixed; inset: 0; background: rgba(15,23,42,.65); backdrop-filter: blur(3px); z-index: 50; display: none; overflow-y: auto; padding: 20px; }
+.modal-bg.open { display: flex; justify-content: center; align-items: flex-start; }
+.modal { background: #fff; border-radius: 14px; max-width: 860px; width: 100%; margin: 20px auto; max-height: calc(100vh - 40px); overflow-y: auto; box-shadow: 0 20px 40px rgba(0,0,0,.2); }
+.modal-head { padding: 20px 24px; border-bottom: 1px solid var(--s200); background: linear-gradient(135deg, var(--teal-l), #fff); border-radius: 14px 14px 0 0; position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; }
+.modal-head h2 { font-size: 18px; font-weight: 800; }
+.close-btn { background: rgba(0,0,0,.05); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px; transition: all .2s; }
+.close-btn:hover { background: var(--s900); color: #fff; }
+.modal-body { padding: 24px; }
+
+/* MD content */
+.md h1 { font-size: 1.3em; font-weight: 800; color: var(--s900); margin: 14px 0 8px; border-bottom: 2px solid var(--teal); padding-bottom: 6px; }
+.md h2 { font-size: 1.1em; font-weight: 700; color: var(--teal-d); margin: 16px 0 6px; }
+.md h3 { font-size: 1em; font-weight: 700; color: var(--s700); margin: 10px 0 4px; }
+.md blockquote { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-left: 4px solid #F59E0B; padding: 10px 14px; border-radius: 6px; margin: 10px 0; font-size: 13px; }
+.md table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+.md th, .md td { border: 1px solid var(--s200); padding: 6px 10px; text-align: left; }
+.md th { background: var(--s50); font-weight: 600; }
+.md ul, .md ol { padding-left: 18px; margin: 6px 0; }
+.md li { margin: 3px 0; font-size: 13px; }
+.md code { background: var(--s100); padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+.md pre { background: var(--s900); color: #E2E8F0; padding: 14px; border-radius: 6px; overflow-x: auto; font-size: 12px; margin: 10px 0; }
+.md pre code { background: none; padding: 0; }
+.md hr { border: none; border-top: 1px solid var(--s200); margin: 16px 0; }
+.md strong { color: var(--s900); }
+
+/* Loading */
+.spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--s200); border-top-color: var(--teal); border-radius: 50%; animation: spin .6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <div style="width:4px;height:20px;background:var(--teal);border-radius:2px"></div>
+      <span class="mono" style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-d);font-weight:700">PANALYT IS TARGET ANALYSIS</span>
+    </div>
+    <h1>パナリット ターゲット企業分析</h1>
+    <p>優先度・推奨切り口・<strong>個別スクリプト完成版</strong>を一気通貫で管理｜<span class="mono" style="color:var(--teal-d);font-weight:700">v4</span></p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="stats" id="stats"></div>
+</div>
+
+<div class="controls">
+  <div class="container">
+    <input type="text" class="search-input" id="search" placeholder="企業名で検索...">
+    <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:8px">
+      <div><div style="font-size:10px;color:var(--s400);margin-bottom:4px" class="mono">優先度</div><div class="filters" id="pf"></div></div>
+      <div style="flex:1;min-width:200px"><div style="font-size:10px;color:var(--s400);margin-bottom:4px" class="mono">業種</div><div class="filters" id="if"></div></div>
+    </div>
+    <div class="result-info">
+      <div>該当 <span class="result-count" id="rc">-</span> 社</div>
+      <button class="reset-btn" id="reset">フィルターをリセット</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards-grid" id="cards"></div>
+  <div id="load-more-wrap" style="text-align:center;padding:20px 0;display:none">
+    <button class="btn btn-primary" style="max-width:300px;margin:0 auto" id="load-more-btn">さらに表示</button>
+  </div>
+</div>
+
+<div class="modal-bg" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal" id="modal-box"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+let DATA = [];
+let filtered = [];
+let shown = 0;
+const BATCH = 24;
+const PO = { A: 0, B: 1, C: 2, D: 3 };
+const PC = { A: 'chip-A', B: 'chip-B', C: 'chip-C', D: 'chip-D' };
+let filters = { q: '', p: [], ind: [] };
+
+// Load data
+fetch('companies.json').then(r => r.json()).then(data => {
+  DATA = data;
+  buildUI();
+  applyFilters();
+}).catch(e => {
+  document.getElementById('cards').innerHTML = '<p style="color:red;padding:40px">companies.json の読み込みに失敗しました。同じディレクトリに配置してください。</p>';
+});
+
+function buildUI() {
+  // Stats
+  const pCounts = { A: 0, B: 0, C: 0, D: 0 };
+  DATA.forEach(c => pCounts[c.priority]++);
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="stat-val">${DATA.length}</div><div class="stat-label">全企業数</div></div>
+    <div class="stat stat-primary"><div class="stat-val">${DATA.filter(c=>c.mdFile).length}/${DATA.length}</div><div class="stat-label">スクリプト完成</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--teal)">${pCounts.A}</div><div class="stat-label">優先度A</div></div>
+    <div class="stat"><div class="stat-val" style="color:#3B82F6">${pCounts.B}</div><div class="stat-label">優先度B</div></div>
+    <div class="stat"><div class="stat-val" style="color:var(--s400)">${pCounts.C}</div><div class="stat-label">優先度C</div></div>
+    <div class="stat"><div class="stat-val" style="color:#FB7185">${pCounts.D}</div><div class="stat-label">優先度D</div></div>
+  `;
+
+  // Priority filters
+  ['A','B','C','D'].forEach(p => {
+    const b = document.createElement('button');
+    b.className = 'filter-btn';
+    b.textContent = '優先度 ' + p;
+    b.dataset.p = p;
+    b.onclick = () => toggleFilter('p', p, b);
+    document.getElementById('pf').appendChild(b);
+  });
+
+  // Industry filters
+  const industries = [...new Set(DATA.map(c => c.industry))].sort();
+  industries.forEach(ind => {
+    const b = document.createElement('button');
+    b.className = 'filter-btn';
+    b.textContent = ind;
+    b.dataset.ind = ind;
+    b.onclick = () => toggleFilter('ind', ind, b);
+    document.getElementById('if').appendChild(b);
+  });
+
+  // Search (debounced)
+  let timer;
+  document.getElementById('search').addEventListener('input', e => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { filters.q = e.target.value.toLowerCase(); applyFilters(); }, 150);
+  });
+
+  // Reset
+  document.getElementById('reset').onclick = () => {
+    filters = { q: '', p: [], ind: [] };
+    document.getElementById('search').value = '';
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
+    applyFilters();
+  };
+
+  // Load more
+  document.getElementById('load-more-btn').onclick = loadMore;
+}
+
+function toggleFilter(type, val, btn) {
+  const arr = filters[type];
+  const idx = arr.indexOf(val);
+  if (idx >= 0) { arr.splice(idx, 1); btn.classList.remove('on'); }
+  else { arr.push(val); btn.classList.add('on'); }
+  applyFilters();
+}
+
+function applyFilters() {
+  filtered = DATA.filter(c => {
+    if (filters.q && !c.name.toLowerCase().includes(filters.q)) return false;
+    if (filters.p.length && !filters.p.includes(c.priority)) return false;
+    if (filters.ind.length && !filters.ind.includes(c.industry)) return false;
+    return true;
+  });
+  filtered.sort((a, b) => PO[a.priority] - PO[b.priority] || a.industry.localeCompare(b.industry) || a.name.localeCompare(b.name));
+  document.getElementById('rc').textContent = filtered.length;
+  shown = 0;
+  document.getElementById('cards').innerHTML = '';
+  loadMore();
+}
+
+function loadMore() {
+  const frag = document.createDocumentFragment();
+  const end = Math.min(shown + BATCH, filtered.length);
+  for (let i = shown; i < end; i++) {
+    frag.appendChild(createCard(filtered[i]));
+  }
+  document.getElementById('cards').appendChild(frag);
+  shown = end;
+  const wrap = document.getElementById('load-more-wrap');
+  if (shown < filtered.length) {
+    wrap.style.display = 'block';
+    document.getElementById('load-more-btn').textContent = `さらに表示（残り ${filtered.length - shown} 社）`;
+  } else {
+    wrap.style.display = 'none';
+  }
+}
+
+function createCard(c) {
+  const div = document.createElement('div');
+  div.className = 'card';
+  div.dataset.p = c.priority;
+  const pitchChips = (c.pitches||[]).map(p => `<span class="chip chip-tag">${p}</span>`).join('');
+  const meta = [
+    c.listed ? '<span class="chip chip-meta">プライム</span>' : '',
+    c.global ? '<span class="chip chip-meta">グローバル</span>' : '',
+    c.scale ? `<span class="chip chip-meta">${c.scale}</span>` : ''
+  ].filter(Boolean).join('');
+
+  div.innerHTML = `
+    <div class="card-header">
+      <span class="chip ${PC[c.priority]}">優先度 ${c.priority}</span>
+      <div class="chips">${meta}</div>
+    </div>
+    <h3>${c.name}</h3>
+    <div class="card-industry">${c.industry}</div>
+    <div class="card-body">
+      <div class="card-label">推奨切り口</div>
+      <div class="chips" style="margin-bottom:8px">${pitchChips}</div>
+      <div class="card-label">推奨先</div>
+      <div style="font-size:13px;font-weight:600;margin-bottom:6px">${c.target||''}</div>
+      <div class="card-note">${c.note||''}</div>
+      ${c.mdFile ? `<button class="btn btn-dark" onclick="openMd('${c.name}','${c.mdFile}')">📄 詳細MDスクリプトを表示</button>` : ''}
+    </div>
+  `;
+  return div;
+}
+
+// Modal
+function openMd(name, file) {
+  const modal = document.getElementById('modal');
+  const box = document.getElementById('modal-box');
+  box.innerHTML = `
+    <div class="modal-head">
+      <div><h2>${name}</h2><span class="mono" style="font-size:11px;color:var(--s400)">${file}</span></div>
+      <button class="close-btn" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body" style="text-align:center;padding:40px"><div class="spinner"></div> 読み込み中...</div>
+  `;
+  modal.classList.add('open');
+  fetch(file).then(r => {
+    if (!r.ok) throw new Error('not found');
+    return r.text();
+  }).then(md => {
+    const html = typeof marked !== 'undefined' && marked.parse ? marked.parse(md) : md.replace(/\n/g,'<br>');
+    box.querySelector('.modal-body').innerHTML = `
+      <div class="md">${html}</div>
+      <div style="display:flex;gap:8px;margin-top:20px">
+        <a href="${file}" download class="btn btn-primary" style="max-width:180px;text-decoration:none">📥 ダウンロード</a>
+        <button class="btn btn-dark" style="max-width:180px" onclick="navigator.clipboard.writeText(this.closest('.modal-body').querySelector('.md').innerText).then(()=>this.textContent='✓ コピー済み')">📋 テキストコピー</button>
+      </div>
+    `;
+  }).catch(() => {
+    box.querySelector('.modal-body').innerHTML = `
+      <div style="background:#FEF2F2;padding:16px;border-radius:8px;color:#991B1B">
+        <p><strong>MDファイルの読み込みに失敗</strong></p>
+        <p style="font-size:12px;margin-top:6px">HTTPサーバーが必要です: <code class="mono">python3 -m http.server 8080</code></p>
+      </div>
+    `;
+  });
+}
+
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
