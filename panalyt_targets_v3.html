@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>パナリット ターゲット企業分析 v3｜89社・個別スクリプト完成版</title>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -233,6 +232,7 @@
   <div class="modal-content" id="modal-content"></div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 // ============= 業界別テンプレート =============
 const INDUSTRY_TEMPLATES = {
@@ -1130,29 +1130,29 @@ async function openMdModal(companyName) {
   }
 }
 
-// v3: カード生成を拡張 - MDボタンを追加
-const origRenderCards = renderCards;
-// カード内にMDボタンを追加するパッチ
-document.addEventListener('DOMContentLoaded', () => {
-  // 定期的にカードを監視してMDボタンを追加
-  const observer = new MutationObserver(() => {
-    document.querySelectorAll('.card .script-btn').forEach(btn => {
-      if (btn.dataset.mdPatched) return;
-      btn.dataset.mdPatched = 'true';
-      const card = btn.closest('.card');
-      const companyName = card?.querySelector('h3')?.textContent;
-      if (companyName && MD_FILE_MAP[companyName]) {
-        const mdBtn = document.createElement('button');
-        mdBtn.className = 'script-btn';
-        mdBtn.style.cssText = 'background: linear-gradient(135deg, #334155, #1E293B); margin-top: 4px;';
-        mdBtn.innerHTML = '<span>📄</span> 詳細MDスクリプトを表示';
-        mdBtn.onclick = (e) => { e.stopPropagation(); openMdModal(companyName); };
-        btn.parentNode.insertBefore(mdBtn, btn.nextSibling);
-      }
-    });
+// v3: カード生成後にMDボタンを追加するパッチ
+function patchCardsWithMdButtons() {
+  document.querySelectorAll('.card .script-btn').forEach(btn => {
+    if (btn.dataset.mdPatched) return;
+    btn.dataset.mdPatched = 'true';
+    const card = btn.closest('.card');
+    const companyName = card?.querySelector('h3')?.textContent;
+    if (companyName && MD_FILE_MAP[companyName]) {
+      const mdBtn = document.createElement('button');
+      mdBtn.className = 'script-btn';
+      mdBtn.style.cssText = 'background: linear-gradient(135deg, #334155, #1E293B); margin-top: 4px;';
+      mdBtn.innerHTML = '<span>📄</span> 詳細MDスクリプトを表示';
+      mdBtn.onclick = (e) => { e.stopPropagation(); openMdModal(companyName); };
+      btn.parentNode.insertBefore(mdBtn, btn.nextSibling);
+    }
   });
-  observer.observe(document.getElementById('cards'), { childList: true, subtree: true });
-});
+}
+// Observe card additions
+const _cardsObserver = new MutationObserver(patchCardsWithMdButtons);
+setTimeout(() => {
+  const cardsEl = document.getElementById('cards');
+  if (cardsEl) _cardsObserver.observe(cardsEl, { childList: true, subtree: true });
+}, 100);
 
 // v3: MD content styling
 const mdStyle = document.createElement('style');
