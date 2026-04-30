@@ -4,63 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>パナリット ターゲット企業分析 v3｜89社・個別スクリプト完成版</title>
-<!-- Tailwind removed for performance. Using inline utility CSS instead -->
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-<style>
-/* Tailwind replacement - minimal utility classes */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-.flex{display:flex}.grid{display:grid}.inline-flex{display:inline-flex}
-.items-center{align-items:center}.items-start{align-items:start}
-.justify-center{justify-content:center}.justify-between{justify-content:space-between}
-.flex-wrap{flex-wrap:wrap}.flex-shrink-0{flex-shrink:0}
-.gap-2{gap:8px}.gap-3{gap:12px}.gap-4{gap:16px}.gap-6{gap:24px}.gap-8{gap:32px}
-.grid-cols-1{grid-template-columns:1fr}
-.grid-cols-2{grid-template-columns:repeat(2,1fr)}
-.grid-cols-3{grid-template-columns:repeat(3,1fr)}
-@media(min-width:768px){
-  .md\:grid-cols-2{grid-template-columns:repeat(2,1fr)}
-  .md\:grid-cols-4{grid-template-columns:repeat(4,1fr)}
-  .md\:grid-cols-6{grid-template-columns:repeat(6,1fr)}
-  .md\:text-4xl{font-size:2.25rem}
-}
-@media(min-width:1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3,1fr)}}
-.w-full{width:100%}.w-1{width:4px}.w-5{width:20px}.w-8{width:32px}.w-10{width:40px}
-.h-5{height:20px}.h-6{height:24px}.h-8{height:32px}.h-10{height:40px}
-.max-w-7xl{max-width:80rem}
-.mx-auto{margin-left:auto;margin-right:auto}
-.px-4{padding-left:16px;padding-right:16px}.px-6{padding-left:24px;padding-right:24px}
-.py-3{padding-top:12px;padding-bottom:12px}.py-4{padding-top:16px;padding-bottom:16px}
-.py-8{padding-top:32px;padding-bottom:32px}
-.pb-4{padding-bottom:16px}.pb-6{padding-bottom:24px}.pb-12{padding-bottom:48px}
-.pt-2{padding-top:8px}
-.mt-1{margin-top:4px}.mt-4{margin-top:16px}.mb-2{margin-bottom:8px}.mr-2{margin-right:8px}
-.p-5{padding:20px}
-.text-center{text-align:center}
-.text-xs{font-size:11px}.text-sm{font-size:14px}.text-lg{font-size:1.125rem}.text-xl{font-size:1.25rem}
-.text-3xl{font-size:1.875rem}.text-4xl{font-size:2.25rem}.text-base{font-size:1rem}
-.font-bold{font-weight:700}.font-medium{font-weight:500}
-.text-white{color:#fff}
-.text-slate-400{color:#94A3B8}.text-slate-500{color:#64748B}.text-slate-600{color:#475569}
-.text-slate-700{color:#334155}.text-slate-900{color:#0F172A}
-.text-teal-600{color:#0D9488}.text-teal-700{color:#0F766E}
-.text-blue-600{color:#2563EB}.text-rose-400{color:#FB7185}
-.bg-white{background:#fff}.bg-teal-500{background:#14B8A6}
-.border{border:1px solid}.border-b{border-bottom:1px solid}
-.border-t{border-top:1px solid}
-.border-slate-100{border-color:#F1F5F9}.border-slate-200{border-color:#E2E8F0}
-.border-teal-100{border-color:#CCFBF1}
-.rounded-xl{border-radius:12px}.rounded-full{border-radius:9999px}
-.space-y-1>*+*{margin-top:4px}.space-y-2>*+*{margin-top:8px}.space-y-3>*+*{margin-top:12px}
-.opacity-90{opacity:.9}
-.sticky{position:sticky}.top-0{top:0}.z-10{z-index:10}
-.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}
-.relative{position:relative}.absolute{position:absolute}
-.inset-0{inset:0}
-.hidden{display:none}
-.uppercase{text-transform:uppercase}.tracking-widest{letter-spacing:.1em}.tracking-wider{letter-spacing:.05em}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --teal-50: #F0FDFA; --teal-100: #CCFBF1; --teal-500: #14B8A6;
@@ -68,9 +15,9 @@
     --slate-50: #F8FAFC; --slate-100: #F1F5F9; --slate-200: #E2E8F0;
     --slate-400: #94A3B8; --slate-600: #475569; --slate-700: #334155; --slate-900: #0F172A;
   }
-  body { font-family: 'Noto Sans JP', -apple-system, sans-serif; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); color: var(--slate-900); }
+  body { font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); color: var(--slate-900); }
   .display-font { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
-  .mono-font { font-family: ui-monospace, 'SF Mono', monospace; }
+  .mono-font { font-family: ui-monospace, 'SF Mono', 'Courier New', monospace; }
   .priority-A { background: var(--teal-500); color: white; }
   .priority-B { background: #3B82F6; color: white; }
   .priority-C { background: #94A3B8; color: white; }
@@ -754,19 +701,41 @@ function filterByName(name) {
   document.getElementById('cards').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+let _filteredCache = [];
+let _renderCount = 20;
+
 function render() {
-  let filtered = companies.filter(c => {
+  _filteredCache = companies.filter(c => {
     const matchSearch = !activeFilters.search || c.name.toLowerCase().includes(activeFilters.search);
     const matchPriority = activeFilters.priorities.length === 0 || activeFilters.priorities.includes(c.priority);
     const matchIndustry = activeFilters.industries.length === 0 || activeFilters.industries.includes(c.industry);
     return matchSearch && matchPriority && matchIndustry;
   });
-  filtered.sort((a, b) =>
+  _filteredCache.sort((a, b) =>
     PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority] ||
     a.industry.localeCompare(b.industry) || a.name.localeCompare(b.name)
   );
-  document.getElementById('result-count').textContent = filtered.length;
-  document.getElementById('cards').innerHTML = filtered.map(createCard).join('');
+  _renderCount = 20;
+  document.getElementById('result-count').textContent = _filteredCache.length;
+  const toRender = _filteredCache.slice(0, _renderCount);
+  document.getElementById('cards').innerHTML = toRender.map(createCard).join('');
+  if (_filteredCache.length > _renderCount) {
+    document.getElementById('cards').insertAdjacentHTML('beforeend',
+      '<div id="load-more" class="col-span-full text-center py-6"><button onclick="loadMore()" class="script-btn" style="max-width:300px;margin:0 auto;">さらに表示（残り ' + (_filteredCache.length - _renderCount) + ' 社）</button></div>');
+  }
+}
+
+function loadMore() {
+  const prev = _renderCount;
+  _renderCount += 30;
+  const next = _filteredCache.slice(prev, _renderCount);
+  const loadMoreEl = document.getElementById('load-more');
+  if (loadMoreEl) loadMoreEl.remove();
+  document.getElementById('cards').insertAdjacentHTML('beforeend', next.map(createCard).join(''));
+  if (_renderCount < _filteredCache.length) {
+    document.getElementById('cards').insertAdjacentHTML('beforeend',
+      '<div id="load-more" class="col-span-full text-center py-6"><button onclick="loadMore()" class="script-btn" style="max-width:300px;margin:0 auto;">さらに表示（残り ' + (_filteredCache.length - _renderCount) + ' 社）</button></div>');
+  }
 }
 
 function createCard(c) {
