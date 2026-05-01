@@ -15,7 +15,8 @@
     "employees": "126,371",
     "avg_salary": "865",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "伊藤忠商事株式会社",
@@ -33,7 +34,8 @@
     "employees": "125,944",
     "avg_salary": "1627",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "リコージャパン株式会社",
@@ -51,7 +53,8 @@
     "employees": "81,184",
     "avg_salary": "0",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "セイコーエプソン株式会社",
@@ -69,7 +72,8 @@
     "employees": "79,944",
     "avg_salary": "712",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社小松製作所",
@@ -87,7 +91,8 @@
     "employees": "61,564",
     "avg_salary": "0",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "パーソルホールディングス株式会社",
@@ -105,7 +110,8 @@
     "employees": "49,434",
     "avg_salary": "665",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "大和ハウス工業株式会社",
@@ -123,7 +129,8 @@
     "employees": "48,807",
     "avg_salary": "868",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "ＳＯＭＰＯホールディングス株式会社",
@@ -141,7 +148,8 @@
     "employees": "48,115",
     "avg_salary": "1109",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "丸紅株式会社",
@@ -159,7 +167,8 @@
     "employees": "45,470",
     "avg_salary": "1192",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "三井物産株式会社",
@@ -177,7 +186,8 @@
     "employees": "44,509",
     "avg_salary": "0",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "旭化成株式会社",
@@ -195,7 +205,8 @@
     "employees": "44,497",
     "avg_salary": "751",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "東京海上ホールディングス株式会社",
@@ -213,7 +224,8 @@
     "employees": "43,257",
     "avg_salary": "772",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "コニカミノルタ株式会社",
@@ -231,7 +243,8 @@
     "employees": "40,979",
     "avg_salary": "747",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社神戸製鋼所",
@@ -249,7 +262,8 @@
     "employees": "40,517",
     "avg_salary": "0",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "住友化学株式会社",
@@ -267,7 +281,8 @@
     "employees": "34,743",
     "avg_salary": "859",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "昭和電工株式会社",
@@ -303,7 +318,8 @@
     "employees": "33,461",
     "avg_salary": "997",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "キリンホールディングス株式会社",
@@ -321,7 +337,8 @@
     "employees": "31,151",
     "avg_salary": "873",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "オムロン株式会社",
@@ -339,7 +356,8 @@
     "employees": "28,006",
     "avg_salary": "826",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "サントリー食品インターナショナル株式会社",
@@ -357,7 +375,8 @@
     "employees": "24,102",
     "avg_salary": "1118",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "ローム株式会社",
@@ -667,7 +686,8 @@
     "employees": "5,485",
     "avg_salary": "0",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "サトーホールディングス株式会社",
@@ -685,7 +705,8 @@
     "employees": "5,451",
     "avg_salary": "796",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社オカムラ",
@@ -703,7 +724,8 @@
     "employees": "5,204",
     "avg_salary": "699",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社千葉銀行",
@@ -757,7 +779,8 @@
     "employees": "4,229",
     "avg_salary": "826",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社三菱総合研究所",
@@ -775,7 +798,8 @@
     "employees": "4,133",
     "avg_salary": "1009",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社ダスキン",
@@ -793,7 +817,8 @@
     "employees": "3,819",
     "avg_salary": "690",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "住友大阪セメント株式会社",
@@ -829,7 +854,8 @@
     "employees": "2,922",
     "avg_salary": "691",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社マンダム",
@@ -847,7 +873,8 @@
     "employees": "2,914",
     "avg_salary": "813",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "ネットワンシステムズ株式会社",
@@ -865,7 +892,8 @@
     "employees": "2,560",
     "avg_salary": "825",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社ＰＡＬＴＡＣ",
@@ -883,7 +911,8 @@
     "employees": "2,169",
     "avg_salary": "622",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "日本板硝子株式会社",
@@ -901,7 +930,8 @@
     "employees": "26,000",
     "avg_salary": "0",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "ＡＧＣ株式会社",
@@ -919,7 +949,8 @@
     "employees": "56,179",
     "avg_salary": "795",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "ＫＤＤＩ株式会社",
@@ -937,7 +968,8 @@
     "employees": "47,320",
     "avg_salary": "948",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "ミネベアミツミ株式会社",
@@ -955,7 +987,8 @@
     "employees": "83,011",
     "avg_salary": "689",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社フジクラ",
@@ -973,7 +1006,8 @@
     "employees": "53,717",
     "avg_salary": "638",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社資生堂",
@@ -991,7 +1025,8 @@
     "employees": "39,035",
     "avg_salary": "658",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社大林組",
@@ -1009,7 +1044,8 @@
     "employees": "15,267",
     "avg_salary": "1032",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "株式会社島津製作所",
