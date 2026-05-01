@@ -210,9 +210,18 @@ function buildUI() {
     document.getElementById('if').appendChild(b);
   });
 
-  // Search (debounced - 300ms to avoid blocking input)
+  // Search (debounced, IME-safe)
   let timer;
-  document.getElementById('search').addEventListener('input', e => {
+  let composing = false;
+  const searchEl = document.getElementById('search');
+  searchEl.addEventListener('compositionstart', () => { composing = true; });
+  searchEl.addEventListener('compositionend', e => {
+    composing = false;
+    clearTimeout(timer);
+    timer = setTimeout(() => { filters.q = e.target.value.toLowerCase(); applyFilters(); }, 300);
+  });
+  searchEl.addEventListener('input', e => {
+    if (composing) return; // IME変換中は無視
     clearTimeout(timer);
     timer = setTimeout(() => { filters.q = e.target.value.toLowerCase(); applyFilters(); }, 300);
   });
