@@ -960,7 +960,7 @@
     "tpl": "electronics",
     "why_now": "カメラ事業の構造変化下、医療・産業機器・半導体露光装置の事業転換進行中。人材ポートフォリオ転換が重要。",
     "hook": "事業転換期における人材ポートフォリオ転換とグローバル人材戦略について",
-    "mdFile": "panalyt_キヤノン.md"
+    "mdFile": "panalyt_キヤノンMJ.md"
   },
   {
     "name": "アンリツ株式会社",
@@ -1157,7 +1157,7 @@
     "tpl": "retail",
     "why_now": "国内外300社超のグループ企業、人事システム・データもバラバラ。連結ガバナンス強化と人的資本開示の精度向上が経営最重要課題。",
     "hook": "300社超のグループ企業の人事データ連結統合と、人的資本開示の精度向上について",
-    "mdFile": "panalyt_イオン.md"
+    "mdFile": "panalyt_イオンモール.md"
   },
   {
     "name": "株式会社ツルハホールディングス",
@@ -1602,5 +1602,879 @@
     "why_now": "人材会社のため、自社人材データ管理の需要は限定的。競合認識リスクあり。",
     "hook": "※基本的に営業優先度低（同業競合認識リスク）",
     "mdFile": "panalyt_パソナグループ.md"
+  },
+  {
+    "name": "株式会社ダスキン",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_ダスキン.md"
+  },
+  {
+    "name": "三ツ星ベルト株式会社",
+    "industry": "ゴム製品",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_三ツ星ベルト.md"
+  },
+  {
+    "name": "味の素株式会社",
+    "industry": "消費財・食品",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_味の素.md"
+  },
+  {
+    "name": "セイコーエプソン株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_セイコーエプソン.md"
+  },
+  {
+    "name": "キリンホールディングス株式会社",
+    "industry": "消費財・食品",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_キリンHD.md"
+  },
+  {
+    "name": "株式会社オカムラ",
+    "industry": "消費財・食品",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_オカムラ.md"
+  },
+  {
+    "name": "ミネベアミツミ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_ミネベアミツミ.md"
+  },
+  {
+    "name": "住友大阪セメント株式会社",
+    "industry": "化学・素材",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_住友大阪セメント.md"
+  },
+  {
+    "name": "株式会社小松製作所",
+    "industry": "自動車・機械・部品",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_小松製作所.md"
+  },
+  {
+    "name": "ローム株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "2025年4月に新社長就任、新中計スタート。構造改革フェーズで経営体制刷新。パワー・アナログ半導体で世界トップ10目標",
+    "tpl": "chemicals",
+    "why_now": "2025年4月に新社長就任、新中計スタート。構造改革フェーズで経営体制刷新。パワー・アナログ半導体で世界トップ10目標",
+    "hook": "新社長体制下での組織変革",
+    "mdFile": "panalyt_ローム.md"
+  },
+  {
+    "name": "株式会社ＰＡＬＴＡＣ",
+    "industry": "運輸・物流・交通",
+    "priority": "B",
+    "scale": "S",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_ＰＡＬＴＡＣ.md"
+  },
+  {
+    "name": "ネットワンシステムズ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "S",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_ネットワンシステムズ.md"
+  },
+  {
+    "name": "第一三共株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "2025年度にグローバル共通ジョブ型人事制度導入。ADC（エンハーツ）の世界的成功を背景にグローバル人材獲得が待ったなし",
+    "tpl": "chemicals",
+    "why_now": "2025年度にグローバル共通ジョブ型人事制度導入。ADC（エンハーツ）の世界的成功を背景にグローバル人材獲得が待ったなし",
+    "hook": "グローバルジョブ型人事制度の定着・運用",
+    "mdFile": "panalyt_第一三共.md"
+  },
+  {
+    "name": "リコージャパン株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_リコージャパン.md"
+  },
+  {
+    "name": "株式会社マンダム",
+    "industry": "化学・素材",
+    "priority": "B",
+    "scale": "S",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_マンダム.md"
+  },
+  {
+    "name": "ＳＯＭＰＯホールディングス株式会社",
+    "industry": "金融・リース",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_ＳＯＭＰＯHD.md"
+  },
+  {
+    "name": "住友化学株式会社",
+    "industry": "化学・素材",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_住友化学.md"
+  },
+  {
+    "name": "丸紅株式会社",
+    "industry": "運輸・物流・交通",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_丸紅.md"
+  },
+  {
+    "name": "パーソルホールディングス株式会社",
+    "industry": "人材・サービス",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_パーソルHD.md"
+  },
+  {
+    "name": "ＡＧＣ株式会社",
+    "industry": "化学・素材",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_ＡＧＣ.md"
+  },
+  {
+    "name": "中外製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "2025年1月に新人事制度導入。過去最高業績を連続更新中。ロシュとのアライアンス下でのグローバル人事が独自課題",
+    "tpl": "chemicals",
+    "why_now": "2025年1月に新人事制度導入。過去最高業績を連続更新中。ロシュとのアライアンス下でのグローバル人事が独自課題",
+    "hook": "新人事制度の定着と効果検証",
+    "mdFile": "panalyt_中外製薬.md"
+  },
+  {
+    "name": "東京海上ホールディングス株式会社",
+    "industry": "金融・リース",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_東京海上HD.md"
+  },
+  {
+    "name": "株式会社大林組",
+    "industry": "プラント・建設",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_大林組.md"
+  },
+  {
+    "name": "ナブテスコ株式会社",
+    "industry": "自動車・機械・部品",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "営利率5.9%→10%と倍増目標。CMP事業の劇的改善には人材再配置が不可欠。2026年1月に人事管掌役員就任したばかり",
+    "tpl": "chemicals",
+    "why_now": "営利率5.9%→10%と倍増目標。CMP事業の劇的改善には人材再配置が不可欠。2026年1月に人事管掌役員就任したばかり",
+    "hook": "営利率倍増の人材PF見直し",
+    "mdFile": "panalyt_ナブテスコ.md"
+  },
+  {
+    "name": "株式会社神戸製鋼所",
+    "industry": "鉄鋼・金属",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_神戸製鋼所.md"
+  },
+  {
+    "name": "サントリー食品インターナショナル株式会社",
+    "industry": "消費財・食品",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_サントリー食品インターナショナル.md"
+  },
+  {
+    "name": "三井物産株式会社",
+    "industry": "運輸・物流・交通",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_三井物産.md"
+  },
+  {
+    "name": "アステラス製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "次期中計が2026年度スタート。副社長CPO杉田氏は人的資本経営の業界著名人。重点戦略製品の極大化を支える人材戦略が焦点",
+    "tpl": "chemicals",
+    "why_now": "次期中計が2026年度スタート。副社長CPO杉田氏は人的資本経営の業界著名人。重点戦略製品の極大化を支える人材戦略が焦点",
+    "hook": "次期中計の人材戦略方向性",
+    "mdFile": "panalyt_アステラス製薬.md"
+  },
+  {
+    "name": "日本板硝子株式会社",
+    "industry": "化学・素材",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_日本板硝子.md"
+  },
+  {
+    "name": "株式会社百五銀行",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "S",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_百五銀行.md"
+  },
+  {
+    "name": "塩野義製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_塩野義製薬.md"
+  },
+  {
+    "name": "オムロン株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_オムロン.md"
+  },
+  {
+    "name": "株式会社商船三井",
+    "industry": "運輸・物流・交通",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "2026年4月に社長交代とPhase2始動が同時。経営の重心を変革から成果実現へシフト",
+    "tpl": "chemicals",
+    "why_now": "2026年4月に社長交代とPhase2始動が同時。経営の重心を変革から成果実現へシフト",
+    "hook": "新社長体制のPhase2人材配置",
+    "mdFile": "panalyt_商船三井.md"
+  },
+  {
+    "name": "株式会社資生堂",
+    "industry": "化学・素材",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_資生堂.md"
+  },
+  {
+    "name": "ＫＤＤＩ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_ＫＤＤＩ.md"
+  },
+  {
+    "name": "株式会社フジクラ",
+    "industry": "鉄鋼・金属",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_フジクラ.md"
+  },
+  {
+    "name": "旭化成株式会社",
+    "industry": "化学・素材",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_旭化成.md"
+  },
+  {
+    "name": "大和ハウス工業株式会社",
+    "industry": "プラント・建設",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_大和ハウス工業.md"
+  },
+  {
+    "name": "株式会社三菱総合研究所",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_三菱総合研究所.md"
+  },
+  {
+    "name": "参天製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_参天製薬.md"
+  },
+  {
+    "name": "株式会社コンコルディア・フィナンシャルグループ",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "2025年10月に横浜フィナンシャルグループへ社名変更予定。利上げ環境下で純利益80%増を目指す攻めの中計。代表取締役が人財部を直接管掌",
+    "tpl": "chemicals",
+    "why_now": "2025年10月に横浜フィナンシャルグループへ社名変更予定。利上げ環境下で純利益80%増を目指す攻めの中計。代表取締役が人財部を直接管掌",
+    "hook": "社名変更のエンプロイヤーブランディング再構築",
+    "mdFile": "panalyt_コンコルディア・フィナンシャルグループ.md"
+  },
+  {
+    "name": "富士通株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_富士通.md"
+  },
+  {
+    "name": "伊藤忠商事株式会社",
+    "industry": "運輸・物流・交通",
+    "priority": "A",
+    "scale": "XL",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_伊藤忠商事.md"
+  },
+  {
+    "name": "株式会社野村総合研究所",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "2026年4月に新中計策定。コンサル・IT業界の人材獲得競争激化の中、海外事業拡大を支えるグローバル人材戦略が急務",
+    "tpl": "chemicals",
+    "why_now": "2026年4月に新中計策定。コンサル・IT業界の人材獲得競争激化の中、海外事業拡大を支えるグローバル人材戦略が急務",
+    "hook": "海外売上1,200億円のグローバル人材確保",
+    "mdFile": "panalyt_野村総合研究所.md"
+  },
+  {
+    "name": "コニカミノルタ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "A",
+    "scale": "L",
+    "listed": false,
+    "global": true,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_コニカミノルタ.md"
+  },
+  {
+    "name": "サトーホールディングス株式会社",
+    "industry": "自動車・機械・部品",
+    "priority": "B",
+    "scale": "M",
+    "listed": false,
+    "global": false,
+    "pitches": [
+      "開示",
+      "中計",
+      "後継"
+    ],
+    "target": "CHRO/経営企画",
+    "note": "",
+    "tpl": "chemicals",
+    "why_now": "",
+    "hook": "",
+    "mdFile": "panalyt_サトーHD.md"
   }
 ]
