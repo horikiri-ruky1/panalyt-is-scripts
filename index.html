@@ -146,8 +146,19 @@ header p { font-size: 13px; color: var(--s500); margin-top: 4px; }
   <div class="modal" id="modal-box"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
+// marked.js を必要になった時だけ読み込む
+let _markedLoaded = false;
+function ensureMarked() {
+  if (_markedLoaded) return Promise.resolve();
+  return new Promise(resolve => {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+    s.onload = () => { _markedLoaded = true; resolve(); };
+    s.onerror = () => resolve(); // fallback
+    document.head.appendChild(s);
+  });
+}
 let DATA = [];
 let filtered = [];
 let shown = 0;
@@ -199,11 +210,11 @@ function buildUI() {
     document.getElementById('if').appendChild(b);
   });
 
-  // Search (debounced)
+  // Search (debounced - 300ms to avoid blocking input)
   let timer;
   document.getElementById('search').addEventListener('input', e => {
     clearTimeout(timer);
-    timer = setTimeout(() => { filters.q = e.target.value.toLowerCase(); applyFilters(); }, 150);
+    timer = setTimeout(() => { filters.q = e.target.value.toLowerCase(); applyFilters(); }, 300);
   });
 
   // Reset
@@ -235,9 +246,12 @@ function applyFilters() {
   });
   filtered.sort((a, b) => PO[a.priority] - PO[b.priority] || a.industry.localeCompare(b.industry) || a.name.localeCompare(b.name));
   document.getElementById('rc').textContent = filtered.length;
-  shown = 0;
-  document.getElementById('cards').innerHTML = '';
-  loadMore();
+  // Use rAF to avoid blocking the input thread
+  requestAnimationFrame(() => {
+    shown = 0;
+    document.getElementById('cards').innerHTML = '';
+    loadMore();
+  });
 }
 
 function loadMore() {
@@ -281,16 +295,19 @@ function createCard(c) {
       <div class="card-label">推奨先</div>
       <div style="font-size:13px;font-weight:600;margin-bottom:6px">${c.target||''}</div>
       <div class="card-note">${c.note||''}</div>
-      ${c.mdFile ? `<button class="btn btn-dark" onclick="openMd('${c.name}','${c.mdFile}')">📄 詳細MDスクリプトを表示</button>` : ''}
+      ${c.mdFile ? `<button class="btn btn-dark" onclick="openMd(this)" data-name="${c.name.replace(/'/g,'&#39;')}" data-file="${c.mdFile}">📄 詳細MDスクリプトを表示</button>` : ''}
     </div>
   `;
   return div;
 }
 
 // Modal
-function openMd(name, file) {
+function openMd(el) {
+  const name = el.dataset.name;
+  const file = el.dataset.file;
   const modal = document.getElementById('modal');
   const box = document.getElementById('modal-box');
+  const encodedFile = encodeURI(file);
   box.innerHTML = `
     <div class="modal-head">
       <div><h2>${name}</h2><span class="mono" style="font-size:11px;color:var(--s400)">${file}</span></div>
@@ -299,7 +316,9 @@ function openMd(name, file) {
     <div class="modal-body" style="text-align:center;padding:40px"><div class="spinner"></div> 読み込み中...</div>
   `;
   modal.classList.add('open');
-  fetch(file).then(r => {
+
+  // Load marked.js lazily, then fetch MD
+  ensureMarked().then(() => fetch(encodedFile)).then(r => {
     if (!r.ok) throw new Error('not found');
     return r.text();
   }).then(md => {
@@ -307,7 +326,7 @@ function openMd(name, file) {
     box.querySelector('.modal-body').innerHTML = `
       <div class="md">${html}</div>
       <div style="display:flex;gap:8px;margin-top:20px">
-        <a href="${file}" download class="btn btn-primary" style="max-width:180px;text-decoration:none">📥 ダウンロード</a>
+        <a href="${encodedFile}" download class="btn btn-primary" style="max-width:180px;text-decoration:none">📥 ダウンロード</a>
         <button class="btn btn-dark" style="max-width:180px" onclick="navigator.clipboard.writeText(this.closest('.modal-body').querySelector('.md').innerText).then(()=>this.textContent='✓ コピー済み')">📋 テキストコピー</button>
       </div>
     `;
@@ -315,7 +334,7 @@ function openMd(name, file) {
     box.querySelector('.modal-body').innerHTML = `
       <div style="background:#FEF2F2;padding:16px;border-radius:8px;color:#991B1B">
         <p><strong>MDファイルの読み込みに失敗</strong></p>
-        <p style="font-size:12px;margin-top:6px">HTTPサーバーが必要です: <code class="mono">python3 -m http.server 8080</code></p>
+        <p style="font-size:12px;margin-top:6px">ファイルが見つかりません: ${file}</p>
       </div>
     `;
   });
