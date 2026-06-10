@@ -1,2481 +1,23 @@
 [
   {
-    "name": "野村ホールディングス株式会社",
-    "industry": "金融・リース",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "証券最大手。ジョブ型導入中、グローバル統合人事の典型ターゲット",
-    "tpl": "finance_megabank",
-    "why_now": "証券業界全体でジョブ型人事制度の運用高度化が進む中、野村HDも経営戦略と人事戦略の連動を強化中。中期経営計画の人的資本KPIも詳細化されており、データ基盤への投資ニーズが高まっている。",
-    "hook": "証券業界のジョブ型人事と人的資本開示について、グローバル投資銀行のベンチマーク事例を共有させていただきたく",
-    "mdFile": "panalyt_野村ホールディングス.md"
-  },
-  {
-    "name": "東京センチュリー株式会社",
-    "industry": "金融・リース",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "伊藤忠系リース、グローバル展開拡大中、プライム",
-    "tpl": "finance_megabank",
-    "why_now": "リース業界のグローバル展開加速期。海外子会社の人事データ統合と、伊藤忠グループの人材戦略連動が経営課題。",
-    "hook": "グローバルリース業界の人材データ統合と、伊藤忠グループ連携の人事戦略について",
-    "mdFile": "panalyt_東京センチュリー.md"
-  },
-  {
-    "name": "株式会社山口フィナンシャルグループ",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "地銀大手、デジタル化先進。千葉銀型の中計フックが有効",
-    "tpl": "finance_regional",
-    "why_now": "地銀業界全体で「人×AI」生産性向上と人的資本開示精緻化が経営アジェンダに。千葉銀行の第16次中計のように、人時生産性目標を掲げる動きが広がっている。",
-    "hook": "地銀業界における人時生産性のKPI化と、人的資本開示の精度向上について",
-    "mdFile": "panalyt_山口FG.md"
-  },
-  {
-    "name": "アコム株式会社",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "三菱UFJG、消費者金融大手。属人化解消・後継育成のニーズ",
-    "tpl": "finance_megabank",
-    "why_now": "消費者金融業界の構造変化と、三菱UFJグループとしての人事ガバナンス強化期。属人化解消と次世代育成が重要テーマ。",
-    "hook": "消費者金融業界の人材ポートフォリオ最適化とMUFGグループ連携人事について",
-    "mdFile": "panalyt_アコム.md"
-  },
-  {
-    "name": "株式会社オリエントコーポレーション",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "みずほG、信販大手",
-    "tpl": "finance_megabank",
-    "why_now": "みずほグループの人事戦略連動と、信販事業の構造変革期。",
-    "hook": "信販業界の人材ポートフォリオ最適化について",
-    "mdFile": "panalyt_オリコ.md"
-  },
-  {
-    "name": "芙蓉総合リース株式会社",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "みずほ系リース、海外展開拡大中",
-    "tpl": "finance_megabank",
-    "why_now": "リース業界のグローバル展開加速期。海外人材統合とサクセッションが経営課題。",
-    "hook": "グローバルリース業界の人材データ統合について",
-    "mdFile": "panalyt_芙蓉総合リース.md"
-  },
-  {
-    "name": "株式会社紀陽銀行",
-    "industry": "金融・リース",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "和歌山地銀、人的資本開示対応中",
-    "tpl": "finance_regional",
-    "why_now": "地銀業界の人的資本開示対応と人時生産性向上が課題。",
-    "hook": "地銀における人的資本開示と人時生産性向上について",
-    "mdFile": "panalyt_紀陽銀行.md"
-  },
-  {
-    "name": "株式会社滋賀銀行",
-    "industry": "金融・リース",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "地銀、SDGs先進",
-    "tpl": "finance_regional",
-    "why_now": "地銀業界の人的資本開示と、SDGs/サステナビリティ人材戦略の連動。",
-    "hook": "サステナビリティ経営と人的資本データ活用について",
-    "mdFile": "panalyt_滋賀銀行.md"
-  },
-  {
-    "name": "株式会社武蔵野銀行",
-    "industry": "金融・リース",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "埼玉地銀",
-    "tpl": "finance_regional",
-    "why_now": "地銀業界の人的資本開示と人時生産性向上が課題。",
-    "hook": "地銀における人的資本データ活用について",
-    "mdFile": "panalyt_武蔵野銀行.md"
-  },
-  {
-    "name": "富士フイルムホールディングス株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "事業転換成功例。ヘルスケア注力、グローバル人事の旗艦事例",
-    "tpl": "pharma_health",
-    "why_now": "フィルムからヘルスケア・素材への事業転換成功例として有名。中計でも人材ポートフォリオの転換が継続テーマで、研究人材・新規事業人材の最適配置が経営課題。",
-    "hook": "事業転換期における人材ポートフォリオ再編と、グローバル人事データ統合について",
-    "mdFile": "panalyt_富士フイルムHD.md"
-  },
-  {
-    "name": "シスメックス株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "体外診断グローバル、海外比率高、エンジニア人材",
-    "tpl": "pharma_health",
-    "why_now": "体外診断分野でグローバル展開を加速中。海外売上比率8割超で、グローバル人材ガバナンスとエンジニア人材確保が最重要課題。",
-    "hook": "グローバル医療機器メーカーの人材データ統合と、エンジニア人材戦略について",
-    "mdFile": "panalyt_シスメックス.md"
-  },
-  {
-    "name": "株式会社ツムラ",
-    "industry": "製薬・ヘルスケア",
-    "priority": "A",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "漢方独占的、人的資本投資注力中",
-    "tpl": "pharma_health",
-    "why_now": "漢方医薬品の独占的地位を活かした成長戦略と、人的資本投資の本格化期。中国展開も加速中。",
-    "hook": "漢方医薬品グローバル展開における人材戦略について",
-    "mdFile": "panalyt_ツムラ.md"
-  },
-  {
-    "name": "ピジョン株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "A",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "ベビー用品グローバル、女性活躍リード企業",
-    "tpl": "pharma_health",
-    "why_now": "女性活躍リード企業として人的資本開示の精緻化を継続。ベビー用品グローバル展開で人材戦略のさらなる高度化が課題。",
-    "hook": "女性活躍・ダイバーシティKPIの精緻なモニタリングと、グローバル人材戦略について",
-    "mdFile": "panalyt_ピジョン.md"
-  },
-  {
-    "name": "株式会社アインホールディングス",
-    "industry": "製薬・ヘルスケア",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO/事業役員",
-    "note": "薬局チェーン最大手、店舗別生産性可視化ニーズ",
-    "tpl": "retail",
-    "why_now": "調剤薬局業界の再編進行中。店舗別生産性と薬剤師の配置最適化が経営課題。",
-    "hook": "調剤薬局チェーンにおける店舗別生産性と薬剤師配置最適化について",
-    "mdFile": "panalyt_アインHD.md"
-  },
-  {
-    "name": "株式会社バイタルケーエスケー・ホールディングス",
-    "industry": "製薬・ヘルスケア",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "開示",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "医薬品卸大手",
-    "tpl": "pharma_health",
-    "why_now": "医薬品卸業界の再編期。物流人材・営業人材の最適配置が課題。",
-    "hook": "医薬品卸業界の人材ポートフォリオ最適化について",
-    "mdFile": "panalyt_バイタルKSK.md"
-  },
-  {
-    "name": "医療法人和光会",
-    "industry": "製薬・ヘルスケア",
-    "priority": "D",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "理事長/事務長",
-    "note": "医療法人は予算規模・意思決定構造的に難しい。営業優先度低",
-    "tpl": "pharma_health",
-    "why_now": "医療法人は予算・意思決定構造的に当面ターゲットから外す。",
-    "hook": "※基本的に営業優先度低",
-    "mdFile": "panalyt_和光会.md"
-  },
-  {
-    "name": "東レ株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "繊維・素材グローバル、研究人材の希少性高",
-    "tpl": "chemicals",
-    "why_now": "炭素繊維・水素事業など先端素材の研究人材確保が最重要課題。グローバル展開も継続強化中。",
-    "hook": "先端素材分野の研究人材確保と、グローバル人材データ統合について",
-    "mdFile": "panalyt_東レ.md"
-  },
-  {
-    "name": "信越化学工業株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "後継",
-      "開示"
-    ],
-    "target": "CHRO",
-    "note": "シリコーン世界一、超優良企業。属人化解消・後継育成テーマ",
-    "tpl": "chemicals",
-    "why_now": "シリコーン・半導体材料の世界一企業。極めて保守的な企業文化のため、属人化解消とサクセッション可視化が長期テーマ。",
-    "hook": "半導体材料グローバルリーダーのサクセッション可視化について",
-    "mdFile": "panalyt_信越化学.md"
-  },
-  {
-    "name": "積水化学工業株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "住宅・化学・医療、人的資本開示注力",
-    "tpl": "chemicals",
-    "why_now": "人的資本開示の精緻化と、住宅・化学・医療の3事業ポートフォリオの人材最適配置が経営課題。",
-    "hook": "多事業ポートフォリオの人材最適配置と、人的資本開示の精緻化について",
-    "mdFile": "panalyt_積水化学.md"
-  },
-  {
-    "name": "株式会社カネカ",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "化学グローバル、サステナブル素材",
-    "tpl": "chemicals",
-    "why_now": "サステナブル素材分野での研究開発加速。グローバル人材戦略と研究人材確保が継続テーマ。",
-    "hook": "サステナブル素材分野の研究人材戦略について",
-    "mdFile": "panalyt_カネカ.md"
-  },
-  {
-    "name": "古河電気工業株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "電線・素材、150周年、中計遂行中",
-    "tpl": "chemicals",
-    "why_now": "創業150周年の節目で長期ビジョンと中計を推進中。グローバル人材ガバナンスと事業ポートフォリオ転換に伴う人材再配置が課題。",
-    "hook": "創業150周年の節目における人材ポートフォリオ戦略について",
-    "mdFile": "panalyt_古河電工.md"
-  },
-  {
-    "name": "東洋紡株式会社",
-    "industry": "化学・素材",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "繊維・機能材、事業転換中",
-    "tpl": "chemicals",
-    "why_now": "繊維から機能材・医療材料への事業転換進行中。人材ポートフォリオ再編が重要テーマ。",
-    "hook": "事業転換期における人材ポートフォリオ再編について",
-    "mdFile": "panalyt_東洋紡.md"
-  },
-  {
-    "name": "倉敷紡績株式会社",
-    "industry": "化学・素材",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "クラボウ、繊維から多角化",
-    "tpl": "chemicals",
-    "why_now": "繊維から化成品・エレクトロニクス・食品への多角化進展。多事業ポートフォリオの人材最適配置が課題。",
-    "hook": "多角化企業の人材ポートフォリオ最適化について",
-    "mdFile": "panalyt_倉敷紡績.md"
-  },
-  {
-    "name": "大倉工業株式会社",
-    "industry": "化学・素材",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "合成樹脂・建材",
-    "tpl": "chemicals",
-    "why_now": "中堅化学メーカーの後継者育成・サクセッションが課題。",
-    "hook": "中堅化学メーカーのサクセッションと人材戦略について",
-    "mdFile": "panalyt_大倉工業.md"
-  },
-  {
-    "name": "大日本塗料株式会社",
-    "industry": "化学・素材",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "塗料中堅",
-    "tpl": "chemicals",
-    "why_now": "塗料業界の再編進行中、後継者育成が重要。",
-    "hook": "塗料業界の人材戦略とサクセッションについて",
-    "mdFile": "panalyt_大日本塗料.md"
-  },
-  {
-    "name": "ダイナパック株式会社",
-    "industry": "化学・素材",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "段ボール・包装",
-    "tpl": "chemicals",
-    "why_now": "包装資材業界の生産性向上と人材ポートフォリオ最適化が課題。",
-    "hook": "包装資材業界の人材戦略について",
-    "mdFile": "panalyt_ダイナパック.md"
-  },
-  {
-    "name": "日揮ホールディングス株式会社",
-    "industry": "プラント・建設",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継",
-      "中計"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "プラントエンジニアリング、プロジェクト人材の最適配置・脱炭素転換",
-    "tpl": "plant_const",
-    "why_now": "エネルギー転換期で従来の石油・ガスプラントから水素・アンモニア・CCSへの事業転換進行中。技術者のリスキリングとプロジェクト人材最適配置が最重要課題。",
-    "hook": "エネルギー転換期における技術者リスキリングとプロジェクト人材最適配置について",
-    "mdFile": "panalyt_日揮HD.md"
-  },
-  {
-    "name": "株式会社アイシン",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "トヨタG筆頭部品、CASE変革のど真ん中、再配置必須",
-    "tpl": "auto_parts",
-    "why_now": "CASE変革の真っ只中。エンジン関連事業から電動化・ソフトウェア・新領域への人材ポートフォリオ転換が経営最重要課題。10万人超の人材再配置が現実問題。",
-    "hook": "CASE変革下における10万人超の人材ポートフォリオ転換シミュレーションについて",
-    "mdFile": "panalyt_アイシン.md"
-  },
-  {
-    "name": "株式会社豊田自動織機",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "CASE変革、グローバル展開",
-    "tpl": "auto_parts",
-    "why_now": "トヨタグループの中核として、自動車・物流機器・エンジン事業の事業ポートフォリオ転換期。",
-    "hook": "トヨタグループ中核企業の人材ポートフォリオ転換について",
-    "mdFile": "panalyt_豊田自動織機.md"
-  },
-  {
-    "name": "豊田合成株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "トヨタG、CASE変革、樹脂・ゴム部品",
-    "tpl": "auto_parts",
-    "why_now": "トヨタグループでCASE変革・電動化対応が進行中。樹脂・ゴム部品の事業構造転換期。",
-    "hook": "CASE時代の樹脂・ゴム部品事業の人材戦略について",
-    "mdFile": "panalyt_豊田合成.md"
-  },
-  {
-    "name": "愛三工業株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "自動車部品、脱エンジン転換中",
-    "tpl": "auto_parts",
-    "why_now": "燃料系部品メーカーから脱エンジン・電動化への事業転換が極めて重要。人材ポートフォリオ転換が会社存続レベルの課題。",
-    "hook": "脱エンジン期における事業転換と人材ポートフォリオ再編について",
-    "mdFile": "panalyt_愛三工業.md"
-  },
-  {
-    "name": "株式会社エクセディ",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "クラッチ・トルコン、EV対応中",
-    "tpl": "auto_parts",
-    "why_now": "クラッチ・トルコンメーカーとしてEV対応が事業存続テーマ。人材スキル転換が急務。",
-    "hook": "EV対応期における事業転換と人材スキル転換について",
-    "mdFile": "panalyt_エクセディ.md"
-  },
-  {
-    "name": "株式会社ミツバ",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "自動車電装部品、CASE対応",
-    "tpl": "auto_parts",
-    "why_now": "自動車電装部品メーカーとしてCASE対応とグローバル拠点最適化が重要。",
-    "hook": "自動車電装部品メーカーのグローバル人材戦略について",
-    "mdFile": "panalyt_ミツバ.md"
-  },
-  {
-    "name": "川崎重工業株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "重工、防衛・水素事業転換期、多事業ポートフォリオ",
-    "tpl": "heavy_industry",
-    "why_now": "防衛・水素・ロボット・モーターサイクル等の多事業ポートフォリオで、防衛と水素事業が急成長期。人材ポートフォリオ再編が最重要。",
-    "hook": "防衛・水素事業急成長期における多事業ポートフォリオの人材最適配置について",
-    "mdFile": "panalyt_川崎重工.md"
-  },
-  {
-    "name": "株式会社ブリヂストン",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "ジョブ型導入の旗手、グローバル人事改革リード企業",
-    "tpl": "auto_parts",
-    "why_now": "日本企業のジョブ型人事制度導入の旗手として有名。グローバル人事改革を継続的に推進中。",
-    "hook": "ジョブ型人事制度の運用高度化と、グローバル人材データ統合について",
-    "mdFile": "panalyt_ブリヂストン.md"
-  },
-  {
-    "name": "住友電気工業株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "住友G、電線・自動車部品グローバル",
-    "tpl": "auto_parts",
-    "why_now": "住友グループの中核として、電線・自動車部品・産業素材のグローバル展開を加速中。",
-    "hook": "住友グループ中核企業のグローバル人材データ統合について",
-    "mdFile": "panalyt_住友電工.md"
-  },
-  {
-    "name": "住友ゴム工業株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "住友G、ダンロップ、グローバル",
-    "tpl": "auto_parts",
-    "why_now": "ダンロップブランドのグローバル展開とEV対応が継続テーマ。",
-    "hook": "グローバルタイヤメーカーの人材戦略について",
-    "mdFile": "panalyt_住友ゴム.md"
-  },
-  {
-    "name": "住友理工株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "住友G、ゴム部品、CASE対応",
-    "tpl": "auto_parts",
-    "why_now": "自動車用ゴム部品としてCASE対応を加速。事業ポートフォリオ転換期。",
-    "hook": "CASE対応期における自動車用ゴム部品事業の人材戦略について",
-    "mdFile": "panalyt_住友理工.md"
-  },
-  {
-    "name": "ダイキョーニシカワ株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "マツダ系、自動車内装樹脂部品",
-    "tpl": "auto_parts",
-    "why_now": "マツダ系の自動車内装樹脂部品メーカー、CASE対応が課題。",
-    "hook": "自動車内装部品メーカーの人材戦略について",
-    "mdFile": "panalyt_ダイキョーニシカワ.md"
-  },
-  {
-    "name": "株式会社ダイヘン",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "溶接機・ロボット、グローバル拡大中",
-    "tpl": "auto_parts",
-    "why_now": "溶接機・ロボット・電力機器のグローバル展開加速中。",
-    "hook": "溶接機・ロボット事業のグローバル人材戦略について",
-    "mdFile": "panalyt_ダイヘン.md"
-  },
-  {
-    "name": "株式会社タダノ",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "クレーン世界2位、グローバル",
-    "tpl": "auto_parts",
-    "why_now": "クレーン世界第2位、海外売上比率高。グローバル人材統合が継続課題。",
-    "hook": "グローバルクレーンメーカーの人材データ統合について",
-    "mdFile": "panalyt_タダノ.md"
-  },
-  {
-    "name": "株式会社キッツ",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "バルブ国内最大手、海外展開",
-    "tpl": "auto_parts",
-    "why_now": "バルブ国内最大手、海外展開も加速中。",
-    "hook": "バルブ業界のグローバル人材戦略について",
-    "mdFile": "panalyt_キッツ.md"
-  },
-  {
-    "name": "新明和工業株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "航空機・特装車",
-    "tpl": "heavy_industry",
-    "why_now": "航空機・特装車の中堅メーカー。技術者のサクセッションが課題。",
-    "hook": "航空機・特装車メーカーの技術者サクセッションについて",
-    "mdFile": "panalyt_新明和工業.md"
-  },
-  {
-    "name": "村田機械株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "繊維機械・物流システム、未上場大手（開示プレッシャー弱）",
-    "tpl": "heavy_industry",
-    "why_now": "未上場のため開示圧力は弱いが、繊維機械・物流システム・FA等多事業のグローバル展開で人材ポートフォリオ管理が課題。",
-    "hook": "グローバル機械メーカーの多事業人材ポートフォリオ管理について",
-    "mdFile": "panalyt_村田機械.md"
-  },
-  {
-    "name": "株式会社エー・アンド・デイ",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "計測機器メーカー",
-    "tpl": "electronics",
-    "why_now": "計測機器のグローバル展開とエンジニア人材確保が課題。",
-    "hook": "計測機器メーカーのエンジニア人材戦略について",
-    "mdFile": "panalyt_エーアンドデイ.md"
-  },
-  {
-    "name": "日本精機株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "自動車計器、CASE対応",
-    "tpl": "auto_parts",
-    "why_now": "自動車計器・HUDのCASE対応進行中。",
-    "hook": "自動車計器メーカーのCASE対応人材戦略について",
-    "mdFile": "panalyt_日本精機.md"
-  },
-  {
-    "name": "千代田インテグレ株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "C",
-    "scale": "S",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "精密成形品、規模やや小",
-    "tpl": "auto_parts",
-    "why_now": "精密成形品メーカー、規模はやや小さいがグローバル展開あり。",
-    "hook": "精密成形品メーカーのグローバル人材戦略について",
-    "mdFile": "panalyt_千代田インテグレ.md"
-  },
-  {
-    "name": "丸一鋼管株式会社",
-    "industry": "鉄鋼・金属",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "鋼管、グローバル展開、海外売上比率高",
-    "tpl": "steel_metal",
-    "why_now": "鋼管メーカー、海外売上比率6割超でグローバル人材統合が継続課題。",
-    "hook": "グローバル鋼管メーカーの海外人材データ統合について",
-    "mdFile": "panalyt_丸一鋼管.md"
-  },
-  {
-    "name": "山陽特殊製鋼株式会社",
-    "industry": "鉄鋼・金属",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "特殊鋼、技能伝承課題",
-    "tpl": "steel_metal",
-    "why_now": "特殊鋼メーカー、ベテラン技能者の高齢化と技能伝承が最重要課題。",
-    "hook": "特殊鋼メーカーの技能伝承可視化について",
-    "mdFile": "panalyt_山陽特殊製鋼.md"
-  },
-  {
-    "name": "共英製鋼株式会社",
-    "industry": "鉄鋼・金属",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "電炉鉄鋼、海外比率高",
-    "tpl": "steel_metal",
-    "why_now": "電炉鉄鋼の代表企業、海外売上比率高でグローバル人材戦略が重要。",
-    "hook": "電炉鉄鋼業界のグローバル人材戦略について",
-    "mdFile": "panalyt_共英製鋼.md"
-  },
-  {
-    "name": "ルネサスエレクトロニクス株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "半導体、経営変革中、人事制度刷新の旬",
-    "tpl": "electronics",
-    "why_now": "半導体業界の構造変化と、経営変革（柴田氏体制）下での人事制度刷新進行中。グローバル人材戦略・報酬戦略が経営アジェンダ。",
-    "hook": "半導体業界の経営変革下における人事制度刷新と、グローバル人材戦略について",
-    "mdFile": "panalyt_ルネサス.md"
-  },
-  {
-    "name": "浜松ホトニクス株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "光学技術世界一、研究開発型、技術伝承",
-    "tpl": "electronics",
-    "why_now": "ノーベル賞貢献企業として有名な光学技術世界一企業。研究開発型で技術者サクセッションが最重要。",
-    "hook": "研究開発型企業の技術者サクセッションとキャリアパス可視化について",
-    "mdFile": "panalyt_浜松ホトニクス.md"
-  },
-  {
-    "name": "キヤノン株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "事業転換、医療・産業機器強化",
-    "tpl": "electronics",
-    "why_now": "カメラ事業の構造変化下、医療・産業機器・半導体露光装置の事業転換進行中。人材ポートフォリオ転換が重要。",
-    "hook": "事業転換期における人材ポートフォリオ転換とグローバル人材戦略について",
-    "mdFile": "panalyt_キヤノンMJ.md"
-  },
-  {
-    "name": "アンリツ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "通信計測機器、グローバル",
-    "tpl": "electronics",
-    "why_now": "通信計測機器のグローバル展開、5G・6G関連需要拡大期。",
-    "hook": "通信計測機器メーカーのグローバル人材戦略について",
-    "mdFile": "panalyt_アンリツ.md"
-  },
-  {
-    "name": "セイコーグループ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "時計・電子機器、事業転換中",
-    "tpl": "electronics",
-    "why_now": "時計事業の構造変化と、電子機器・システムソリューションへの事業転換期。",
-    "hook": "事業転換期における人材ポートフォリオ転換について",
-    "mdFile": "panalyt_セイコーグループ.md"
-  },
-  {
-    "name": "キヤノンマーケティングジャパン株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "キヤノン販社、サービス転換",
-    "tpl": "electronics",
-    "why_now": "キヤノン販社からITサービス・ソリューション企業への転換進行中。",
-    "hook": "販社からソリューション企業への転換における人材戦略について",
-    "mdFile": "panalyt_キヤノンMJ.md"
-  },
-  {
-    "name": "花王株式会社",
-    "industry": "消費財・食品",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "人的資本KPI整備リード企業、ジョブ型先進。最高ターゲット",
-    "tpl": "fmcg_food",
-    "why_now": "人的資本経営のリード企業として有名。ジョブ型導入・人的資本KPI整備で日本企業のベンチマーク。さらなる高度化のニーズあり。",
-    "hook": "人的資本KPI整備リード企業として、さらなる高度化と他社ベンチマーク事例について",
-    "mdFile": "panalyt_花王.md"
-  },
-  {
-    "name": "ハウス食品グループ本社株式会社",
-    "industry": "消費財・食品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "食品大手、海外比率向上中",
-    "tpl": "fmcg_food",
-    "why_now": "海外比率向上中（特に米国・中国）。グローバル人材戦略が継続テーマ。",
-    "hook": "食品グローバル展開期における人材戦略について",
-    "mdFile": "panalyt_ハウス食品.md"
-  },
-  {
-    "name": "株式会社ヤクルト本社",
-    "industry": "消費財・食品",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "海外比率高、ヤクルトレディ管理が独特",
-    "tpl": "fmcg_food",
-    "why_now": "海外売上比率5割超、ヤクルトレディという独自の販売チャネル管理あり。グローバル人材＋独自チャネル人材の二重管理が特徴。",
-    "hook": "グローバル展開とヤクルトレディチャネルの人材戦略について",
-    "mdFile": "panalyt_ヤクルト.md"
-  },
-  {
-    "name": "株式会社ニチレイ",
-    "industry": "消費財・食品",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "冷凍食品、物流、グローバル",
-    "tpl": "fmcg_food",
-    "why_now": "冷凍食品・低温物流のグローバル展開期、人材戦略が重要。",
-    "hook": "冷凍食品・低温物流のグローバル人材戦略について",
-    "mdFile": "panalyt_ニチレイ.md"
-  },
-  {
-    "name": "プリマハム株式会社",
-    "industry": "消費財・食品",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "食肉加工",
-    "tpl": "fmcg_food",
-    "why_now": "食肉加工業界の人材ポートフォリオ最適化が課題。",
-    "hook": "食肉加工業界の人材戦略について",
-    "mdFile": "panalyt_プリマハム.md"
-  },
-  {
-    "name": "丸大食品株式会社",
-    "industry": "消費財・食品",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "食肉加工",
-    "tpl": "fmcg_food",
-    "why_now": "食肉加工業界の人材戦略が課題。",
-    "hook": "食肉加工業界の人材戦略について",
-    "mdFile": "panalyt_丸大食品.md"
-  },
-  {
-    "name": "昭和産業株式会社",
-    "industry": "消費財・食品",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "製粉・食用油",
-    "tpl": "fmcg_food",
-    "why_now": "製粉・食用油業界、後継者育成と事業承継が課題。",
-    "hook": "食品中堅メーカーの後継者育成について",
-    "mdFile": "panalyt_昭和産業.md"
-  },
-  {
-    "name": "イオン株式会社",
-    "industry": "小売・流通",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "超巨大グループ、国内外多数の子会社、連結ガバナンス課題ど真ん中",
-    "tpl": "retail",
-    "why_now": "国内外300社超のグループ企業、人事システム・データもバラバラ。連結ガバナンス強化と人的資本開示の精度向上が経営最重要課題。",
-    "hook": "300社超のグループ企業の人事データ連結統合と、人的資本開示の精度向上について",
-    "mdFile": "panalyt_イオンモール.md"
-  },
-  {
-    "name": "株式会社ツルハホールディングス",
-    "industry": "小売・流通",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/事業役員",
-    "note": "ドラッグストア再編、店舗網拡大、店舗別生産性",
-    "tpl": "retail",
-    "why_now": "ドラッグストア業界の再編期。イオン・ウエルシア・ツルハの統合議論進行中。店舗別生産性可視化と統合後人材ポートフォリオ管理が重要。",
-    "hook": "ドラッグストア業界再編期における店舗別生産性と統合後人材戦略について",
-    "mdFile": "panalyt_ツルハHD.md"
-  },
-  {
-    "name": "株式会社ビックカメラ",
-    "industry": "小売・流通",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "家電量販、グループ会社多数、連結人材分析",
-    "tpl": "retail",
-    "why_now": "家電量販業界の構造変化期。コジマ・ソフマップ等グループ会社の人材データ統合と店舗別生産性最適化が重要。",
-    "hook": "グループ会社含む店舗別生産性可視化と人材ポートフォリオについて",
-    "mdFile": "panalyt_ビックカメラ.md"
-  },
-  {
-    "name": "イオンモール株式会社",
-    "industry": "小売・流通",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "商業施設運営、海外展開",
-    "tpl": "retail",
-    "why_now": "商業施設運営、海外展開（中国・ベトナム等）あり。",
-    "hook": "商業施設運営のグローバル人材戦略について",
-    "mdFile": "panalyt_イオンモール.md"
-  },
-  {
-    "name": "株式会社ケーズホールディングス",
-    "industry": "小売・流通",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "家電量販",
-    "tpl": "retail",
-    "why_now": "家電量販業界の構造変化期。",
-    "hook": "家電量販業界の店舗別生産性について",
-    "mdFile": "panalyt_ケーズHD.md"
-  },
-  {
-    "name": "株式会社ネクステージ",
-    "industry": "小売・流通",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "中古車販売、急成長中、人員拡大",
-    "tpl": "retail",
-    "why_now": "中古車販売の急成長企業。M&A・店舗拡大に伴う人員急拡大で、店舗別生産性管理が重要。",
-    "hook": "急成長企業の店舗別生産性と人員拡大期の人材戦略について",
-    "mdFile": "panalyt_ネクステージ.md"
-  },
-  {
-    "name": "株式会社コジマ",
-    "industry": "小売・流通",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "ビックカメラ傘下、家電",
-    "tpl": "retail",
-    "why_now": "ビックカメラ傘下、グループ統合の文脈。",
-    "hook": "家電量販グループ統合の人材戦略について",
-    "mdFile": "panalyt_コジマ.md"
-  },
-  {
-    "name": "株式会社平和堂",
-    "industry": "小売・流通",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "滋賀地盤スーパー",
-    "tpl": "retail",
-    "why_now": "地域スーパーの店舗別生産性が課題。",
-    "hook": "地域スーパーの店舗別生産性について",
-    "mdFile": "panalyt_平和堂.md"
-  },
-  {
-    "name": "株式会社イズミ",
-    "industry": "小売・流通",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "中四国スーパー（ゆめタウン）",
-    "tpl": "retail",
-    "why_now": "中四国地域スーパーの店舗別生産性が課題。",
-    "hook": "地域スーパーの店舗別生産性について",
-    "mdFile": "panalyt_イズミ.md"
-  },
-  {
-    "name": "株式会社あらた",
-    "industry": "小売・流通",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "日用品卸",
-    "tpl": "retail",
-    "why_now": "日用品卸業界の物流人材・営業人材の最適配置が課題。",
-    "hook": "日用品卸業界の人材ポートフォリオについて",
-    "mdFile": "panalyt_あらた.md"
-  },
-  {
-    "name": "川崎汽船株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "中計",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "海運大手、市況変動激しい、グローバル",
-    "tpl": "logistics",
-    "why_now": "海運業界の市況変動激しく、海外人材含めた配置最適化と、ONE（コンテナ船統合事業）含めたグループ人材戦略が継続課題。",
-    "hook": "海運業界のグローバル人材戦略とONE連携について",
-    "mdFile": "panalyt_川崎汽船.md"
-  },
-  {
-    "name": "名古屋鉄道株式会社",
+    "name": "ＡＮＡホールディングス株式会社",
     "industry": "運輸・物流・交通",
     "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
+    "scale": "営業利益2,500億円・ROE15%以上",
+    "listed": "上場",
+    "global": "あり",
     "pitches": [
-      "ポートフォリオ",
-      "後継"
+      "非航空事業拡大に向けた人材ポートフォリオ多様化",
+      "パイロット・CA・グランドスタッフのサクセッション管理",
+      "グローバル路線拡大の海外人材戦略",
+      "CHRO体制下の人的資本KPI設計と開示"
     ],
-    "target": "CHRO",
-    "note": "名鉄、グループ会社多数",
-    "tpl": "logistics",
-    "why_now": "名鉄グループの多事業（鉄道・バス・流通・不動産等）の人材ポートフォリオ管理と、2024年問題対応が課題。",
-    "hook": "名鉄グループの人材ポートフォリオと2024年問題対応について",
-    "mdFile": "panalyt_名古屋鉄道.md"
-  },
-  {
-    "name": "丸全昭和運輸株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "陸運、2024年問題対応",
-    "tpl": "logistics",
-    "why_now": "陸運業界の2024年問題対応。ドライバー人材確保と労働時間最適化が重要。",
-    "hook": "陸運業界の2024年問題対応とドライバー人材戦略について",
-    "mdFile": "panalyt_丸全昭和運輸.md"
-  },
-  {
-    "name": "日本コムシス株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "通信工事、技術者多数、属人化解消",
-    "tpl": "logistics",
-    "why_now": "通信工事業界、技術者の属人化解消とサクセッションが課題。",
-    "hook": "通信工事業界の技術者人材戦略について",
-    "mdFile": "panalyt_日本コムシス.md"
-  },
-  {
-    "name": "神奈川中央交通株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "神奈中、バス、2024年問題",
-    "tpl": "logistics",
-    "why_now": "バス業界の2024年問題対応、運転手不足が深刻。",
-    "hook": "バス業界の運転手不足と2024年問題対応について",
-    "mdFile": "panalyt_神奈川中央交通.md"
-  },
-  {
-    "name": "大阪ガス株式会社",
-    "industry": "エネルギー・インフラ",
-    "priority": "A",
-    "scale": "XL",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "都市ガス大手、脱炭素人材、グループ多数",
-    "tpl": "energy",
-    "why_now": "脱炭素転換期で水素・アンモニア事業強化中。グループ100社超の人材ポートフォリオ統合と、脱炭素人材へのリスキリングが経営課題。",
-    "hook": "エネルギー転換期における脱炭素人材リスキリングとグループ人材統合について",
-    "mdFile": "panalyt_大阪ガス.md"
-  },
-  {
-    "name": "電源開発株式会社",
-    "industry": "エネルギー・インフラ",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "J-POWER、脱炭素転換、技能伝承課題",
-    "tpl": "energy",
-    "why_now": "電力卸最大手、脱炭素転換期。火力発電の技能者高齢化と、再エネ・水素人材へのリスキリングが急務。",
-    "hook": "電力業界の脱炭素転換と技能伝承・リスキリングについて",
-    "mdFile": "panalyt_電源開発.md"
-  },
-  {
-    "name": "オルガノ株式会社",
-    "industry": "エネルギー・インフラ",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "水処理プラント、半導体向けで成長中",
-    "tpl": "plant_const",
-    "why_now": "半導体向け水処理プラントで急成長中。エンジニア人材確保が最重要。",
-    "hook": "半導体向け水処理プラントのエンジニア人材戦略について",
-    "mdFile": "panalyt_オルガノ.md"
-  },
-  {
-    "name": "伊藤忠エネクス株式会社",
-    "industry": "エネルギー・インフラ",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "伊藤忠系石油卸",
-    "tpl": "energy",
-    "why_now": "石油卸業界の構造変化、伊藤忠グループ連動の人材戦略が重要。",
-    "hook": "伊藤忠グループ連携の人材戦略について",
-    "mdFile": "panalyt_伊藤忠エネクス.md"
-  },
-  {
-    "name": "東テク株式会社",
-    "industry": "エネルギー・インフラ",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "空調設備工事",
-    "tpl": "plant_const",
-    "why_now": "空調設備工事業界の人材ポートフォリオが課題。",
-    "hook": "空調設備工事業界の人材戦略について",
-    "mdFile": "panalyt_東テク.md"
-  },
-  {
-    "name": "株式会社バンダイナムコホールディングス",
-    "industry": "エンタメ・サービス",
-    "priority": "A",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "超大手エンタメ、IP戦略、組織変革進行中",
-    "tpl": "entertainment",
-    "why_now": "IP戦略中心の組織変革進行中。エンタメ企業のクリエイター人材定着と、IP別人材アサイン最適化が経営課題。",
-    "hook": "IP戦略下におけるクリエイター人材定着と組織最適化について",
-    "mdFile": "panalyt_バンダイナムコ.md"
-  },
-  {
-    "name": "セガサミーホールディングス株式会社",
-    "industry": "エンタメ・サービス",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "ポートフォリオ",
-      "中計"
-    ],
-    "target": "CHRO",
-    "note": "エンタメ、ゲーム・パチンコ",
-    "tpl": "entertainment",
-    "why_now": "ゲーム・パチンコの多事業ポートフォリオ、グローバル展開も加速中。",
-    "hook": "エンタメ多事業ポートフォリオの人材戦略について",
-    "mdFile": "panalyt_セガサミー.md"
-  },
-  {
-    "name": "東宝株式会社",
-    "industry": "エンタメ・サービス",
-    "priority": "B",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "後継",
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "映画・演劇、海外展開",
-    "tpl": "entertainment",
-    "why_now": "映画・演劇のグローバル展開、IP戦略強化期。",
-    "hook": "映画・演劇のグローバル展開と人材戦略について",
-    "mdFile": "panalyt_東宝.md"
-  },
-  {
-    "name": "株式会社河合楽器製作所",
-    "industry": "エンタメ・サービス",
-    "priority": "C",
-    "scale": "M",
-    "listed": true,
-    "global": true,
-    "pitches": [
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "ピアノ、技能伝承",
-    "tpl": "steel_metal",
-    "why_now": "ピアノ製造の技能伝承が長期課題。",
-    "hook": "ピアノ製造業の技能伝承について",
-    "mdFile": "panalyt_河合楽器.md"
-  },
-  {
-    "name": "株式会社テクノプロ",
-    "industry": "人材・サービス",
-    "priority": "B",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ",
-      "後継"
-    ],
-    "target": "CHRO",
-    "note": "IT人材派遣、技術者2万人超、配置可視化需要大",
-    "tpl": "staffing",
-    "why_now": "IT人材派遣最大手級、技術者2万人超のスキル可視化と案件マッチング最適化が事業の根幹課題。",
-    "hook": "IT人材派遣業界の技術者スキル可視化と案件マッチング最適化について",
-    "mdFile": "panalyt_テクノプロ.md"
-  },
-  {
-    "name": "株式会社パソナグループ",
-    "industry": "人材・サービス",
-    "priority": "C",
-    "scale": "L",
-    "listed": true,
-    "global": false,
-    "pitches": [
-      "ポートフォリオ"
-    ],
-    "target": "CHRO",
-    "note": "人材会社（同業）。自社管理需要は限定的、競合認識リスク",
-    "tpl": "staffing",
-    "why_now": "人材会社のため、自社人材データ管理の需要は限定的。競合認識リスクあり。",
-    "hook": "※基本的に営業優先度低（同業競合認識リスク）",
-    "mdFile": "panalyt_パソナグループ.md"
-  },
-  {
-    "name": "株式会社ダスキン",
-    "industry": "人材・サービス",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
+    "target": "※CHRO設置あり・架電前に特定",
+    "why_now": "新中計スタート。コロナ後の復活から成長フェーズへ。非航空事業拡大とグローバル人材戦略が焦点",
+    "hook": "非航空事業拡大に向けた人材ポートフォリオ多様化",
     "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_ダスキン.md"
-  },
-  {
-    "name": "三ツ星ベルト株式会社",
-    "industry": "ゴム製品",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_三ツ星ベルト.md"
-  },
-  {
-    "name": "味の素株式会社",
-    "industry": "消費財・食品",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_味の素.md"
-  },
-  {
-    "name": "セイコーエプソン株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_セイコーエプソン.md"
-  },
-  {
-    "name": "キリンホールディングス株式会社",
-    "industry": "消費財・食品",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_キリンHD.md"
-  },
-  {
-    "name": "株式会社オカムラ",
-    "industry": "消費財・食品",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_オカムラ.md"
-  },
-  {
-    "name": "ミネベアミツミ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_ミネベアミツミ.md"
-  },
-  {
-    "name": "住友大阪セメント株式会社",
-    "industry": "化学・素材",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_住友大阪セメント.md"
-  },
-  {
-    "name": "株式会社小松製作所",
-    "industry": "自動車・機械・部品",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_小松製作所.md"
-  },
-  {
-    "name": "ローム株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "2025年4月に新社長就任、新中計スタート。構造改革フェーズで経営体制刷新。パワー・アナログ半導体で世界トップ10目標",
-    "tpl": "chemicals",
-    "why_now": "2025年4月に新社長就任、新中計スタート。構造改革フェーズで経営体制刷新。パワー・アナログ半導体で世界トップ10目標",
-    "hook": "新社長体制下での組織変革",
-    "mdFile": "panalyt_ローム.md"
-  },
-  {
-    "name": "株式会社ＰＡＬＴＡＣ",
-    "industry": "運輸・物流・交通",
-    "priority": "B",
-    "scale": "S",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_ＰＡＬＴＡＣ.md"
-  },
-  {
-    "name": "ネットワンシステムズ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "S",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_ネットワンシステムズ.md"
-  },
-  {
-    "name": "第一三共株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "2025年度にグローバル共通ジョブ型人事制度導入。ADC（エンハーツ）の世界的成功を背景にグローバル人材獲得が待ったなし",
-    "tpl": "chemicals",
-    "why_now": "2025年度にグローバル共通ジョブ型人事制度導入。ADC（エンハーツ）の世界的成功を背景にグローバル人材獲得が待ったなし",
-    "hook": "グローバルジョブ型人事制度の定着・運用",
-    "mdFile": "panalyt_第一三共.md"
-  },
-  {
-    "name": "リコージャパン株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_リコージャパン.md"
-  },
-  {
-    "name": "株式会社マンダム",
-    "industry": "化学・素材",
-    "priority": "B",
-    "scale": "S",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_マンダム.md"
-  },
-  {
-    "name": "ＳＯＭＰＯホールディングス株式会社",
-    "industry": "金融・リース",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_ＳＯＭＰＯHD.md"
-  },
-  {
-    "name": "住友化学株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_住友化学.md"
-  },
-  {
-    "name": "丸紅株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_丸紅.md"
-  },
-  {
-    "name": "パーソルホールディングス株式会社",
-    "industry": "人材・サービス",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_パーソルHD.md"
-  },
-  {
-    "name": "ＡＧＣ株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_ＡＧＣ.md"
-  },
-  {
-    "name": "中外製薬株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "2025年1月に新人事制度導入。過去最高業績を連続更新中。ロシュとのアライアンス下でのグローバル人事が独自課題",
-    "tpl": "chemicals",
-    "why_now": "2025年1月に新人事制度導入。過去最高業績を連続更新中。ロシュとのアライアンス下でのグローバル人事が独自課題",
-    "hook": "新人事制度の定着と効果検証",
-    "mdFile": "panalyt_中外製薬.md"
-  },
-  {
-    "name": "東京海上ホールディングス株式会社",
-    "industry": "金融・リース",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_東京海上HD.md"
-  },
-  {
-    "name": "株式会社大林組",
-    "industry": "プラント・建設",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_大林組.md"
-  },
-  {
-    "name": "ナブテスコ株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "営利率5.9%→10%と倍増目標。CMP事業の劇的改善には人材再配置が不可欠。2026年1月に人事管掌役員就任したばかり",
-    "tpl": "chemicals",
-    "why_now": "営利率5.9%→10%と倍増目標。CMP事業の劇的改善には人材再配置が不可欠。2026年1月に人事管掌役員就任したばかり",
-    "hook": "営利率倍増の人材PF見直し",
-    "mdFile": "panalyt_ナブテスコ.md"
-  },
-  {
-    "name": "株式会社神戸製鋼所",
-    "industry": "鉄鋼・金属",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_神戸製鋼所.md"
-  },
-  {
-    "name": "サントリー食品インターナショナル株式会社",
-    "industry": "消費財・食品",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_サントリー食品インターナショナル.md"
-  },
-  {
-    "name": "三井物産株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_三井物産.md"
-  },
-  {
-    "name": "アステラス製薬株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "次期中計が2026年度スタート。副社長CPO杉田氏は人的資本経営の業界著名人。重点戦略製品の極大化を支える人材戦略が焦点",
-    "tpl": "chemicals",
-    "why_now": "次期中計が2026年度スタート。副社長CPO杉田氏は人的資本経営の業界著名人。重点戦略製品の極大化を支える人材戦略が焦点",
-    "hook": "次期中計の人材戦略方向性",
-    "mdFile": "panalyt_アステラス製薬.md"
-  },
-  {
-    "name": "日本板硝子株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_日本板硝子.md"
-  },
-  {
-    "name": "株式会社百五銀行",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "S",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_百五銀行.md"
-  },
-  {
-    "name": "塩野義製薬株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_塩野義製薬.md"
-  },
-  {
-    "name": "オムロン株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_オムロン.md"
-  },
-  {
-    "name": "株式会社商船三井",
-    "industry": "運輸・物流・交通",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "2026年4月に社長交代とPhase2始動が同時。経営の重心を変革から成果実現へシフト",
-    "tpl": "chemicals",
-    "why_now": "2026年4月に社長交代とPhase2始動が同時。経営の重心を変革から成果実現へシフト",
-    "hook": "新社長体制のPhase2人材配置",
-    "mdFile": "panalyt_商船三井.md"
-  },
-  {
-    "name": "株式会社資生堂",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_資生堂.md"
-  },
-  {
-    "name": "ＫＤＤＩ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_ＫＤＤＩ.md"
-  },
-  {
-    "name": "株式会社フジクラ",
-    "industry": "鉄鋼・金属",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_フジクラ.md"
-  },
-  {
-    "name": "旭化成株式会社",
-    "industry": "化学・素材",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_旭化成.md"
-  },
-  {
-    "name": "大和ハウス工業株式会社",
-    "industry": "プラント・建設",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_大和ハウス工業.md"
-  },
-  {
-    "name": "株式会社三菱総合研究所",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_三菱総合研究所.md"
-  },
-  {
-    "name": "参天製薬株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_参天製薬.md"
-  },
-  {
-    "name": "株式会社コンコルディア・フィナンシャルグループ",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "2025年10月に横浜フィナンシャルグループへ社名変更予定。利上げ環境下で純利益80%増を目指す攻めの中計。代表取締役が人財部を直接管掌",
-    "tpl": "chemicals",
-    "why_now": "2025年10月に横浜フィナンシャルグループへ社名変更予定。利上げ環境下で純利益80%増を目指す攻めの中計。代表取締役が人財部を直接管掌",
-    "hook": "社名変更のエンプロイヤーブランディング再構築",
-    "mdFile": "panalyt_コンコルディア・フィナンシャルグループ.md"
-  },
-  {
-    "name": "富士通株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_富士通.md"
-  },
-  {
-    "name": "伊藤忠商事株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "A",
-    "scale": "XL",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_伊藤忠商事.md"
-  },
-  {
-    "name": "株式会社野村総合研究所",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "2026年4月に新中計策定。コンサル・IT業界の人材獲得競争激化の中、海外事業拡大を支えるグローバル人材戦略が急務",
-    "tpl": "chemicals",
-    "why_now": "2026年4月に新中計策定。コンサル・IT業界の人材獲得競争激化の中、海外事業拡大を支えるグローバル人材戦略が急務",
-    "hook": "海外売上1,200億円のグローバル人材確保",
-    "mdFile": "panalyt_野村総合研究所.md"
-  },
-  {
-    "name": "コニカミノルタ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "A",
-    "scale": "L",
-    "listed": false,
-    "global": true,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_コニカミノルタ.md"
-  },
-  {
-    "name": "サトーホールディングス株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "M",
-    "listed": false,
-    "global": false,
-    "pitches": [
-      "開示",
-      "中計",
-      "後継"
-    ],
-    "target": "CHRO/経営企画",
-    "note": "",
-    "tpl": "chemicals",
-    "why_now": "",
-    "hook": "",
-    "mdFile": "panalyt_サトーHD.md"
+    "tpl": "full",
+    "mdFile": "panalyt_ANAHD.md"
   },
   {
     "name": "ＡＳＴＩ株式会社",
@@ -2498,6 +40,86 @@
     "mdFile": "panalyt_ASTI.md"
   },
   {
+    "name": "ＣＫＤ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "売上2,600億円以上・営利400億円以上・営利率15%以上",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "中計で明記された人的資本経営の具体的実装",
+      "グローバルマネジメント体制強化に向けた人材データ統合",
+      "半導体製造装置向け事業拡大に伴うエンジニア確保",
+      "高付加価値ビジネスモデル転換に対応するリスキリング"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "2026年5月に新10年VISIONと第6次中計を同時発表。「人的資本経営」を重点施策に明記しており導入機運が非常に高い",
+    "hook": "中計で明記された人的資本経営の具体的実装",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_CKD.md"
+  },
+  {
+    "name": "ＤＣＭホールディングス株式会社",
+    "industry": "小売・流通",
+    "priority": "B",
+    "scale": "売上6,000億円・営利率7%",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "店舗別人時生産性の可視化と最適配置",
+      "M&A後のグループ人事制度統一",
+      "パート・アルバイト含む全従業員データ統合",
+      "店長サクセッションプランニング"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "ホームセンター最大手。新中計スタートで店舗オペレーション効率化と人材確保が課題",
+    "hook": "店舗別人時生産性の可視化と最適配置",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_DCMHD.md"
+  },
+  {
+    "name": "DIC株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "2026年度営利565億円（過去最高）、2030年度売上12,400億円・営利800億円・ROE10",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "グローバルCHRO体制下のHRCoE構築",
+      "Sun Chemical統合のグローバル人事制度統一",
+      "Phase2事業PF転換の人材リソースシフト",
+      "外国人CHRO×日本本社のガバナンス課題"
+    ],
+    "target": "Matthew Goldberg（グループCHRO、2026年1月就任、外国人）",
+    "why_now": "2026年1月にグローバル運営体制へ移行しグループCHROを新設。外国人CHRO登用というドラスティックな変革期",
+    "hook": "グローバルCHRO体制下のHRCoE構築",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_DIC.md"
+  },
+  {
+    "name": "ＤＯＷＡホールディングス株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "営利470億円・経常利益600億円・ROE10%以上",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "新経営体制に伴う人材戦略の再設計",
+      "循環経済・環境分野の専門人材確保",
+      "3年で1,450億円の設備投資に連動した人員計画",
+      "グループ横断の人的資本KPIの設定・モニタリング"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "2025年5月に新中計発表し社長交代も実施。循環経済への転換のもと新経営体制での人材戦略再構築が求められている",
+    "hook": "新経営体制に伴う人材戦略の再設計",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_DOWAHD.md"
+  },
+  {
     "name": "ＥＩＺＯ株式会社",
     "industry": "製薬・ヘルスケア",
     "priority": "B",
@@ -2516,6 +138,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_EIZO.md"
+  },
+  {
+    "name": "ＥＮＥＯＳホールディングス株式会社",
+    "industry": "化学・素材",
+    "priority": "B",
+    "scale": "営業利益4,000億円・ROE10%以上",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "石油→再エネ・水素事業への人材PF転換",
+      "グリーン・DX人材の大量採用・育成",
+      "JX金属分離後のグループ人材データ再統合",
+      "製油所人材のリスキリングROI分析"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "石油→再エネ・水素・素材への事業PF転換期。グリーン人材の大量確保とリスキリングが急務",
+    "hook": "石油→再エネ・水素事業への人材PF転換",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ENEOSHD.md"
   },
   {
     "name": "ＦＤＫ株式会社",
@@ -2558,6 +200,26 @@
     "mdFile": "panalyt_GMB.md"
   },
   {
+    "name": "ＧＭＯインターネットグループ株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "毎期営業利益15%成長・グループシナジー極大化",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "グループ12社横断の人材データ統合",
+      "経営統合・再編に伴う人事PMI",
+      "AI・セキュリティ領域の専門人材確保",
+      "権限分散型組織における人的資本の可視化"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "グループ上場12社体制に拡大し経営統合・組織再編が活発。権限分散型経営の中でグループ全体の人材可視化と最適配置が重要テーマ",
+    "hook": "グループ12社横断の人材データ統合",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_GMO.md"
+  },
+  {
     "name": "エイチ・ツー・オーリテイリング株式会社",
     "industry": "消費財・食品",
     "priority": "B",
@@ -2576,6 +238,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_H2Oリテイリング.md"
+  },
+  {
+    "name": "ＨＯＹＡ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "事業PF管理、ライフケア・情報通信の収益最大化",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "四半期レビュー型経営における人材評価・配置の可視化",
+      "グローバル拠点間の人材データ統合",
+      "ライフケア事業拡大に伴う専門人材採用・リテンション",
+      "事業ポートフォリオ管理と連動した人的資本ROI分析"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "中計を持たない独自経営だが、EUV関連需要拡大でグローバル人材の獲得・配置最適化が経営課題",
+    "hook": "四半期レビュー型経営における人材評価・配置の可視化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_HOYA.md"
   },
   {
     "name": "Ｈ．Ｕ．グループホールディングス株式会社",
@@ -2638,6 +320,26 @@
     "mdFile": "panalyt_JKHD.md"
   },
   {
+    "name": "九州旅客鉄道株式会社",
+    "industry": "小売・流通",
+    "priority": "B",
+    "scale": "営業利益700億円・ROE10%以上",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "多角化事業に対応した人材ポートフォリオ再構築",
+      "人口減少地域での採用・定着データ分析",
+      "鉄道運行要員の技能伝承と最適配置",
+      "グループ会社横断の人材データ統合"
+    ],
+    "target": "山根久資（総務・人事担当）",
+    "why_now": "鉄道＋まちづくりの多角化戦略。人口減少地域での人材確保と生産性向上が経営課題",
+    "hook": "多角化事業に対応した人材ポートフォリオ再構築",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_JR九州.md"
+  },
+  {
     "name": "ＪＵＫＩ株式会社",
     "industry": "IT・サービス",
     "priority": "B",
@@ -2656,6 +358,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_JUKI.md"
+  },
+  {
+    "name": "Ｊ．フロント リテイリング株式会社",
+    "industry": "小売・流通",
+    "priority": "B",
+    "scale": "連結事業利益560億円・ROE8.0%以上・女性管理職比率31%",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "女性管理職比率31%達成に向けたパイプライン分析",
+      "百貨店からデベロッパーへの事業転換に伴うリスキリング",
+      "非財務KPIのモニタリング体制構築",
+      "ラグジュアリー外商強化のための専門人材育成"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "2030年を見据えた変革期。非財務KPI（女性管理職比率等）を中計に明記しており人的資本の可視化ニーズが高い",
+    "hook": "女性管理職比率31%達成に向けたパイプライン分析",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_Jフロントリテイリング.md"
   },
   {
     "name": "ＫＮＴ－ＣＴホールディングス株式会社",
@@ -2818,6 +540,26 @@
     "mdFile": "panalyt_SAAFHD.md"
   },
   {
+    "name": "ＳＢＩホールディングス株式会社",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "SBI新生銀行連結純利益700億円・第4のメガバンク構想",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "グループ横断の人材データ統合・一元管理",
+      "フィンテック・デジタル人材の獲得競争",
+      "M&A後のPMIにおける人事統合",
+      "多様な事業PFに対応した人的資本ROI分析"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "フィンテック・暗号資産・海外展開を急拡大。多様な事業を横断するグループ人材の可視化と最適配置が喫緊の課題",
+    "hook": "グループ横断の人材データ統合・一元管理",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_SBIHD.md"
+  },
+  {
     "name": "ＳＢＳホールディングス株式会社",
     "industry": "運輸・物流・交通",
     "priority": "B",
@@ -2878,6 +620,46 @@
     "mdFile": "panalyt_SGHD.md"
   },
   {
+    "name": "株式会社ＳＨＩＦＴ",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "売上3,000億円",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "大量採用・高成長企業の人材データ統合基盤",
+      "M&A後のPMI人材マネジメント",
+      "エンジニア人材のスキル可視化とキャリアパス設計",
+      "離職予兆分析と定着施策のROI可視化"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "急成長IT企業。M&Aによる組織統合と年間数千人規模の大量採用の両立が課題",
+    "hook": "大量採用・高成長企業の人材データ統合基盤",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_SHIFT.md"
+  },
+  {
+    "name": "ＳＭＣ株式会社",
+    "industry": "プラント・建設",
+    "priority": "B",
+    "scale": "売上高1兆円・年率約10%成長",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "急成長に伴う採用計画と人員配置の最適化",
+      "グローバル拠点の人材データ可視化",
+      "技術者の確保・育成と離職防止策",
+      "大型設備投資に連動した人的資本計画の策定"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "売上1兆円に向けた拡大期。柏の葉新技術センター建設等の大型投資が進行中。急速な組織拡大に対応する人材基盤が不可欠",
+    "hook": "急成長に伴う採用計画と人員配置の最適化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_SMC.md"
+  },
+  {
     "name": "ＳＭＫ株式会社",
     "industry": "エネルギー・インフラ",
     "priority": "B",
@@ -2898,6 +680,26 @@
     "mdFile": "panalyt_SMK.md"
   },
   {
+    "name": "ＴＤＫ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "長期ROE15%以上・ROIC12%以上",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "事業PF再編に伴う人材リスキリング・再配置",
+      "グローバル人材データの統合・一元管理",
+      "ROIC経営と連動した人的資本KPIの設定",
+      "AI・半導体領域の高度人材獲得競争への対応"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "AIエコシステムを成長軸に事業PF再編推進中。事業構造転換に伴い人材PFの可視化と再配置が急務",
+    "hook": "事業PF再編に伴う人材リスキリング・再配置",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_TDK.md"
+  },
+  {
     "name": "ＴＨＫ株式会社",
     "industry": "人材・サービス",
     "priority": "B",
@@ -2916,6 +718,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_THK.md"
+  },
+  {
+    "name": "TIS株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "売上6,200億円・営利率13.1%・ROE16%超・ASEAN売上1,000億円",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "ASEAN拡大のグローバル人材体制",
+      "DX・AI人材の大量採用・育成",
+      "プロフェッショナル人材の報酬評価制度",
+      "次期中計の人的資本経営方向性"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "中計最終年度、次期中計策定フェーズ。ASEAN事業拡大やDX人材の大量確保が急務",
+    "hook": "ASEAN拡大のグローバル人材体制",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_TIS.md"
   },
   {
     "name": "ＴＯＡ株式会社",
@@ -2998,6 +820,21 @@
     "mdFile": "panalyt_UTグループ.md"
   },
   {
+    "name": "株式会社千葉銀行（コード：8331、東証プライム）",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "",
+    "listed": "プライム",
+    "global": "",
+    "pitches": [],
+    "target": "",
+    "why_now": "2026年3月25日、 **第16次中期経営計画（2026.4〜2029.3）「エンゲージメントバンクグループ フェーズ2 ― 人×AIによる生産性の向上」を発表したばかり** 。",
+    "hook": "",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_chibabank.md"
+  },
+  {
     "name": "ｎｍｓホールディングス株式会社",
     "industry": "製造業",
     "priority": "B",
@@ -3016,481 +853,6 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_nmsHD.md"
-  },
-  {
-    "name": "アイダエンジニアリング株式会社",
-    "industry": "自動車・機械・部品",
-    "priority": "B",
-    "scale": "売上750億円・営利62億円・営利率8.3%",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "次世代自動車向け技術開発を担う人材の採用・育成",
-      "次期中計に向けた人材戦略",
-      "グローバル拠点の人材配置最適化",
-      "技術伝承とデジタル人材育成の両立"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "中計最終年度で売上目標前倒し達成。次世代自動車向け技術開発と顧客DX支援を加速中。技術人材の確保が成長のボトルネック",
-    "hook": "次世代自動車向け技術開発を担う人材の採用・育成",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_アイダエンジニアリング.md"
-  },
-  {
-    "name": "アイフル株式会社",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "営業収益2,180億円・営利414億円・ROE11.4%",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "HD体制移行後の人事制度・評価体系の統一",
-      "M&A先企業の人材統合（PMI）",
-      "海外展開に伴うグローバル人材マネジメント",
-      "消費者金融業界の採用ブランディングと人材定着"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "HD体制（ムニノバHD）への移行とM&A加速期。事業多角化・海外展開に伴いグループ横断の人材管理が急務",
-    "hook": "HD体制移行後の人事制度・評価体系の統一",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_アイフル.md"
-  },
-  {
-    "name": "アークランズ株式会社",
-    "industry": "小売・流通",
-    "priority": "B",
-    "scale": "2030年度:売上5,000億円・経常利益400億円",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "新社長体制での人材資本向上の具体施策",
-      "ビバホーム統合後の人事データ・制度統合",
-      "小売業界の人手不足への対応とパート管理",
-      "2030年売上5,000億円に向けた人材育成・採用計画"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "社長交代と新中計同時スタート。ビバホーム統合後の構造改革推進中で人材資本の向上を中計の柱に据えている",
-    "hook": "新社長体制での人材資本向上の具体施策",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_アークランズ.md"
-  },
-  {
-    "name": "アース製薬株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "B",
-    "scale": "商品数3割削減・構造改革費用50〜60億円",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "構造改革に伴う人員配置・再配置の意思決定",
-      "工場再編における従業員のリスキリング・異動計画",
-      "海外売上拡大に向けたグローバル人材確保",
-      "グループ企業再編後の人事制度統一と人材データ管理"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "構造改革の真っ只中。商品数3割削減・工場再編・グループ企業再編で人員配置の最適化と人事データ可視化が急務",
-    "hook": "構造改革に伴う人員配置・再配置の意思決定",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_アース製薬.md"
-  },
-  {
-    "name": "イリソ電子工業株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "売上650億円・営利率15%以上・2030年:売上1,000億円",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "グローバル売上拡大に向けた海外人材の採用・配置",
-      "EV・センサー分野の技術人材確保",
-      "売上1,000億円に向けた組織拡大と人材育成投資",
-      "中計目標達成に向けた生産性KPIと人材KPI連動"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "EV向けコネクタ需要拡大を追い風に世界TOP10を目指す成長戦略の基盤づくり。グローバル展開加速に伴い人材データ統合が急務",
-    "hook": "グローバル売上拡大に向けた海外人材の採用・配置",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_イリソ電子.md"
-  },
-  {
-    "name": "エスフーズ株式会社",
-    "industry": "消費財・食品",
-    "priority": "B",
-    "scale": "売上6,000億円・営利150億円（2028年）",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "売上6,000億円達成に向けた人員計画・採用戦略",
-      "食肉加工現場の人手不足と生産性向上",
-      "中計改訂に伴う組織体制見直し・人材配置変更",
-      "グループ全体の人事データ可視化"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "売上6,000億円への成長加速を明確化。食肉業界の労働集約型モデルで人材の確保・定着・生産性向上がスケーラビリティの鍵",
-    "hook": "売上6,000億円達成に向けた人員計画・採用戦略",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_エスフーズ.md"
-  },
-  {
-    "name": "株式会社千葉銀行",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "連結ROE約11%",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "延べ280人の育成計画の進捗モニタリングと効果測定",
-      "CHRO主導の人的資本KPI設定・開示の高度化",
-      "地銀として地域人材のエンゲージメント向上",
-      "Phase2における人材PF変革の方向性"
-    ],
-    "target": "今井敦司（常務執行役員・グループCHRO）",
-    "why_now": "CHRO設置済みで人材戦略を経営の中核に据えている。前中計の倍となる延べ280人のトレーニー派遣を計画し人材育成投資を大幅拡大中",
-    "hook": "延べ280人の育成計画の進捗モニタリングと効果測定",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_千葉銀行.md"
-  },
-  {
-    "name": "杏林製薬株式会社",
-    "industry": "製薬・ヘルスケア",
-    "priority": "B",
-    "scale": "売上1,200億円以上・研究開発費控除前営利170億円以上・新薬比率55%以上",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "Stage2移行に伴う組織・人材戦略の変更点",
-      "R&D人材の獲得競争における自社の強み・課題",
-      "新薬比率向上を支えるMR・営業人材の育成",
-      "2032年ビジョン実現に向けた長期人材パイプライン構築"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "Stage1前倒し達成しStage2に移行する変革の節目。110周年（2032年）に向けた事業体制変革に人材戦略高度化が不可欠",
-    "hook": "Stage2移行に伴う組織・人材戦略の変更点",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_杏林製薬.md"
-  },
-  {
-    "name": "ＡＮＡホールディングス株式会社",
-    "industry": "運輸・物流・交通",
-    "priority": "B",
-    "scale": "営業利益2,500億円・ROE15%以上",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "非航空事業拡大に向けた人材ポートフォリオ多様化",
-      "パイロット・CA・グランドスタッフのサクセッション管理",
-      "グローバル路線拡大の海外人材戦略",
-      "CHRO体制下の人的資本KPI設計と開示"
-    ],
-    "target": "※CHRO設置あり・架電前に特定",
-    "why_now": "新中計スタート。コロナ後の復活から成長フェーズへ。非航空事業拡大とグローバル人材戦略が焦点",
-    "hook": "非航空事業拡大に向けた人材ポートフォリオ多様化",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_ANAHD.md"
-  },
-  {
-    "name": "ＣＫＤ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "売上2,600億円以上・営利400億円以上・営利率15%以上",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "中計で明記された人的資本経営の具体的実装",
-      "グローバルマネジメント体制強化に向けた人材データ統合",
-      "半導体製造装置向け事業拡大に伴うエンジニア確保",
-      "高付加価値ビジネスモデル転換に対応するリスキリング"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "2026年5月に新10年VISIONと第6次中計を同時発表。「人的資本経営」を重点施策に明記しており導入機運が非常に高い",
-    "hook": "中計で明記された人的資本経営の具体的実装",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_CKD.md"
-  },
-  {
-    "name": "ＤＣＭホールディングス株式会社",
-    "industry": "小売・流通",
-    "priority": "B",
-    "scale": "売上6,000億円・営利率7%",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "店舗別人時生産性の可視化と最適配置",
-      "M&A後のグループ人事制度統一",
-      "パート・アルバイト含む全従業員データ統合",
-      "店長サクセッションプランニング"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "ホームセンター最大手。新中計スタートで店舗オペレーション効率化と人材確保が課題",
-    "hook": "店舗別人時生産性の可視化と最適配置",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_DCMHD.md"
-  },
-  {
-    "name": "DIC株式会社",
-    "industry": "人材・サービス",
-    "priority": "B",
-    "scale": "2026年度営利565億円（過去最高）、2030年度売上12,400億円・営利800億円・ROE10",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "グローバルCHRO体制下のHRCoE構築",
-      "Sun Chemical統合のグローバル人事制度統一",
-      "Phase2事業PF転換の人材リソースシフト",
-      "外国人CHRO×日本本社のガバナンス課題"
-    ],
-    "target": "Matthew Goldberg（グループCHRO、2026年1月就任、外国人）",
-    "why_now": "2026年1月にグローバル運営体制へ移行しグループCHROを新設。外国人CHRO登用というドラスティックな変革期",
-    "hook": "グローバルCHRO体制下のHRCoE構築",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_DIC.md"
-  },
-  {
-    "name": "ＤＯＷＡホールディングス株式会社",
-    "industry": "人材・サービス",
-    "priority": "B",
-    "scale": "営利470億円・経常利益600億円・ROE10%以上",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "新経営体制に伴う人材戦略の再設計",
-      "循環経済・環境分野の専門人材確保",
-      "3年で1,450億円の設備投資に連動した人員計画",
-      "グループ横断の人的資本KPIの設定・モニタリング"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "2025年5月に新中計発表し社長交代も実施。循環経済への転換のもと新経営体制での人材戦略再構築が求められている",
-    "hook": "新経営体制に伴う人材戦略の再設計",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_DOWAHD.md"
-  },
-  {
-    "name": "ＥＮＥＯＳホールディングス株式会社",
-    "industry": "化学・素材",
-    "priority": "B",
-    "scale": "営業利益4,000億円・ROE10%以上",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "石油→再エネ・水素事業への人材PF転換",
-      "グリーン・DX人材の大量採用・育成",
-      "JX金属分離後のグループ人材データ再統合",
-      "製油所人材のリスキリングROI分析"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "石油→再エネ・水素・素材への事業PF転換期。グリーン人材の大量確保とリスキリングが急務",
-    "hook": "石油→再エネ・水素事業への人材PF転換",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_ENEOSHD.md"
-  },
-  {
-    "name": "ＧＭＯインターネットグループ株式会社",
-    "industry": "IT・サービス",
-    "priority": "B",
-    "scale": "毎期営業利益15%成長・グループシナジー極大化",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "グループ12社横断の人材データ統合",
-      "経営統合・再編に伴う人事PMI",
-      "AI・セキュリティ領域の専門人材確保",
-      "権限分散型組織における人的資本の可視化"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "グループ上場12社体制に拡大し経営統合・組織再編が活発。権限分散型経営の中でグループ全体の人材可視化と最適配置が重要テーマ",
-    "hook": "グループ12社横断の人材データ統合",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_GMO.md"
-  },
-  {
-    "name": "ＨＯＹＡ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "事業PF管理、ライフケア・情報通信の収益最大化",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "四半期レビュー型経営における人材評価・配置の可視化",
-      "グローバル拠点間の人材データ統合",
-      "ライフケア事業拡大に伴う専門人材採用・リテンション",
-      "事業ポートフォリオ管理と連動した人的資本ROI分析"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "中計を持たない独自経営だが、EUV関連需要拡大でグローバル人材の獲得・配置最適化が経営課題",
-    "hook": "四半期レビュー型経営における人材評価・配置の可視化",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_HOYA.md"
-  },
-  {
-    "name": "九州旅客鉄道株式会社",
-    "industry": "小売・流通",
-    "priority": "B",
-    "scale": "営業利益700億円・ROE10%以上",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "多角化事業に対応した人材ポートフォリオ再構築",
-      "人口減少地域での採用・定着データ分析",
-      "鉄道運行要員の技能伝承と最適配置",
-      "グループ会社横断の人材データ統合"
-    ],
-    "target": "山根久資（総務・人事担当）",
-    "why_now": "鉄道＋まちづくりの多角化戦略。人口減少地域での人材確保と生産性向上が経営課題",
-    "hook": "多角化事業に対応した人材ポートフォリオ再構築",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_JR九州.md"
-  },
-  {
-    "name": "Ｊ．フロント リテイリング株式会社",
-    "industry": "小売・流通",
-    "priority": "B",
-    "scale": "連結事業利益560億円・ROE8.0%以上・女性管理職比率31%",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "女性管理職比率31%達成に向けたパイプライン分析",
-      "百貨店からデベロッパーへの事業転換に伴うリスキリング",
-      "非財務KPIのモニタリング体制構築",
-      "ラグジュアリー外商強化のための専門人材育成"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "2030年を見据えた変革期。非財務KPI（女性管理職比率等）を中計に明記しており人的資本の可視化ニーズが高い",
-    "hook": "女性管理職比率31%達成に向けたパイプライン分析",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_Jフロントリテイリング.md"
-  },
-  {
-    "name": "ＳＢＩホールディングス株式会社",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "SBI新生銀行連結純利益700億円・第4のメガバンク構想",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "グループ横断の人材データ統合・一元管理",
-      "フィンテック・デジタル人材の獲得競争",
-      "M&A後のPMIにおける人事統合",
-      "多様な事業PFに対応した人的資本ROI分析"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "フィンテック・暗号資産・海外展開を急拡大。多様な事業を横断するグループ人材の可視化と最適配置が喫緊の課題",
-    "hook": "グループ横断の人材データ統合・一元管理",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_SBIHD.md"
-  },
-  {
-    "name": "株式会社ＳＨＩＦＴ",
-    "industry": "IT・サービス",
-    "priority": "B",
-    "scale": "売上3,000億円",
-    "listed": "上場",
-    "global": "",
-    "pitches": [
-      "大量採用・高成長企業の人材データ統合基盤",
-      "M&A後のPMI人材マネジメント",
-      "エンジニア人材のスキル可視化とキャリアパス設計",
-      "離職予兆分析と定着施策のROI可視化"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "急成長IT企業。M&Aによる組織統合と年間数千人規模の大量採用の両立が課題",
-    "hook": "大量採用・高成長企業の人材データ統合基盤",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_SHIFT.md"
-  },
-  {
-    "name": "ＳＭＣ株式会社",
-    "industry": "プラント・建設",
-    "priority": "B",
-    "scale": "売上高1兆円・年率約10%成長",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "急成長に伴う採用計画と人員配置の最適化",
-      "グローバル拠点の人材データ可視化",
-      "技術者の確保・育成と離職防止策",
-      "大型設備投資に連動した人的資本計画の策定"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "売上1兆円に向けた拡大期。柏の葉新技術センター建設等の大型投資が進行中。急速な組織拡大に対応する人材基盤が不可欠",
-    "hook": "急成長に伴う採用計画と人員配置の最適化",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_SMC.md"
-  },
-  {
-    "name": "ＴＤＫ株式会社",
-    "industry": "電機・半導体・精密",
-    "priority": "B",
-    "scale": "長期ROE15%以上・ROIC12%以上",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "事業PF再編に伴う人材リスキリング・再配置",
-      "グローバル人材データの統合・一元管理",
-      "ROIC経営と連動した人的資本KPIの設定",
-      "AI・半導体領域の高度人材獲得競争への対応"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "AIエコシステムを成長軸に事業PF再編推進中。事業構造転換に伴い人材PFの可視化と再配置が急務",
-    "hook": "事業PF再編に伴う人材リスキリング・再配置",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_TDK.md"
-  },
-  {
-    "name": "TIS株式会社",
-    "industry": "IT・サービス",
-    "priority": "B",
-    "scale": "売上6,200億円・営利率13.1%・ROE16%超・ASEAN売上1,000億円",
-    "listed": "上場",
-    "global": "あり",
-    "pitches": [
-      "ASEAN拡大のグローバル人材体制",
-      "DX・AI人材の大量採用・育成",
-      "プロフェッショナル人材の報酬評価制度",
-      "次期中計の人的資本経営方向性"
-    ],
-    "target": "※架電前にIR資料で特定",
-    "why_now": "中計最終年度、次期中計策定フェーズ。ASEAN事業拡大やDX人材の大量確保が急務",
-    "hook": "ASEAN拡大のグローバル人材体制",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_TIS.md"
-  },
-  {
-    "name": "株式会社千葉銀行（コード：8331、東証プライム）",
-    "industry": "金融・リース",
-    "priority": "B",
-    "scale": "",
-    "listed": "プライム",
-    "global": "",
-    "pitches": [],
-    "target": "",
-    "why_now": "2026年3月25日、 **第16次中期経営計画（2026.4〜2029.3）「エンゲージメントバンクグループ フェーズ2 ― 人×AIによる生産性の向上」を発表したばかり** 。",
-    "hook": "",
-    "note": "",
-    "tpl": "full",
-    "mdFile": "panalyt_chibabank.md"
   },
   {
     "name": "あらた（コード：2733））",
@@ -3563,6 +925,46 @@
     "mdFile": "panalyt_アイシン.md"
   },
   {
+    "name": "アイダエンジニアリング株式会社",
+    "industry": "自動車・機械・部品",
+    "priority": "B",
+    "scale": "売上750億円・営利62億円・営利率8.3%",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "次世代自動車向け技術開発を担う人材の採用・育成",
+      "次期中計に向けた人材戦略",
+      "グローバル拠点の人材配置最適化",
+      "技術伝承とデジタル人材育成の両立"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "中計最終年度で売上目標前倒し達成。次世代自動車向け技術開発と顧客DX支援を加速中。技術人材の確保が成長のボトルネック",
+    "hook": "次世代自動車向け技術開発を担う人材の採用・育成",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_アイダエンジニアリング.md"
+  },
+  {
+    "name": "アイフル株式会社",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "営業収益2,180億円・営利414億円・ROE11.4%",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "HD体制移行後の人事制度・評価体系の統一",
+      "M&A先企業の人材統合（PMI）",
+      "海外展開に伴うグローバル人材マネジメント",
+      "消費者金融業界の採用ブランディングと人材定着"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "HD体制（ムニノバHD）への移行とM&A加速期。事業多角化・海外展開に伴いグループ横断の人材管理が急務",
+    "hook": "HD体制移行後の人事制度・評価体系の統一",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_アイフル.md"
+  },
+  {
     "name": "アインHD（コード：9627、東証プライム/札証））",
     "industry": "製薬・ヘルスケア",
     "priority": "B",
@@ -3611,6 +1013,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_アスクル.md"
+  },
+  {
+    "name": "アステラス製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "XTANDI+Strategic Brandsで売上1.2兆円以上・Core営利率30%以上",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "次期中計の人材戦略方向性",
+      "グローバル人事システム統合の次フェーズ",
+      "組織健全性目標（OHG）の運用改善",
+      "副社長CPOという先進ガバナンス体制の知見共有"
+    ],
+    "target": "杉田 勝好（代表取締役副社長CPO）",
+    "why_now": "次期中計が2026年度スタート。副社長CPO杉田氏は人的資本経営の業界著名人。重点戦略製品の極大化を支える人材戦略が焦点",
+    "hook": "次期中計の人材戦略方向性",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_アステラス製薬.md"
   },
   {
     "name": "アズビル株式会社",
@@ -3728,6 +1150,46 @@
     "mdFile": "panalyt_アンリツ.md"
   },
   {
+    "name": "アークランズ株式会社",
+    "industry": "小売・流通",
+    "priority": "B",
+    "scale": "2030年度:売上5,000億円・経常利益400億円",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "新社長体制での人材資本向上の具体施策",
+      "ビバホーム統合後の人事データ・制度統合",
+      "小売業界の人手不足への対応とパート管理",
+      "2030年売上5,000億円に向けた人材育成・採用計画"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "社長交代と新中計同時スタート。ビバホーム統合後の構造改革推進中で人材資本の向上を中計の柱に据えている",
+    "hook": "新社長体制での人材資本向上の具体施策",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_アークランズ.md"
+  },
+  {
+    "name": "アース製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "商品数3割削減・構造改革費用50〜60億円",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "構造改革に伴う人員配置・再配置の意思決定",
+      "工場再編における従業員のリスキリング・異動計画",
+      "海外売上拡大に向けたグローバル人材確保",
+      "グループ企業再編後の人事制度統一と人材データ管理"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "構造改革の真っ只中。商品数3割削減・工場再編・グループ企業再編で人員配置の最適化と人事データ可視化が急務",
+    "hook": "構造改革に伴う人員配置・再配置の意思決定",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_アース製薬.md"
+  },
+  {
     "name": "イオン株式会社（コード：8267、東証プライム）",
     "industry": "金融・リース",
     "priority": "B",
@@ -3796,6 +1258,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_イビデン.md"
+  },
+  {
+    "name": "イリソ電子工業株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "売上650億円・営利率15%以上・2030年:売上1,000億円",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "グローバル売上拡大に向けた海外人材の採用・配置",
+      "EV・センサー分野の技術人材確保",
+      "売上1,000億円に向けた組織拡大と人材育成投資",
+      "中計目標達成に向けた生産性KPIと人材KPI連動"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "EV向けコネクタ需要拡大を追い風に世界TOP10を目指す成長戦略の基盤づくり。グローバル展開加速に伴い人材データ統合が急務",
+    "hook": "グローバル売上拡大に向けた海外人材の採用・配置",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_イリソ電子.md"
   },
   {
     "name": "ウエルシアホールディングス株式会社",
@@ -3873,6 +1355,26 @@
     "mdFile": "panalyt_エクセディ.md"
   },
   {
+    "name": "エスフーズ株式会社",
+    "industry": "消費財・食品",
+    "priority": "B",
+    "scale": "売上6,000億円・営利150億円（2028年）",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "売上6,000億円達成に向けた人員計画・採用戦略",
+      "食肉加工現場の人手不足と生産性向上",
+      "中計改訂に伴う組織体制見直し・人材配置変更",
+      "グループ全体の人事データ可視化"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "売上6,000億円への成長加速を明確化。食肉業界の労働集約型モデルで人材の確保・定着・生産性向上がスケーラビリティの鍵",
+    "hook": "売上6,000億円達成に向けた人員計画・採用戦略",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_エスフーズ.md"
+  },
+  {
     "name": "エムスリー株式会社",
     "industry": "製薬・ヘルスケア",
     "priority": "B",
@@ -3926,6 +1428,46 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_オイレス工業.md"
+  },
+  {
+    "name": "株式会社オカムラ",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "次期中計の人的資本KPI設計",
+      "需要創出型企業の人材像定義・スキルギャップ",
+      "海外事業拡大のグローバル人材管理",
+      "ROE10%超持続の人時生産性可視化"
+    ],
+    "target": "佐藤喜一（専務CHRO、HR本部長）",
+    "why_now": "中計最終年度、次期中計策定期。需要創出型企業への変革で人財育成と働きがい向上が経営基盤の柱",
+    "hook": "次期中計の人的資本KPI設計",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_オカムラ.md"
+  },
+  {
+    "name": "オムロン株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "構造改革後の組織再活性化とエンゲージメント回復",
+      "GEMBA DX推進のデジタル×製造融合人材",
+      "13優先事業への人的資源の戦略的配分",
+      "グローバル人財マネジメントとD&I推進"
+    ],
+    "target": "冨田雅彦（執行役員専務CHRO）",
+    "why_now": "2025年11月に新5カ年ロードマップ発表。構造改革NEXT2025で約2,000名削減後の攻めの成長投資フェーズ",
+    "hook": "構造改革後の組織再活性化とエンゲージメント回復",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_オムロン.md"
   },
   {
     "name": "オリコ（コード：8585、東証プライム））",
@@ -4063,6 +1605,26 @@
     "mdFile": "panalyt_キヤノンMJ.md"
   },
   {
+    "name": "キリンホールディングス株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "CSV経営連動の人材PF再構築",
+      "ヘルスサイエンス分野の専門人材獲得",
+      "女性管理職パイプライン拡大・深化",
+      "役員メンター制度のスケールアップ"
+    ],
+    "target": "坪井純子（取締役副社長CPO）",
+    "why_now": "副社長CPO坪井氏が「専門性×多様性」でCSV経営の人材戦略をリード。女性経営職を約3倍に増やした実績",
+    "hook": "CSV経営連動の人材PF再構築",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_キリンHD.md"
+  },
+  {
     "name": "ケーズHD（コード：8282、東証プライム））",
     "industry": "小売・流通",
     "priority": "B",
@@ -4093,6 +1655,86 @@
     "mdFile": "panalyt_コジマ.md"
   },
   {
+    "name": "コニカミノルタ株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "ROIC経営移行の事業部別人材PF最適化",
+      "DX人財リテンションと次世代技術パイプライン",
+      "エンゲージメントスコア業界上位25%達成",
+      "グローバル人事制度統一と多様性推進"
+    ],
+    "target": "岡慎一郎（常務執行役CHRO、東芝・IBM・コカコーラ等出身）",
+    "why_now": "2026年4月に新中計発表。DX専門技術者1,000名超を擁するがエンゲージメントスコア改善が経営課題",
+    "hook": "ROIC経営移行の事業部別人材PF最適化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_コニカミノルタ.md"
+  },
+  {
+    "name": "株式会社コンコルディア・フィナンシャルグループ",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "当期純利益1,229億円（+80%）・ROE9%超・配当性向40%",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "社名変更のエンプロイヤーブランディング再構築",
+      "ソリューション人材の採用・育成",
+      "リテール→コンサル型の人材PF転換",
+      "代表取締役が人財部直接管掌の体制"
+    ],
+    "target": "小野寺 伸夫（代表取締役、人財部担当、2025年4月就任）",
+    "why_now": "2025年10月に横浜フィナンシャルグループへ社名変更予定。利上げ環境下で純利益80%増を目指す攻めの中計。代表取締役が人財部を直接管掌",
+    "hook": "社名変更のエンプロイヤーブランディング再構築",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_コンコルディア・フィナンシャルグループ.md"
+  },
+  {
+    "name": "サトーホールディングス株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "日本事業の人時生産性可視化",
+      "グローバル人材PFの最適化",
+      "三行提報・タレマネの効果測定",
+      "PBR1.5倍の人的資本開示"
+    ],
+    "target": "江上茂樹（エグゼクティブフェロー、グローバル人財開発室長）",
+    "why_now": "利益回復期から成長投資再開期への転換期。人時生産性の可視化とバリューチェーン管理が直結",
+    "hook": "日本事業の人時生産性可視化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_サトーHD.md"
+  },
+  {
+    "name": "サントリー食品インターナショナル株式会社",
+    "industry": "消費財・食品",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "社長交代に伴う人事戦略再構築",
+      "CHRO設置を含む人事ガバナンス高度化",
+      "グローバル4極の人材マネジメント統合",
+      "女性活躍推進（初の女性社長実績の組織波及）"
+    ],
+    "target": "CHRO未設置。人財戦略部部長：関原のぞみ",
+    "why_now": "2026年3月に社長交代予定。「人財開発室」→「人財戦略部」改組でCHRO未設置。グローバル4極の人材統合が課題",
+    "hook": "社長交代に伴う人事戦略再構築",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_サントリー食品インターナショナル.md"
+  },
+  {
     "name": "シスメックス株式会社（コード：6869、東証プライム）",
     "industry": "製薬・ヘルスケア",
     "priority": "B",
@@ -4106,6 +1748,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_シスメックス.md"
+  },
+  {
+    "name": "セイコーエプソン株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "新社長体制の事業PF再設計に伴う人材再配置",
+      "ROIC経営深化の事業部横断人材流動性",
+      "2035年長期ビジョンの次世代リーダー育成",
+      "成長領域（環境・DX）リスキリング投資ROI"
+    ],
+    "target": "阿部栄一（取締役、人的資本・健康経営本部担当）",
+    "why_now": "社長交代と新中計Phase1開始が同時。非技術畑出身の初代社長としてROIC経営と組織風土改革を同時推進",
+    "hook": "新社長体制の事業PF再設計に伴う人材再配置",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_セイコーエプソン.md"
   },
   {
     "name": "セイコーグループ（コード：8050、東証プライム））",
@@ -4198,6 +1860,26 @@
     "mdFile": "panalyt_ダイヘン.md"
   },
   {
+    "name": "株式会社ダスキン",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "訪販4領域の人材配置最適化と生産性可視化",
+      "FC加盟店含むグループ全体の人材データ統合",
+      "人的資本グループ新設の人事KPI設計",
+      "新規事業の人材スキルギャップ分析"
+    ],
+    "target": "飯田健司（取締役、人的資本グループ担当、2025年6月就任）",
+    "why_now": "新パーパス・長期戦略「Do-Connect」策定。「人的資本グループ」を組織設置し担当役員を据えた。訪販営利59%増の目標に人材生産性向上が不可欠",
+    "hook": "訪販4領域の人材配置最適化と生産性可視化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ダスキン.md"
+  },
+  {
     "name": "株式会社ツムラ（コード：4540、東証プライム）",
     "industry": "金融・リース",
     "priority": "B",
@@ -4243,6 +1925,26 @@
     "mdFile": "panalyt_テクノプロ.md"
   },
   {
+    "name": "ナブテスコ株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "売上4,000億円・営利420億円・営利率10%以上・ROIC10%以上",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "営利率倍増の人材PF見直し",
+      "CMP事業の技術人材強化",
+      "新任人事管掌役員の施策立案タイミング",
+      "グローバル人材マネジメント体制構築"
+    ],
+    "target": "高橋 誠司（常務執行役員、総務・人事・法務管掌、2026年1月就任）",
+    "why_now": "営利率5.9%→10%と倍増目標。CMP事業の劇的改善には人材再配置が不可欠。2026年1月に人事管掌役員就任したばかり",
+    "hook": "営利率倍増の人材PF見直し",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ナブテスコ.md"
+  },
+  {
     "name": "ニチレイ（コード：2871、東証プライム））",
     "industry": "消費財・食品",
     "priority": "B",
@@ -4271,6 +1973,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_ネクステージ.md"
+  },
+  {
+    "name": "ネットワンシステムズ株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "SCSK合併のPMI人事制度統合",
+      "両社の企業文化融合とエンゲージメント維持",
+      "IT人材獲得競争の統合後リテンション",
+      "ディストリビューター事業統合の組織再編"
+    ],
+    "target": "金井朗子（CHRO）",
+    "why_now": "2027年4月のSCSKとの合併に向けたPMI準備の真っ最中。企業文化融合と人事制度統合が山積",
+    "hook": "SCSK合併のPMI人事制度統合",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ネットワンシステムズ.md"
   },
   {
     "name": "ハウス食品（コード：2810、東証プライム））",
@@ -4333,6 +2055,26 @@
     "mdFile": "panalyt_パソナグループ.md"
   },
   {
+    "name": "パーソルホールディングス株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "CHRO交代に伴う人的資本経営方針の再定義",
+      "人材サービス企業の自社実践（Advanced HR Showcase）",
+      "テクノロジー人材事業のグループ内人材流動",
+      "はたらくWell-being指標のKPI化と事業成果接続"
+    ],
+    "target": "大場竜佳（CHRO、2025年4月新任）",
+    "why_now": "CHRO交代直後。中計最終年度でEBITDA目標に未達の可能性。新CHRO体制下の人的資本経営再定義フェーズ",
+    "hook": "CHRO交代に伴う人的資本経営方針の再定義",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_パーソルHD.md"
+  },
+  {
     "name": "ビックカメラ（コード：3048、東証プライム））",
     "industry": "小売・流通",
     "priority": "B",
@@ -4361,6 +2103,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_ピジョン.md"
+  },
+  {
+    "name": "株式会社フジクラ",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "AI・DC需要の光ファイバー技術人材大量確保",
+      "次期中計の中長期人材戦略設計",
+      "CEO月例会活用のサクセッションプラン深化",
+      "急成長の組織拡大痛への対応"
+    ],
+    "target": "森祐起（執行役員コーポレートスタッフ部門長兼人事総務部長）",
+    "why_now": "AI・DC需要で業績絶好調（中計目標前倒し達成）。次期中計策定中で急成長に対応した人材確保が最重要課題",
+    "hook": "AI・DC需要の光ファイバー技術人材大量確保",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_フジクラ.md"
   },
   {
     "name": "ブリヂストン（コード：5108、東証プライム））",
@@ -4393,6 +2155,26 @@
     "mdFile": "panalyt_プリマハム.md"
   },
   {
+    "name": "株式会社マンダム",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "創業100周年の組織文化改革",
+      "インドネシア現地人材マネジメント",
+      "営利率9%への人事制度見直し",
+      "CHROの聖域なき構造改革"
+    ],
+    "target": "高橋哲也（執行役員CHRO）",
+    "why_now": "2027年に創業100周年。インドネシア事業赤字転落やグローバル構造改革を推進中。営利率2.8%→9.0%への収益改革",
+    "hook": "創業100周年の組織文化改革",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_マンダム.md"
+  },
+  {
     "name": "ミツバ（コード：7280、東証プライム））",
     "industry": "自動車・機械・部品",
     "priority": "B",
@@ -4408,6 +2190,26 @@
     "mdFile": "panalyt_ミツバ.md"
   },
   {
+    "name": "ミネベアミツミ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "M&A後のグループ全体人事制度統一",
+      "グローバル10万人超の人事ガバナンス",
+      "会長→社長への経営移行期の次世代リーダー育成",
+      "米中関税リスクのグローバル人材再配置"
+    ],
+    "target": "CHRO未設置（貝沼会長がトップダウンで人事主導）",
+    "why_now": "M&Aで15年で売上5倍の急成長。芝浦電子買収等のPMI進行中。米中関税リスクでグローバル人材再配置が急務",
+    "hook": "M&A後のグループ全体人事制度統一",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ミネベアミツミ.md"
+  },
+  {
     "name": "株式会社ヤクルト本社（コード：2267、東証プライム）",
     "industry": "金融・リース",
     "priority": "B",
@@ -4421,6 +2223,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_ヤクルト.md"
+  },
+  {
+    "name": "リコージャパン株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "ワークプレイスインテグレーターへの人材リスキリング",
+      "ジョブ型人事の販社浸透と管理職500人の意識改革",
+      "人的資本ROI25%の測定フレームワーク",
+      "デジタルサービス比率60%超のデジタル人材育成"
+    ],
+    "target": "瀬戸まゆ子（リコーCHRO）",
+    "why_now": "新中計で人的資本ROI25%という野心的KPIを設定。ジョブ型人事制度の販社レベルへの浸透が課題",
+    "hook": "ワークプレイスインテグレーターへの人材リスキリング",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_リコージャパン.md"
   },
   {
     "name": "ルネサス（コード：6723、東証プライム））",
@@ -4478,6 +2300,26 @@
     "mdFile": "panalyt_レゾナック・HD.md"
   },
   {
+    "name": "ローム株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "売上5,000億円以上・営利率20%以上・ROE9%以上",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "新社長体制下での組織変革",
+      "構造改革に伴う人材PF再構築",
+      "パワー半導体のグローバル人材獲得",
+      "CHRO未整備という組織課題"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "2025年4月に新社長就任、新中計スタート。構造改革フェーズで経営体制刷新。パワー・アナログ半導体で世界トップ10目標",
+    "hook": "新社長体制下での組織変革",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ローム.md"
+  },
+  {
     "name": "三ツ星ベルト株式会社（コード：5192、東証プライム）",
     "industry": "人材・サービス",
     "priority": "B",
@@ -4518,6 +2360,26 @@
     "mdFile": "panalyt_三井住友トラスト.md"
   },
   {
+    "name": "三井物産株式会社",
+    "industry": "製造業",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "次期中計における「強い個の育成」深化",
+      "グローバルタレントマネジメント（Bloom）の活用最適化",
+      "CHRO交代を見据えた人的資本経営の継続性",
+      "エンゲージメントサーベイ（MES）のKPI・役員報酬接続"
+    ],
+    "target": "稲室昌也（CHRO・CCO、2026年4月就任予定）",
+    "why_now": "中計最終年度で次期中計策定フェーズ。「人の三井」としてISO30414認証取得。CHRO交代前後での戦略連続性が課題",
+    "hook": "次期中計における「強い個の育成」深化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_三井物産.md"
+  },
+  {
     "name": "三菱商事株式会社",
     "industry": "IT・サービス",
     "priority": "B",
@@ -4536,6 +2398,46 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_三菱商事.md"
+  },
+  {
+    "name": "株式会社三菱総合研究所",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "コンサルタント人時生産性と稼働率最適化",
+      "DX・GX・HX専門人材のスキルマッピング",
+      "生成AI活用の人材PF変革シミュレーション",
+      "ROE二桁達成の次期中計人的資本KPI"
+    ],
+    "target": "野辺潤（常務執行役員、経営企画・総務人事管掌）",
+    "why_now": "中計最終年度で次期中計「ジャンプ」フェーズの策定期。コンサルタントの生産性向上が収益性改善の鍵",
+    "hook": "コンサルタント人時生産性と稼働率最適化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_三菱総合研究所.md"
+  },
+  {
+    "name": "中外製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "2025年実績:Core売上1兆2,579億円・Core営利6,232億円（過去最高）",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "新人事制度の定着と効果検証",
+      "サイエンス人材の獲得・育成",
+      "ロシュグループ内のグローバル人材流動性",
+      "ジョブ型人財マネジメント推進"
+    ],
+    "target": "矢野 嘉行（上席執行役員、人事・EHS推進統括）",
+    "why_now": "2025年1月に新人事制度導入。過去最高業績を連続更新中。ロシュとのアライアンス下でのグローバル人事が独自課題",
+    "hook": "新人事制度の定着と効果検証",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_中外製薬.md"
   },
   {
     "name": "中部電力株式会社",
@@ -4603,6 +2505,26 @@
     "mdFile": "panalyt_丸大食品.md"
   },
   {
+    "name": "丸紅株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "CHRO交代期の人財エコシステム進化",
+      "時価総額10兆円目標の人的資本の企業価値貢献可視化",
+      "成長投資1.7兆円の事業人材確保",
+      "タレントマネジメントシステムの高度化"
+    ],
+    "target": "宮健（CHRO、2026年4月新任。前任：鹿島浩二）",
+    "why_now": "新中計GC2027で時価総額10兆円目標。CHRO交代（鹿島→宮）が2026年4月。人財エコシステムの次フェーズ",
+    "hook": "CHRO交代期の人財エコシステム進化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_丸紅.md"
+  },
+  {
     "name": "伊藤忠エネクス（コード：8133、東証プライム））",
     "industry": "エネルギー・インフラ",
     "priority": "B",
@@ -4618,6 +2540,26 @@
     "mdFile": "panalyt_伊藤忠エネクス.md"
   },
   {
+    "name": "伊藤忠商事株式会社",
+    "industry": "商社",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "単年度経営体制下の人材投資ROI可視化",
+      "最少人員で最高利益の組織設計",
+      "AI活用のタレントマネジメント高度化",
+      "グローバル人材パイプライン構築"
+    ],
+    "target": "垣見俊之（執行役員人事・総務部長）",
+    "why_now": "中計廃止し単年度経営に転換。労働生産性5.2倍達成の次フェーズとしてAI×人事を模索中",
+    "hook": "単年度経営体制下の人材投資ROI可視化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_伊藤忠商事.md"
+  },
+  {
     "name": "住友ゴム（コード：5110、東証プライム））",
     "industry": "自動車・機械・部品",
     "priority": "B",
@@ -4631,6 +2573,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_住友ゴム.md"
+  },
+  {
+    "name": "住友化学株式会社",
+    "industry": "化学・素材",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "事業PF再構築の人員再配置とリスキリング",
+      "成長2領域（アグロ・ICT）への戦略的人材シフト",
+      "技術系トップの研究開発人材マネジメント高度化",
+      "財務再建連動の人件費最適化・生産性向上"
+    ],
+    "target": "清水正生（常務執行役員人事担当）。CHRO未設置",
+    "why_now": "業績悪化からの再建フェーズで新中計発表。約80年ぶりの技術系社長就任で経営改革モードが高い",
+    "hook": "事業PF再構築の人員再配置とリスキリング",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_住友化学.md"
   },
   {
     "name": "住友大阪セメント株式会社（コード：5232、東証プライム）",
@@ -4783,6 +2745,46 @@
     "mdFile": "panalyt_千代田インテグレ.md"
   },
   {
+    "name": "株式会社千葉銀行",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "連結ROE約11%",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "延べ280人の育成計画の進捗モニタリングと効果測定",
+      "CHRO主導の人的資本KPI設定・開示の高度化",
+      "地銀として地域人材のエンゲージメント向上",
+      "Phase2における人材PF変革の方向性"
+    ],
+    "target": "今井敦司（常務執行役員・グループCHRO）",
+    "why_now": "CHRO設置済みで人材戦略を経営の中核に据えている。前中計の倍となる延べ280人のトレーニー派遣を計画し人材育成投資を大幅拡大中",
+    "hook": "延べ280人の育成計画の進捗モニタリングと効果測定",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_千葉銀行.md"
+  },
+  {
+    "name": "参天製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "海外比率58%のグローバル人材PF可視化",
+      "新市場（近視・眼瞼下垂）のR&D人材スキル分析",
+      "SAP SFとの連携によるグローバル分析基盤",
+      "ROE14%達成の人的資本KPI設計"
+    ],
+    "target": "CHRO未設置。SAP SuccessFactorsでグローバル人事統一運用",
+    "why_now": "2025年5月に新5年中計発表。売上4,000億円・海外比率58%のグローバル成長戦略。中計初年度で実行基盤を固める今がアプローチ好機",
+    "hook": "海外比率58%のグローバル人材PF可視化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_参天製薬.md"
+  },
+  {
     "name": "双日株式会社",
     "industry": "IT・サービス",
     "priority": "B",
@@ -4833,6 +2835,26 @@
     "mdFile": "panalyt_名古屋鉄道.md"
   },
   {
+    "name": "味の素株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "新任CHROの人事戦略刷新・グローバル基盤",
+      "中計廃止型経営の人的資本KPI設計・開示",
+      "ASV指標連動の人材評価制度設計",
+      "DE&I推進（女性・外国人役員増）"
+    ],
+    "target": "下保寛（代表執行役副社長CHRO、2026年4月新設・新任）",
+    "why_now": "2026年4月にCHRO職を新設し副社長レベルで起用。中計廃止という先進的経営モデルでの人的資本KPI設計が重要",
+    "hook": "新任CHROの人事戦略刷新・グローバル基盤",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_味の素.md"
+  },
+  {
     "name": "和光会（コード：非上場））",
     "industry": "製薬・ヘルスケア",
     "priority": "B",
@@ -4846,6 +2868,46 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_和光会.md"
+  },
+  {
+    "name": "株式会社商船三井",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "2035年:税前純利益4,000億円・総資産7.5兆円・ROE9-10%",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "新社長体制のPhase2人材配置",
+      "非海運事業拡大の異業種人材確保",
+      "Human Capitalビジョン更新",
+      "HRガバナンス体制強化"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "2026年4月に社長交代とPhase2始動が同時。経営の重心を変革から成果実現へシフト",
+    "hook": "新社長体制のPhase2人材配置",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_商船三井.md"
+  },
+  {
+    "name": "塩野義製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "グローバルHR戦略室のデータ統合基盤",
+      "大型M&A後のタレントマネジメント",
+      "売上8,000億円達成の人材投資ROI",
+      "次世代リーダーのサクセッション"
+    ],
+    "target": "グローバルHR戦略室新設（2025年4月）。CHRO未設置",
+    "why_now": "STS2030 Phase3に突入。8,800億円超の大型投資を発表。グローバルHR戦略室を新設し人事のグローバル化を本格化",
+    "hook": "グローバルHR戦略室のデータ統合基盤",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_塩野義製薬.md"
   },
   {
     "name": "大倉工業（コード：4221））",
@@ -4863,6 +2925,26 @@
     "mdFile": "panalyt_大倉工業.md"
   },
   {
+    "name": "大和ハウス工業株式会社",
+    "industry": "プラント・建設",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "第8次中計策定に向けた人材戦略再設計",
+      "建設業界の人手不足（DX・自動化・多様人材）",
+      "創業100年ビジョンの次世代リーダー育成",
+      "海外売上1兆円体制のグローバル人材確保"
+    ],
+    "target": "石﨑順子（常務執行役員人事担当）",
+    "why_now": "社長交代と第8次中計策定が同時進行中。創業100年（2055年）に向けた人財育成が経営課題",
+    "hook": "第8次中計策定に向けた人材戦略再設計",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_大和ハウス工業.md"
+  },
+  {
     "name": "大日本塗料（コード：4611））",
     "industry": "化学・素材",
     "priority": "B",
@@ -4876,6 +2958,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_大日本塗料.md"
+  },
+  {
+    "name": "株式会社大林組",
+    "industry": "プラント・建設",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "建設業2024年問題後の働き方改革",
+      "技能労働者不足の人材確保（外国人材含む）",
+      "事務系出身新社長の人事・組織改革",
+      "DX・脱炭素の異業種人材獲得"
+    ],
+    "target": "CHRO未設置。佐藤社長が副社長時代に人事部管掌",
+    "why_now": "7年ぶりの社長交代。事務系出身初の社長で人事・管理に精通。建設業界は深刻な人手不足と建設資材高騰に直面",
+    "hook": "建設業2024年問題後の働き方改革",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_大林組.md"
   },
   {
     "name": "大王製紙株式会社",
@@ -4946,6 +3048,46 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_富士フイルムHD.md"
+  },
+  {
+    "name": "富士通株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "ジョブ型人事制度導入後3年の成果と課題",
+      "Fujitsu Uvance推進に必要なデジタル人材PF",
+      "キャリアオーナーシップ施策のエンゲージメント効果",
+      "次期中計における人材戦略の方向性"
+    ],
+    "target": "平松浩樹（取締役専務CHRO）",
+    "why_now": "中計最終年度で目標未達見込み。ジョブ型人事制度の深化とキャリアオーナーシップの実効性検証が求められるタイミング",
+    "hook": "ジョブ型人事制度導入後3年の成果と課題",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_富士通.md"
+  },
+  {
+    "name": "株式会社小松製作所",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "財務出身新社長のグローバル人材マネジメント再構築",
+      "電動化・自動化のデジタル人材育成",
+      "グローバル6.8万人のエンゲージメントサーベイ活用",
+      "D&I推進（グローバル拠点のローカル人材登用）"
+    ],
+    "target": "佐藤輝（執行役員人事部担当、グローバルHRユニット長）",
+    "why_now": "財務畑出身の新社長就任と新中計スタートが同時。グローバル6.8万人のエンゲージメント向上とD&I推進が重点課題",
+    "hook": "財務出身新社長のグローバル人材マネジメント再構築",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_小松製作所.md"
   },
   {
     "name": "山口FG（コード：8418、東証プライム））",
@@ -5103,6 +3245,26 @@
     "mdFile": "panalyt_日本コムシス.md"
   },
   {
+    "name": "日本板硝子株式会社",
+    "industry": "製造業",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "新CHRO（外国人）のグローバル人事戦略",
+      "4つのD（Diverse Talent等）の具体策",
+      "欧州構造改革の人員再配置・リスキリング",
+      "新経営チームの次世代リーダー育成"
+    ],
+    "target": "デニース・ヘイラー（執行役CHRO、外国人）",
+    "why_now": "社長交代とCHRO交代が同時。外国人CHROの登用でグローバル人事統括体制の再構築期",
+    "hook": "新CHRO（外国人）のグローバル人事戦略",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_日本板硝子.md"
+  },
+  {
     "name": "日本精機（コード：7287、東証プライム））",
     "industry": "自動車・機械・部品",
     "priority": "B",
@@ -5138,6 +3300,26 @@
     "mdFile": "panalyt_日清食品HD.md"
   },
   {
+    "name": "旭化成株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "3領域横断の人材流動性とキャリア自律",
+      "事業PF変革のリスキリング・人材再配置",
+      "ROIC経営浸透の人的資本KPI設定",
+      "グローバル人材マネジメント基盤統合"
+    ],
+    "target": "西川知（常務執行役員人事担当）",
+    "why_now": "2025年4月に新中計発表。「終身成長」「共創力」で人的資本経営強化。3領域横断の人事制度再構築ニーズ",
+    "hook": "3領域横断の人材流動性とキャリア自律",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_旭化成.md"
+  },
+  {
     "name": "昭和産業（コード：2004））",
     "industry": "消費財・食品",
     "priority": "B",
@@ -5151,6 +3333,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_昭和産業.md"
+  },
+  {
+    "name": "杏林製薬株式会社",
+    "industry": "製薬・ヘルスケア",
+    "priority": "B",
+    "scale": "売上1,200億円以上・研究開発費控除前営利170億円以上・新薬比率55%以上",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "Stage2移行に伴う組織・人材戦略の変更点",
+      "R&D人材の獲得競争における自社の強み・課題",
+      "新薬比率向上を支えるMR・営業人材の育成",
+      "2032年ビジョン実現に向けた長期人材パイプライン構築"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "Stage1前倒し達成しStage2に移行する変革の節目。110周年（2032年）に向けた事業体制変革に人材戦略高度化が不可欠",
+    "hook": "Stage2移行に伴う組織・人材戦略の変更点",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_杏林製薬.md"
   },
   {
     "name": "村田機械（コード：非上場、東証プライム））",
@@ -5211,6 +3413,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_東京センチュリー.md"
+  },
+  {
+    "name": "東京海上ホールディングス株式会社",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "新CEO体制の次世代リーダーパイプライン再設計",
+      "グローバル保険グループの人材マネジメント統合",
+      "人的資本レポートの高度化",
+      "DX推進のデジタル人材確保"
+    ],
+    "target": "守山聡（常務執行役員グループCHRO兼CWO兼副CDIO）",
+    "why_now": "53歳の若手新社長就任で大胆な改革。TOPIX100で唯一人的資本レポートを発行する先進企業",
+    "hook": "新CEO体制の次世代リーダーパイプライン再設計",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_東京海上HD.md"
   },
   {
     "name": "東宝（コード：9602、東証プライム））",
@@ -5343,6 +3565,26 @@
     "mdFile": "panalyt_滋賀銀行.md"
   },
   {
+    "name": "株式会社百五銀行",
+    "industry": "金融・リース",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "人事制度改定後の効果測定と配置可視化",
+      "行員生産性の店舗別収益性分析",
+      "非財務目標の人的資本KPIダッシュボード",
+      "コンサルティング人材の育成・配置"
+    ],
+    "target": "伊藤慎二（執行役員人事担当、2025年6月就任）",
+    "why_now": "2025年4月に新中計スタート。2026年1月に人事制度抜本改定と「百五銀行グループ人事ポリシー」制定。非財務目標を新設",
+    "hook": "人事制度改定後の効果測定と配置可視化",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_百五銀行.md"
+  },
+  {
     "name": "神奈川中央交通（コード：9081））",
     "industry": "運輸・物流・交通",
     "priority": "B",
@@ -5358,6 +3600,26 @@
     "mdFile": "panalyt_神奈川中央交通.md"
   },
   {
+    "name": "株式会社神戸製鋼所",
+    "industry": "化学・素材",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "GX・CN推進の専門人材採用・育成",
+      "CHRO設置を含む人事ガバナンス強化提案",
+      "素材×機械の事業横断型人材配置",
+      "安全文化・コンプライアンスと人事制度連動"
+    ],
+    "target": "CHRO未設置。人事労政部長：野村学",
+    "why_now": "GX対応と機械系事業拡大で技術者確保が急務。CHRO未設置で人事ガバナンスの高度化余地が大きい",
+    "hook": "GX・CN推進の専門人材採用・育成",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_神戸製鋼所.md"
+  },
+  {
     "name": "積水化学工業株式会社（コード：4204、東証プライム）",
     "industry": "化学・素材",
     "priority": "B",
@@ -5371,6 +3633,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_積水化学.md"
+  },
+  {
+    "name": "第一三共株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "売上1.6兆円・がん領域6,000億円以上・Core営利率40%以上・ROE16%以上",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "グローバルジョブ型人事制度の定着・運用",
+      "ADC成功に伴うグローバル研究開発人材確保",
+      "新中計（第6期）の人的資本戦略",
+      "初任給10万円増・30代幹部登用等の報酬改革効果測定"
+    ],
+    "target": "松本 高史（常務執行役員CHRO、Head of Global HR）",
+    "why_now": "2025年度にグローバル共通ジョブ型人事制度導入。ADC（エンハーツ）の世界的成功を背景にグローバル人材獲得が待ったなし",
+    "hook": "グローバルジョブ型人事制度の定着・運用",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_第一三共.md"
   },
   {
     "name": "第一生命ホールディングス株式会社",
@@ -5488,6 +3770,26 @@
     "mdFile": "panalyt_豊田自動織機.md"
   },
   {
+    "name": "株式会社資生堂",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "CPO退任後の人事リーダーシップ体制",
+      "中国縮小・構造改革のグローバル人員再配置",
+      "8ブランド集中投資のマーケティング人材",
+      "CO/DO新組織体制の役割定義と人事制度"
+    ],
+    "target": "和田真司（CPO、2025年12月退任）→後任未公表",
+    "why_now": "中国事業急減速を受けた構造改革の真っ只中。CPO退任と新体制（CO/DO制）への移行期で人事リーダーシップ空白リスク",
+    "hook": "CPO退任後の人事リーダーシップ体制",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_資生堂.md"
+  },
+  {
     "name": "野村ホールディングス株式会社（コード：8604、東証プライム）",
     "industry": "金融・リース",
     "priority": "B",
@@ -5501,6 +3803,26 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_野村ホールディングス.md"
+  },
+  {
+    "name": "株式会社野村総合研究所",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "海外事業売上1,200億円・営利率5%。前期実績:売上8,100億円・営利1,450億円・ROE20",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "海外売上1,200億円のグローバル人材確保",
+      "コンサル・DX人材の採用市場差別化",
+      "新中計の人的資本経営",
+      "CHRO設置含むHR機能の高度化"
+    ],
+    "target": "※架電前にIR資料で特定",
+    "why_now": "2026年4月に新中計策定。コンサル・IT業界の人材獲得競争激化の中、海外事業拡大を支えるグローバル人材戦略が急務",
+    "hook": "海外売上1,200億円のグローバル人材確保",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_野村総合研究所.md"
   },
   {
     "name": "関西電力株式会社",
@@ -5536,5 +3858,85 @@
     "note": "",
     "tpl": "full",
     "mdFile": "panalyt_電源開発.md"
+  },
+  {
+    "name": "ＡＧＣ株式会社",
+    "industry": "電機・半導体・精密",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "あり",
+    "pitches": [
+      "人財のAGCの人的資本KPIと開示",
+      "EUV・半導体の高度技術人材獲得",
+      "両利きの経営のリーダーシップ開発",
+      "グローバル3万人の人事ガバナンス高度化"
+    ],
+    "target": "井原有紀（人事戦略統括担当部長）。役員級CHRO未設置",
+    "why_now": "「人財のAGC」を経営トップが掲げ両利きの経営を推進。EUV関連の戦略事業急成長で高度技術人材確保が急務",
+    "hook": "人財のAGCの人的資本KPIと開示",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ＡＧＣ.md"
+  },
+  {
+    "name": "ＫＤＤＩ株式会社",
+    "industry": "IT・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "新社長就任後の人事戦略アップデート",
+      "KDDI版ジョブ型の運用成熟度と進化",
+      "AI・DX人材育成の次ステップ",
+      "サテライトグロース戦略の多領域人材確保"
+    ],
+    "target": "菱田直人（執行役員人事本部長、CHRO相当）",
+    "why_now": "2025年4月に新社長就任。KDDI版ジョブ型を全社展開済みで次フェーズのAI・DX活用人材戦略が課題",
+    "hook": "新社長就任後の人事戦略アップデート",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ＫＤＤＩ.md"
+  },
+  {
+    "name": "株式会社ＰＡＬＴＡＣ",
+    "industry": "運輸・物流・交通",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "物流DX推進のデジタル人材育成",
+      "新物流センター開設の人員配置",
+      "卸売業の人手不足対応人材育成",
+      "長期ビジョンの組織変革と人事制度改革"
+    ],
+    "target": "吉田幸代（上席執行役員総務部長）。CHRO未設置",
+    "why_now": "卸売業の構造変革期。物流DXと新物流センター投資を推進中。物流人材の確保・育成が経営課題",
+    "hook": "物流DX推進のデジタル人材育成",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ＰＡＬＴＡＣ.md"
+  },
+  {
+    "name": "ＳＯＭＰＯホールディングス株式会社",
+    "industry": "人材・サービス",
+    "priority": "B",
+    "scale": "",
+    "listed": "上場",
+    "global": "",
+    "pitches": [
+      "MYパーパス施策のエンゲージメント・業績定量効果",
+      "2ビジネス体制再編の人材配置最適化",
+      "CHRO副社長体制の実効性",
+      "不祥事後の企業文化変革と心理的安全性"
+    ],
+    "target": "原伸一（グループCHRO、代表執行役副社長）",
+    "why_now": "不祥事からの信頼回復でMYパーパス施策を全社展開。CHRO副社長昇格で人事が経営中枢に",
+    "hook": "MYパーパス施策のエンゲージメント・業績定量効果",
+    "note": "",
+    "tpl": "full",
+    "mdFile": "panalyt_ＳＯＭＰＯHD.md"
   }
 ]
