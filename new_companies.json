@@ -2035,7 +2035,8 @@
     "employees": "4,830",
     "avg_salary": "685",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "Ｚホールディングス株式会社",
@@ -2053,7 +2054,8 @@
     "employees": "23,531",
     "avg_salary": "0",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "アークランドサカモト株式会社",
@@ -2071,7 +2073,8 @@
     "employees": "3,279",
     "avg_salary": "454",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "アース製薬株式会社",
@@ -2089,7 +2092,8 @@
     "employees": "4,255",
     "avg_salary": "683",
     "hr_system": "COMPANY",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "アイカ工業株式会社",
@@ -2107,7 +2111,8 @@
     "employees": "4,796",
     "avg_salary": "644",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "アイダエンジニアリング株式会社",
