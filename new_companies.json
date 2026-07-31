@@ -2652,7 +2652,8 @@
     "employees": "33,153",
     "avg_salary": "858",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "カゴメ株式会社",
@@ -2670,7 +2671,8 @@
     "employees": "2,684",
     "avg_salary": "773",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "カシオ計算機株式会社",
@@ -2688,7 +2690,8 @@
     "employees": "10,404",
     "avg_salary": "804",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "カメイ株式会社",
@@ -2706,7 +2709,8 @@
     "employees": "5,213",
     "avg_salary": "506",
     "hr_system": "",
-    "bi_tool": ""
+    "bi_tool": "",
+    "batch_status": "generated"
   },
   {
     "name": "カルビー株式会社",
